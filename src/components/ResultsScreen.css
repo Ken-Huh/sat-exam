@@ -1,0 +1,121 @@
+.results-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.results-container {
+  background-color: white;
+  padding: 50px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.results-container h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.overall-score {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.overall-score h2 {
+  font-size: 28px;
+  margin: 0 0 15px 0;
+}
+
+.percentage {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.score-breakdown {
+  margin-bottom: 30px;
+}
+
+.score-breakdown h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.section-scores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.score-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.score-box h4 {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.score-box .score {
+  font-size: 24px;
+  color: #667eea;
+  margin: 0;
+  font-weight: bold;
+}
+
+.rw-total,
+.math-total {
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.rw-total p,
+.math-total p {
+  margin: 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.restart-button {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restart-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.restart-button:active {
+  transform: translateY(0);
+}

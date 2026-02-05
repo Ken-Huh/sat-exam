@@ -14,7 +14,7 @@ export const sampleQuestions = {
       passage: `The following text is from Mark Twain's 1876 novel The Adventures of Tom Sawyer. Tom, a child, has been told by his aunt to paint their house's fence.
 
 Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush. He surveyed the fence, and all gladness left him and a deep melancholy settled down upon his spirit. Thirty yards of board fence nine feet high.`,
-      text: 'As used in the text, what does the word "surveyed" most nearly mean?',
+      text: 'As used in the text, what does the word __"surveyed"__ most nearly mean?',
       type: 'multipleChoice',
       options: [
         { letter: 'A', text: 'Looked at' },
@@ -1270,7 +1270,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 23,
       module: 2,
-      text: 'The speed of a white-throated needletail, a type of bird, in flight was measured to be 49 miles per hour. What was the white-throated needletail\'s measured speed, in kilometers per hour? (Use 1 mile = 1.6 kilometers.)',
+      text: 'The speed of a white-throated needletail, a type of bird, in flight was measured to be 49 miles per hour. What was the white-throated needletail\'s measured speed, in __kilometers__ per hour? (Use 1 mile = 1.6 kilometers.)',
       type: 'multipleChoice',
       options: [
         { letter: 'A', text: '30.6' },

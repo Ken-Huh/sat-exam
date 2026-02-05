@@ -11,14 +11,24 @@ export default function ReadingWritingModule({
 }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [moduleAnswers, setModuleAnswers] = useState({});
-  const [timeRemaining, setTimeRemaining] = useState(timeLimit * 60); // convert to seconds
-  const [isComplete, setIsComplete] = useState(false);
+  const [timeRemaining, setTimeRemaining] = useState(timeLimit * 60);
 
   const currentQuestion = questions[currentQuestionIndex];
 
+  const calculateScore = () => {
+    let correct = 0;
+    questions.forEach(question => {
+      if (moduleAnswers[question.id] === question.correctAnswer) {
+        correct++;
+      }
+    });
+    return correct;
+  };
+
   useEffect(() => {
     if (timeRemaining <= 0) {
-      handleSubmitModule();
+      const score = calculateScore();
+      onComplete(moduleAnswers, score);
       return;
     }
 
@@ -27,15 +37,8 @@ export default function ReadingWritingModule({
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [timeRemaining]);
-
-  const handleAnswer = (questionId, answer) => {
-    setModuleAnswers({
-      ...moduleAnswers,
-      [questionId]: answer
-    });
-  };
-
+  }, [timeRemaining, moduleAnswers, questions, onComplete]);
+  
   const handleNext = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);

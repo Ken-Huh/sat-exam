@@ -11,14 +11,28 @@ export default function MathModule({
 }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [moduleAnswers, setModuleAnswers] = useState({});
-  const [timeRemaining, setTimeRemaining] = useState(timeLimit * 60); // convert to seconds
-  const [isComplete, setIsComplete] = useState(false);
+  const [timeRemaining, setTimeRemaining] = useState(timeLimit * 60);
 
   const currentQuestion = questions[currentQuestionIndex];
 
+  const calculateScore = () => {
+    let correct = 0;
+    questions.forEach(question => {
+      const userAnswer = moduleAnswers[question.id];
+      const normalizedUserAnswer = userAnswer ? String(userAnswer).trim() : '';
+      const normalizedCorrectAnswer = String(question.correctAnswer).trim();
+      
+      if (normalizedUserAnswer === normalizedCorrectAnswer) {
+        correct++;
+      }
+    });
+    return correct;
+  };
+
   useEffect(() => {
     if (timeRemaining <= 0) {
-      handleSubmitModule();
+      const score = calculateScore();
+      onComplete(moduleAnswers, score);
       return;
     }
 
@@ -27,7 +41,7 @@ export default function MathModule({
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [timeRemaining]);
+  }, [timeRemaining, moduleAnswers, questions, onComplete]);
 
   const handleAnswer = (questionId, answer) => {
     setModuleAnswers({
@@ -35,7 +49,6 @@ export default function MathModule({
       [questionId]: answer
     });
   };
-
   const handleNext = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);

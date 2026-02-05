@@ -39,6 +39,14 @@ export default function ReadingWritingModule({
     return () => clearInterval(timer);
   }, [timeRemaining, moduleAnswers, questions, onComplete]);
   
+
+  const handleAnswer = (questionId, answer) => {
+    setModuleAnswers({
+      ...moduleAnswers,
+      [questionId]: answer
+    });
+  };
+
   const handleNext = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -54,16 +62,6 @@ export default function ReadingWritingModule({
   const handleSubmitModule = () => {
     const score = calculateScore();
     onComplete(moduleAnswers, score);
-  };
-
-  const calculateScore = () => {
-    let correct = 0;
-    questions.forEach(question => {
-      if (moduleAnswers[question.id] === question.correctAnswer) {
-        correct++;
-      }
-    });
-    return correct;
   };
 
   return (

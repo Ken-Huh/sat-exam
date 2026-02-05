@@ -49,6 +49,7 @@ export default function MathModule({
       [questionId]: answer
     });
   };
+
   const handleNext = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -64,21 +65,6 @@ export default function MathModule({
   const handleSubmitModule = () => {
     const score = calculateScore();
     onComplete(moduleAnswers, score);
-  };
-
-  const calculateScore = () => {
-    let correct = 0;
-    questions.forEach(question => {
-      const userAnswer = moduleAnswers[question.id];
-      // For fill-in, normalize the answer (strip spaces, etc.)
-      const normalizedUserAnswer = userAnswer ? String(userAnswer).trim() : '';
-      const normalizedCorrectAnswer = String(question.correctAnswer).trim();
-      
-      if (normalizedUserAnswer === normalizedCorrectAnswer) {
-        correct++;
-      }
-    });
-    return correct;
   };
 
   return (

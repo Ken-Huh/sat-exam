@@ -1,0 +1,126 @@
+.passage-renderer {
+  line-height: 1.8;
+  color: #333;
+}
+
+.passage-renderer p {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+}
+
+.passage-renderer p:last-child {
+  margin-bottom: 0;
+}
+
+/* Source subtitle */
+.passage-source {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.passage-content p {
+  margin: 0;
+}
+
+/* Cross-text styles */
+.passage-renderer.cross-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.text-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.text-label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #1e3a5f;
+}
+
+.text-content {
+  line-height: 1.8;
+}
+
+.text-content p {
+  margin: 0;
+}
+
+/* Notes style */
+.passage-renderer.notes-style .notes-header {
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.passage-renderer .notes-list {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 24px;
+}
+
+.passage-renderer .notes-list li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.passage-renderer .notes-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Table styles */
+.passage-renderer .data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.passage-renderer .data-table th,
+.passage-renderer .data-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.passage-renderer .data-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  color: #333;
+}
+
+.passage-renderer .data-table td {
+  background-color: #fff;
+}
+
+.passage-renderer .data-table tr:nth-child(even) td {
+  background-color: #fafafa;
+}
+
+/* Image styles */
+.passage-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+/* Underline style */
+.passage-renderer u {
+  text-decoration: underline;
+  text-decoration-color: #1e3a5f;
+  text-underline-offset: 2px;
+}

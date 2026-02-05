@@ -1,121 +1,267 @@
 .results-screen {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 20px;
+  background-color: #f5f5f5;
+  padding: 40px 20px;
 }
 
 .results-container {
   background-color: white;
-  padding: 50px;
+  padding: 40px;
   border-radius: 12px;
-  max-width: 600px;
-  width: 100%;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .results-container h1 {
-  font-size: 36px;
+  font-size: 32px;
   color: #333;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
   text-align: center;
+  font-weight: 400;
 }
 
+/* Overall Score */
 .overall-score {
   text-align: center;
   padding: 30px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 8px;
+  background-color: #1e3a5f;
+  border-radius: 12px;
   margin-bottom: 30px;
   color: white;
 }
 
-.overall-score h2 {
-  font-size: 28px;
-  margin: 0 0 15px 0;
+.score-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.score-number {
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 18px;
+  opacity: 0.8;
 }
 
 .percentage {
-  font-size: 48px;
-  font-weight: bold;
+  font-size: 24px;
   margin: 0;
+  opacity: 0.9;
 }
 
+/* Score Breakdown */
 .score-breakdown {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .score-breakdown h3 {
   font-size: 20px;
   color: #333;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
+  font-weight: 600;
 }
 
 .section-scores {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 20px;
 }
 
-.score-box {
+.section-group {
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
-  text-align: center;
   border: 1px solid #e0e0e0;
 }
 
-.score-box h4 {
-  font-size: 14px;
-  color: #666;
-  margin: 0 0 10px 0;
+.section-group h4 {
+  font-size: 16px;
+  color: #333;
+  margin: 0 0 16px 0;
   font-weight: 600;
 }
 
-.score-box .score {
-  font-size: 24px;
-  color: #667eea;
-  margin: 0;
-  font-weight: bold;
+.module-scores {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
-.rw-total,
-.math-total {
-  background-color: #f9f9f9;
-  padding: 15px 20px;
+.score-box {
+  flex: 1;
+  background-color: white;
+  padding: 12px;
   border-radius: 6px;
-  margin-bottom: 10px;
-  border-left: 4px solid #667eea;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.rw-total p,
-.math-total p {
-  margin: 0;
+.module-label {
+  font-size: 13px;
+  color: #666;
+}
+
+.module-score {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e3a5f;
+}
+
+.section-total {
+  text-align: center;
+  font-weight: 600;
   color: #333;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Knowledge and Skills Section */
+.knowledge-skills-section {
+  margin-bottom: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.knowledge-skills-section h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.new-badge {
+  background-color: #1e3a5f;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
   font-weight: 500;
 }
 
+.section-description {
+  color: #666;
+  margin: 0 0 24px 0;
+  font-size: 15px;
+}
+
+.domain-section {
+  margin-bottom: 30px;
+}
+
+.domain-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.domain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.domain-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.domain-header {
+  margin-bottom: 12px;
+}
+
+.domain-header h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 4px 0;
+}
+
+.domain-description {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Skill Bar */
+.skill-bar {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.skill-bar-segment {
+  flex: 1;
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+}
+
+.skill-bar-segment.filled {
+  background-color: #1e3a5f;
+}
+
+.domain-level {
+  font-size: 13px;
+  color: #666;
+}
+
+.level-text {
+  color: #1e3a5f;
+  font-weight: 500;
+}
+
+.domain-raw-score {
+  font-size: 12px;
+  color: #888;
+  margin-top: 6px;
+}
+
+/* Restart Button */
 .restart-button {
   width: 100%;
   padding: 16px;
-  font-size: 18px;
-  font-weight: bold;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #1e3a5f;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 .restart-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  background-color: #2c4a73;
 }
 
-.restart-button:active {
-  transform: translateY(0);
+/* Responsive */
+@media (max-width: 768px) {
+  .results-container {
+    padding: 24px;
+  }
+
+  .section-scores {
+    grid-template-columns: 1fr;
+  }
+
+  .domain-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .score-number {
+    font-size: 48px;
+  }
 }

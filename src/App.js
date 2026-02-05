@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import ExamStart from './components/ExamStart';
+import TestSelection from './components/TestSelection';
 import ReadingWritingModule from './components/ReadingWritingModule';
 import MathModule from './components/MathModule';
 import BreakScreen from './components/BreakScreen';
@@ -8,28 +8,30 @@ import ResultsScreen from './components/ResultsScreen';
 import { sampleQuestions } from './data/questions';
 
 function App() {
-  const [stage, setStage] = useState('start'); // start, rw1, rw2, break, math1, math2, results
+  const [stage, setStage] = useState('select'); // select, rw1, rw2, break, math1, math2, results
+  const [selectedTest, setSelectedTest] = useState(null); // eslint-disable-line no-unused-vars
   const [answers, setAnswers] = useState({});
   const [scores, setScores] = useState({});
 
-  const handleStartExam = () => {
+  const handleSelectTest = (testId) => {
+    setSelectedTest(testId);
     setStage('rw1');
   };
 
   const handleModuleComplete = (moduleAnswers, moduleScore) => {
-    setAnswers({ ...answers, ...moduleAnswers });
-    
+    setAnswers(prev => ({ ...prev, ...moduleAnswers }));
+
     if (stage === 'rw1') {
-      setScores({ ...scores, rw1: moduleScore });
+      setScores(prev => ({ ...prev, rw1: moduleScore }));
       setStage('rw2');
     } else if (stage === 'rw2') {
-      setScores({ ...scores, rw2: moduleScore });
+      setScores(prev => ({ ...prev, rw2: moduleScore }));
       setStage('break');
     } else if (stage === 'math1') {
-      setScores({ ...scores, math1: moduleScore });
+      setScores(prev => ({ ...prev, math1: moduleScore }));
       setStage('math2');
     } else if (stage === 'math2') {
-      setScores({ ...scores, math2: moduleScore });
+      setScores(prev => ({ ...prev, math2: moduleScore }));
       setStage('results');
     }
   };
@@ -39,18 +41,28 @@ function App() {
   };
 
   const handleRestartExam = () => {
-    setStage('start');
+    setStage('select');
+    setSelectedTest(null);
     setAnswers({});
     setScores({});
   };
 
+  // Get questions based on selected test (currently only test1)
+  const getQuestions = () => {
+    // For now, all tests use the same questions
+    // In the future, you can add more test sets
+    return sampleQuestions;
+  };
+
+  const questions = getQuestions();
+
   return (
     <div className="App">
-      {stage === 'start' && <ExamStart onStart={handleStartExam} />}
+      {stage === 'select' && <TestSelection onSelectTest={handleSelectTest} />}
       {stage === 'rw1' && (
         <ReadingWritingModule
           moduleNumber={1}
-          questions={sampleQuestions.readingWriting.filter(q => q.module === 1)}
+          questions={questions.readingWriting.filter(q => q.module === 1)}
           timeLimit={32}
           onComplete={handleModuleComplete}
         />
@@ -58,7 +70,7 @@ function App() {
       {stage === 'rw2' && (
         <ReadingWritingModule
           moduleNumber={2}
-          questions={sampleQuestions.readingWriting.filter(q => q.module === 2)}
+          questions={questions.readingWriting.filter(q => q.module === 2)}
           timeLimit={32}
           onComplete={handleModuleComplete}
         />
@@ -67,7 +79,7 @@ function App() {
       {stage === 'math1' && (
         <MathModule
           moduleNumber={1}
-          questions={sampleQuestions.math.filter(q => q.module === 1)}
+          questions={questions.math.filter(q => q.module === 1)}
           timeLimit={35}
           onComplete={handleModuleComplete}
         />
@@ -75,7 +87,7 @@ function App() {
       {stage === 'math2' && (
         <MathModule
           moduleNumber={2}
-          questions={sampleQuestions.math.filter(q => q.module === 2)}
+          questions={questions.math.filter(q => q.module === 2)}
           timeLimit={35}
           onComplete={handleModuleComplete}
         />
@@ -84,6 +96,7 @@ function App() {
         <ResultsScreen
           scores={scores}
           answers={answers}
+          questions={questions}
           onRestart={handleRestartExam}
         />
       )}

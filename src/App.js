@@ -5,7 +5,7 @@ import ReadingWritingModule from './components/ReadingWritingModule';
 import MathModule from './components/MathModule';
 import BreakScreen from './components/BreakScreen';
 import ResultsScreen from './components/ResultsScreen';
-import { sampleQuestions } from './data/questions';
+import { allTests, getTestQuestions } from './data/index';
 
 function App() {
   const [stage, setStage] = useState('select'); // select, rw1, rw2, break, math1, math2, results
@@ -47,14 +47,8 @@ function App() {
     setScores({});
   };
 
-  // Get questions based on selected test (currently only test1)
-  const getQuestions = () => {
-    // For now, all tests use the same questions
-    // In the future, you can add more test sets
-    return sampleQuestions;
-  };
-
-  const questions = getQuestions();
+  // Get questions based on selected test
+  const questions = selectedTest ? getTestQuestions(selectedTest) : allTests.test1.questions;
 
   return (
     <div className="App">

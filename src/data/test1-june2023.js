@@ -17,7 +17,7 @@
 //   - 'geometry'              : Geometry and Trigonometry (area, volume, angles, trig)
 // ==============================================
 
-export const sampleQuestions = {
+export const test1Questions = {
   readingWriting: [
     // ========================================
     // SECTION 1, MODULE 1: Reading and Writing

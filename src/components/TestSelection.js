@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import './TestSelection.css';
+import { getAvailableTests } from '../data/index';
 
-const availableTests = [
-  { id: 'test1', name: 'Practice Test #1 (June 2023)' },
-  // Add more tests here as they become available
-  // { id: 'test2', name: 'Practice Test #2' },
-];
+// Get available tests dynamically from data
+const availableTests = getAvailableTests();
 
 export default function TestSelection({ onSelectTest }) {
   const [selectedTest, setSelectedTest] = useState('');

@@ -5,6 +5,9 @@ import { test1Questions } from './test1-june2023';
 import { test2Questions } from './test2-dec2023';
 import { test3Questions } from './test3-dec2023-digital';
 
+// Import practice sets
+import { rwPracticeSet1 } from './rw-practice-set1';
+
 // ==============================================
 // DOMAIN CATEGORIES FOR SKILL TRACKING
 // ==============================================
@@ -60,3 +63,53 @@ export const getTestQuestions = (testId) => {
 
 // Legacy export for backwards compatibility
 export const sampleQuestions = test1Questions;
+
+// ==============================================
+// PRACTICE SETS (Section-specific practice)
+// ==============================================
+
+// R/W Practice Sets
+export const rwPracticeSets = {
+  'rw-set1': rwPracticeSet1
+};
+
+// Math Practice Sets (placeholder for future sets)
+export const mathPracticeSets = {
+  // 'math-set1': mathPracticeSet1
+};
+
+// Get list of available R/W practice sets for dropdown
+export const getAvailableRWPracticeSets = () => {
+  return Object.values(rwPracticeSets).map(set => ({
+    id: set.id,
+    name: set.name
+  }));
+};
+
+// Get list of available Math practice sets for dropdown
+export const getAvailableMathPracticeSets = () => {
+  return Object.values(mathPracticeSets).map(set => ({
+    id: set.id,
+    name: set.name
+  }));
+};
+
+// Get questions for a specific R/W practice set
+export const getRWPracticeQuestions = (setId) => {
+  const set = rwPracticeSets[setId];
+  if (!set) {
+    console.error(`R/W Practice set not found: ${setId}`);
+    return null;
+  }
+  return set.questions;
+};
+
+// Get questions for a specific Math practice set
+export const getMathPracticeQuestions = (setId) => {
+  const set = mathPracticeSets[setId];
+  if (!set) {
+    console.error(`Math Practice set not found: ${setId}`);
+    return null;
+  }
+  return set.questions;
+};

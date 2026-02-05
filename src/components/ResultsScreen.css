@@ -247,6 +247,36 @@
   background-color: #2c4a73;
 }
 
+/* Practice Mode Styles */
+.practice-badge {
+  display: inline-block;
+  background-color: #2e7d32;
+  color: white;
+  font-size: 14px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.practice-score-circle {
+  background-color: transparent;
+}
+
+.practice-single-section {
+  grid-template-columns: 1fr;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.practice-single-section .section-group {
+  width: 100%;
+}
+
+.section-group.full-width {
+  grid-column: span 2;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .results-container {
@@ -263,5 +293,9 @@
 
   .score-number {
     font-size: 48px;
+  }
+
+  .practice-single-section {
+    max-width: 100%;
   }
 }

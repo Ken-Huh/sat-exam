@@ -132,3 +132,124 @@
   color: #666;
   font-size: 14px;
 }
+
+/* Section styling */
+.selection-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e3a5f;
+  margin: 0 0 20px 0;
+}
+
+.section-description {
+  color: #666;
+  font-size: 15px;
+  margin: 0 0 24px 0;
+}
+
+/* Section divider */
+.section-divider {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.section-divider span {
+  padding: 0 20px;
+  color: #888;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Practice options grid */
+.practice-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.practice-option {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.practice-option .form-group {
+  margin-bottom: 16px;
+}
+
+.practice-option .form-label {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.practice-option .test-dropdown {
+  padding: 12px 16px;
+  font-size: 15px;
+}
+
+.practice-option .test-dropdown:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+.start-practice-button {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2e7d32;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 12px;
+}
+
+.start-practice-button:hover:not(:disabled) {
+  background-color: #388e3c;
+}
+
+.start-practice-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.practice-info {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Adjust test-info when inside section */
+.selection-section .test-info {
+  box-shadow: none;
+  padding: 20px 0 0 0;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.selection-section .selection-form {
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 0;
+}

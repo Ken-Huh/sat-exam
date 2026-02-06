@@ -6,7 +6,7 @@
 // ============================================
 
 // Your Google Apps Script Web App URL (already configured)
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzs8BhEiCmLFJj_YyVGbiCFX4n2nqzvfefyQRmQY-CIzCMdoODhbwRJxlj7-NNpXlDx/exec';
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxN8hD-DXbEETjZxgeE5TTp_rdcs5CD7h6PO724XNXdPWUuysBQRuVt4jC922Sw1bK1/exec';
 
 /**
  * Submit results to Google Sheets
@@ -14,7 +14,7 @@ const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzs8BhEiCmLFJ
  */
 export async function submitToGoogleSheets(data) {
   // Don't submit if URL not configured
-  if (!GOOGLE_SHEETS_URL || GOOGLE_SHEETS_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+  if (!GOOGLE_SHEETS_URL || GOOGLE_SHEETS_URL === 'https://script.google.com/macros/s/AKfycbxN8hD-DXbEETjZxgeE5TTp_rdcs5CD7h6PO724XNXdPWUuysBQRuVt4jC922Sw1bK1/exec') {
     console.log('Google Sheets URL not configured. Skipping submission.');
     console.log('Results data:', data);
     return { success: false, reason: 'not_configured' };
@@ -39,6 +39,7 @@ export async function submitToGoogleSheets(data) {
 
 /**
  * Format results data for Google Sheets submission
+ * Sends detailed question-by-question data for individual tabs per student
  */
 export function formatResultsForSheet(studentInfo, scores, answers, questions, practiceType = null) {
   const timestamp = new Date().toISOString();
@@ -56,8 +57,8 @@ export function formatResultsForSheet(studentInfo, scores, answers, questions, p
     totalQuestions = practiceType === 'readingWriting' ? 54 : 44;
   }
 
-  // Get wrong answers details
-  const wrongAnswers = getWrongAnswersDetails(answers, questions, practiceType);
+  // Get all question details (not just wrong ones)
+  const allQuestionDetails = getAllQuestionDetails(answers, questions, practiceType);
 
   return {
     timestamp,
@@ -74,10 +75,54 @@ export function formatResultsForSheet(studentInfo, scores, answers, questions, p
     totalQuestions,
     percentage: Math.round((totalCorrect / totalQuestions) * 100),
 
-    // Wrong answers summary
-    wrongAnswersCount: wrongAnswers.length,
-    wrongAnswersDetails: JSON.stringify(wrongAnswers),
+    // Detailed question data for individual tabs
+    // Format: array of {q#, section, module, domain, userAnswer, correctAnswer, isCorrect}
+    questionDetails: allQuestionDetails,
+
+    // Request for separate tab (flag for Apps Script)
+    createNewTab: true,
   };
+}
+
+/**
+ * Get detailed information about ALL questions (for vertical format in sheets)
+ */
+export function getAllQuestionDetails(answers, questions, practiceType = null) {
+  const details = [];
+
+  // Handle practice mode (flat array) vs full test (nested object)
+  let allQuestions = [];
+  if (practiceType) {
+    allQuestions = questions;
+  } else {
+    allQuestions = [...(questions.readingWriting || []), ...(questions.math || [])];
+  }
+
+  allQuestions.forEach((q, index) => {
+    const userAnswer = answers[q.id] || '';
+    const isCorrect = userAnswer === q.correctAnswer;
+
+    // Determine section
+    let section = 'RW';
+    if (q.section) {
+      section = q.section;
+    } else if (practiceType === 'math' || q.type === 'fillIn') {
+      section = 'Math';
+    }
+
+    details.push({
+      questionNumber: index + 1,
+      questionId: q.id,
+      section: section,
+      module: q.module || 1,
+      domain: (q.domain || 'unknown').replace(/_/g, ' '),
+      userAnswer: userAnswer || '(blank)',
+      correctAnswer: q.correctAnswer,
+      isCorrect: isCorrect ? 'Correct' : 'Incorrect',
+    });
+  });
+
+  return details;
 }
 
 /**

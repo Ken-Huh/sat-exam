@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './ResultsScreen.css';
 import { submitToGoogleSheets, formatResultsForSheet } from '../utils/resultsExport';
 import { downloadResultsPDF } from '../utils/pdfGenerator';
-import { sendResultsEmail, isEmailConfigured, openMailtoFallback } from '../utils/emailService';
 
 // Domain categories
 const RW_DOMAINS = [
@@ -69,8 +68,6 @@ function getDifficultyLevel(score, total) {
 
 export default function PracticeResultsScreen({ scores, answers, questions, practiceType, studentInfo, onRestart }) {
   const [sheetSubmitted, setSheetSubmitted] = useState(false);
-  const [emailSending, setEmailSending] = useState(false);
-  const [emailStatus, setEmailStatus] = useState(null);
 
   const isRW = practiceType === 'readingWriting';
   const sectionName = isRW ? 'Reading & Writing' : 'Math';
@@ -105,30 +102,6 @@ export default function PracticeResultsScreen({ scores, answers, questions, prac
     downloadResultsPDF(studentInfo, scores, answers, questions, practiceType);
   };
 
-  const handleEmail = async () => {
-    if (!studentInfo.email) {
-      alert('No email address provided. Please download the PDF instead.');
-      return;
-    }
-
-    if (isEmailConfigured()) {
-      setEmailSending(true);
-      setEmailStatus(null);
-
-      const result = await sendResultsEmail(studentInfo, scores, answers, questions, practiceType);
-
-      setEmailSending(false);
-      if (result.success) {
-        setEmailStatus('success');
-        setTimeout(() => setEmailStatus(null), 3000);
-      } else {
-        openMailtoFallback(studentInfo, scores, answers, questions, practiceType);
-      }
-    } else {
-      openMailtoFallback(studentInfo, scores, answers, questions, practiceType);
-    }
-  };
-
   return (
     <div className="results-screen">
       <div className="results-container">
@@ -152,18 +125,7 @@ export default function PracticeResultsScreen({ scores, answers, questions, prac
           <button onClick={handleDownload} className="export-button download-button">
             📥 Download PDF
           </button>
-          <button
-            onClick={handleEmail}
-            className="export-button email-button"
-            disabled={emailSending}
-          >
-            {emailSending ? '⏳ Sending...' : '✉️ Email Results'}
-          </button>
         </div>
-
-        {emailStatus === 'success' && (
-          <p className="email-success">✓ Email sent successfully!</p>
-        )}
 
         <div className="score-breakdown">
           <h3>Module Scores</h3>
@@ -190,10 +152,7 @@ export default function PracticeResultsScreen({ scores, answers, questions, prac
 
         {/* Knowledge and Skills Section */}
         <div className="knowledge-skills-section">
-          <h2>
-            Knowledge and Skills
-            <span className="new-badge">New!</span>
-          </h2>
+          <h2>Knowledge and Skills</h2>
           <p className="section-description">
             View your performance across the content domains.
           </p>

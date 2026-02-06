@@ -3,14 +3,18 @@ import Timer from './Timer';
 import QuestionNav from './QuestionNav';
 import ReviewPage from './ReviewPage';
 import PassageRenderer from './PassageRenderer';
+import { renderMathText } from '../utils/latexRenderer';
 import './Module.css';
 
-// Helper function to format text with underlines, bold, etc.
+// Helper function to format text with underlines, bold, and LaTeX math
 function formatText(text) {
   if (!text) return '';
   let processed = text;
+  // First handle markdown formatting
   processed = processed.replace(/__([^_]+)__/g, '<u>$1</u>');
   processed = processed.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  // Then render LaTeX math expressions
+  processed = renderMathText(processed, true);
   return processed;
 }
 

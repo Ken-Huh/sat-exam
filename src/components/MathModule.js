@@ -4,15 +4,19 @@ import QuestionNav from './QuestionNav';
 import ReviewPage from './ReviewPage';
 import PassageRenderer from './PassageRenderer';
 import DesmosCalculator from './DesmosCalculator';
+import { renderMathText } from '../utils/latexRenderer';
 import './Module.css';
 import './DesmosCalculator.css';
 
-// Helper function to format text with underlines, bold, etc.
+// Helper function to format text with underlines, bold, and LaTeX math
 function formatText(text) {
   if (!text) return '';
   let processed = text;
+  // First handle markdown formatting
   processed = processed.replace(/__([^_]+)__/g, '<u>$1</u>');
   processed = processed.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  // Then render LaTeX math expressions
+  processed = renderMathText(processed, true);
   return processed;
 }
 
@@ -158,8 +162,30 @@ export default function MathModule({
       {/* Top Header */}
       <div className="module-header">
         <h1>Section 2, Module {moduleNumber}: Math</h1>
-        <div className="header-actions">
+        <div className="header-center">
           <Timer timeRemaining={timeRemaining} />
+        </div>
+        <div className="header-actions">
+          <button
+            className="header-calculator-btn"
+            onClick={() => setShowCalculator(true)}
+            title="Open Calculator"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="4" y="2" width="16" height="20" rx="2" />
+              <line x1="8" y1="6" x2="16" y2="6" />
+              <line x1="8" y1="10" x2="8" y2="10.01" />
+              <line x1="12" y1="10" x2="12" y2="10.01" />
+              <line x1="16" y1="10" x2="16" y2="10.01" />
+              <line x1="8" y1="14" x2="8" y2="14.01" />
+              <line x1="12" y1="14" x2="12" y2="14.01" />
+              <line x1="16" y1="14" x2="16" y2="14.01" />
+              <line x1="8" y1="18" x2="8" y2="18.01" />
+              <line x1="12" y1="18" x2="12" y2="18.01" />
+              <line x1="16" y1="18" x2="16" y2="18.01" />
+            </svg>
+            Calculator
+          </button>
         </div>
       </div>
 
@@ -348,16 +374,6 @@ export default function MathModule({
           </button>
         </div>
       </div>
-
-      {/* Calculator Button */}
-      <button
-        className="calculator-button"
-        onClick={() => setShowCalculator(true)}
-        title="Open Calculator"
-      >
-        🔢
-      </button>
-      <div className="calculator-tooltip">Calculator</div>
 
       {/* Desmos Calculator Modal */}
       {showCalculator && (

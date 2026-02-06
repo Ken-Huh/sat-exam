@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './ResultsScreen.css';
 import { submitToGoogleSheets, formatResultsForSheet } from '../utils/resultsExport';
 import { downloadResultsPDF } from '../utils/pdfGenerator';
-import { sendResultsEmail, isEmailConfigured, openMailtoFallback } from '../utils/emailService';
 
 // Domain categories
 const RW_DOMAINS = [
@@ -73,8 +72,6 @@ function getDifficultyLevel(score, total) {
 
 export default function ResultsScreen({ scores, answers, questions, studentInfo, onRestart }) {
   const [sheetSubmitted, setSheetSubmitted] = useState(false);
-  const [emailSending, setEmailSending] = useState(false);
-  const [emailStatus, setEmailStatus] = useState(null);
 
   const totalCorrect = (scores.rw1 || 0) + (scores.rw2 || 0) + (scores.math1 || 0) + (scores.math2 || 0);
   const totalQuestions = 54 + 44;
@@ -108,32 +105,6 @@ export default function ResultsScreen({ scores, answers, questions, studentInfo,
     downloadResultsPDF(studentInfo, scores, answers, questions, null);
   };
 
-  const handleEmail = async () => {
-    if (!studentInfo.email) {
-      alert('No email address provided. Please download the PDF instead.');
-      return;
-    }
-
-    if (isEmailConfigured()) {
-      setEmailSending(true);
-      setEmailStatus(null);
-
-      const result = await sendResultsEmail(studentInfo, scores, answers, questions, null);
-
-      setEmailSending(false);
-      if (result.success) {
-        setEmailStatus('success');
-        setTimeout(() => setEmailStatus(null), 3000);
-      } else {
-        // Fallback to mailto
-        openMailtoFallback(studentInfo, scores, answers, questions, null);
-      }
-    } else {
-      // Fallback to mailto
-      openMailtoFallback(studentInfo, scores, answers, questions, null);
-    }
-  };
-
   return (
     <div className="results-screen">
       <div className="results-container">
@@ -157,18 +128,7 @@ export default function ResultsScreen({ scores, answers, questions, studentInfo,
           <button onClick={handleDownload} className="export-button download-button">
             📥 Download PDF
           </button>
-          <button
-            onClick={handleEmail}
-            className="export-button email-button"
-            disabled={emailSending}
-          >
-            {emailSending ? '⏳ Sending...' : '✉️ Email Results'}
-          </button>
         </div>
-
-        {emailStatus === 'success' && (
-          <p className="email-success">✓ Email sent successfully!</p>
-        )}
 
         <div className="score-breakdown">
           <h3>Section Scores</h3>
@@ -214,10 +174,7 @@ export default function ResultsScreen({ scores, answers, questions, studentInfo,
 
         {/* Knowledge and Skills Section */}
         <div className="knowledge-skills-section">
-          <h2>
-            Knowledge and Skills
-            <span className="new-badge">New!</span>
-          </h2>
+          <h2>Knowledge and Skills</h2>
           <p className="section-description">
             View your performance across the 8 content domains measured on the SAT.
           </p>

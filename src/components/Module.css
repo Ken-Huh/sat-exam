@@ -13,6 +13,7 @@
   padding: 12px 24px;
   background-color: #1e3a5f;
   color: white;
+  position: relative;
 }
 
 .module-header h1 {
@@ -21,10 +22,42 @@
   margin: 0;
 }
 
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
+}
+
+/* Header Calculator Button */
+.header-calculator-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.header-calculator-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.header-calculator-btn svg {
+  stroke: white;
 }
 
 /* Main Split Layout */

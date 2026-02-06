@@ -1,44 +1,83 @@
 import React, { useState } from 'react';
 import './App.css';
 import TestSelection from './components/TestSelection';
+import StudentInfoModal from './components/StudentInfoModal';
 import ReadingWritingModule from './components/ReadingWritingModule';
 import MathModule from './components/MathModule';
 import BreakScreen from './components/BreakScreen';
 import ResultsScreen from './components/ResultsScreen';
 import PracticeResultsScreen from './components/PracticeResultsScreen';
-import { allTests, getTestQuestions, getRWPracticeQuestions, getMathPracticeQuestions } from './data/index';
+import { allTests, getAvailableTests, getTestQuestions, getRWPracticeQuestions, getMathPracticeQuestions } from './data/index';
 
 function App() {
   // Full test states
-  const [stage, setStage] = useState('select'); // select, rw1, rw2, break, math1, math2, results, practice_rw1, practice_rw2, practice_math1, practice_math2, practice_results
-  const [selectedTest, setSelectedTest] = useState(null); // eslint-disable-line no-unused-vars
+  const [stage, setStage] = useState('select');
+  const [selectedTest, setSelectedTest] = useState(null);
   const [answers, setAnswers] = useState({});
   const [scores, setScores] = useState({});
 
+  // Student info
+  const [studentInfo, setStudentInfo] = useState({ name: '', email: '' });
+  const [showStudentModal, setShowStudentModal] = useState(false);
+  const [pendingAction, setPendingAction] = useState(null); // { type: 'test'|'practice', id: string, practiceType?: string }
+
   // Practice mode states
-  const [practiceMode, setPracticeMode] = useState(null); // 'readingWriting' or 'math'
-  const [practiceSetId, setPracticeSetId] = useState(null);
+  const [practiceMode, setPracticeMode] = useState(null);
   const [practiceQuestions, setPracticeQuestions] = useState([]);
 
+  // Get test name for modal display
+  const getTestName = (action) => {
+    if (!action) return '';
+    if (action.type === 'test') {
+      const tests = getAvailableTests();
+      const test = tests.find(t => t.id === action.id);
+      return test ? test.name : 'Practice Test';
+    } else {
+      return action.practiceType === 'readingWriting'
+        ? 'Reading & Writing Practice'
+        : 'Math Practice';
+    }
+  };
+
   const handleSelectTest = (testId) => {
-    setSelectedTest(testId);
-    setPracticeMode(null);
-    setStage('rw1');
+    setPendingAction({ type: 'test', id: testId });
+    setShowStudentModal(true);
   };
 
   const handleSelectPractice = (setId, type) => {
-    setPracticeSetId(setId);
-    setPracticeMode(type);
+    setPendingAction({ type: 'practice', id: setId, practiceType: type });
+    setShowStudentModal(true);
+  };
 
-    if (type === 'readingWriting') {
-      const questions = getRWPracticeQuestions(setId);
-      setPracticeQuestions(questions);
-      setStage('practice_rw1');
-    } else if (type === 'math') {
-      const questions = getMathPracticeQuestions(setId);
-      setPracticeQuestions(questions);
-      setStage('practice_math1');
+  const handleStudentInfoSubmit = (info) => {
+    setStudentInfo(info);
+    setShowStudentModal(false);
+
+    if (pendingAction.type === 'test') {
+      setSelectedTest(pendingAction.id);
+      setPracticeMode(null);
+      setStage('rw1');
+    } else if (pendingAction.type === 'practice') {
+      const { id: setId, practiceType } = pendingAction;
+      setPracticeMode(practiceType);
+
+      if (practiceType === 'readingWriting') {
+        const questions = getRWPracticeQuestions(setId);
+        setPracticeQuestions(questions);
+        setStage('practice_rw1');
+      } else if (practiceType === 'math') {
+        const questions = getMathPracticeQuestions(setId);
+        setPracticeQuestions(questions);
+        setStage('practice_math1');
+      }
     }
+
+    setPendingAction(null);
+  };
+
+  const handleStudentInfoCancel = () => {
+    setShowStudentModal(false);
+    setPendingAction(null);
   };
 
   const handleModuleComplete = (moduleAnswers, moduleScore) => {
@@ -83,8 +122,8 @@ function App() {
     setAnswers({});
     setScores({});
     setPracticeMode(null);
-    setPracticeSetId(null);
     setPracticeQuestions([]);
+    setStudentInfo({ name: '', email: '' });
   };
 
   // Get questions based on selected test
@@ -101,6 +140,15 @@ function App() {
         <TestSelection
           onSelectTest={handleSelectTest}
           onSelectPractice={handleSelectPractice}
+        />
+      )}
+
+      {/* Student Info Modal */}
+      {showStudentModal && (
+        <StudentInfoModal
+          onSubmit={handleStudentInfoSubmit}
+          onCancel={handleStudentInfoCancel}
+          testType={getTestName(pendingAction)}
         />
       )}
 
@@ -143,6 +191,7 @@ function App() {
           scores={scores}
           answers={answers}
           questions={questions}
+          studentInfo={studentInfo}
           onRestart={handleRestartExam}
         />
       )}
@@ -194,6 +243,7 @@ function App() {
           answers={answers}
           questions={practiceQuestions}
           practiceType={practiceMode}
+          studentInfo={studentInfo}
           onRestart={handleRestartExam}
         />
       )}

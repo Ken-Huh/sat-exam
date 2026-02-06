@@ -16,9 +16,16 @@
 .results-container h1 {
   font-size: 32px;
   color: #333;
-  margin: 0 0 30px 0;
+  margin: 0 0 10px 0;
   text-align: center;
   font-weight: 400;
+}
+
+.student-greeting {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin: 0 0 24px 0;
 }
 
 /* Overall Score */
@@ -53,6 +60,55 @@
   font-size: 24px;
   margin: 0;
   opacity: 0.9;
+}
+
+/* Export Actions */
+.export-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.export-button {
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.export-button:hover {
+  transform: translateY(-1px);
+}
+
+.export-button:active {
+  transform: translateY(0);
+}
+
+.download-button {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.download-button:hover {
+  background-color: #c8e6c9;
+}
+
+.email-button {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #bbdefb;
+}
+
+.email-button:hover {
+  background-color: #bbdefb;
 }
 
 /* Score Breakdown */

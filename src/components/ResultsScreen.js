@@ -1,5 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ResultsScreen.css';
+import {
+  submitToGoogleSheets,
+  formatResultsForSheet,
+  downloadResultsAsText,
+  emailResults
+} from '../utils/resultsExport';
 
 // Domain categories
 const RW_DOMAINS = [
@@ -69,7 +75,9 @@ function getDifficultyLevel(score, total) {
   return 'Needs Practice';
 }
 
-export default function ResultsScreen({ scores, answers, questions, onRestart }) {
+export default function ResultsScreen({ scores, answers, questions, studentInfo, onRestart }) {
+  const [sheetSubmitted, setSheetSubmitted] = useState(false);
+
   const totalCorrect = (scores.rw1 || 0) + (scores.rw2 || 0) + (scores.math1 || 0) + (scores.math2 || 0);
   const totalQuestions = 54 + 44; // 27*2 RW + 22*2 Math
   const percentage = Math.round((totalCorrect / totalQuestions) * 100);
@@ -78,10 +86,35 @@ export default function ResultsScreen({ scores, answers, questions, onRestart })
   const rwDomainData = questions ? calculateDomainScores(questions, answers, 'rw') : { scores: {}, totals: {} };
   const mathDomainData = questions ? calculateDomainScores(questions, answers, 'math') : { scores: {}, totals: {} };
 
+  // Submit to Google Sheets on mount
+  useEffect(() => {
+    if (!sheetSubmitted && questions) {
+      const data = formatResultsForSheet(studentInfo, scores, answers, questions, null);
+      submitToGoogleSheets(data).then(result => {
+        if (result.success) {
+          console.log('Results submitted to Google Sheets');
+        }
+      });
+      setSheetSubmitted(true);
+    }
+  }, [sheetSubmitted, studentInfo, scores, answers, questions]);
+
+  const handleDownload = () => {
+    downloadResultsAsText(studentInfo, scores, answers, questions, null);
+  };
+
+  const handleEmail = () => {
+    emailResults(studentInfo, scores, answers, questions, null);
+  };
+
   return (
     <div className="results-screen">
       <div className="results-container">
         <h1>Practice Test Complete!</h1>
+
+        {studentInfo?.name && (
+          <p className="student-greeting">Great work, {studentInfo.name}!</p>
+        )}
 
         <div className="overall-score">
           <div className="score-circle">
@@ -89,6 +122,16 @@ export default function ResultsScreen({ scores, answers, questions, onRestart })
             <span className="score-label">of {totalQuestions}</span>
           </div>
           <p className="percentage">{percentage}% Correct</p>
+        </div>
+
+        {/* Export Actions */}
+        <div className="export-actions">
+          <button onClick={handleDownload} className="export-button download-button">
+            📥 Download Results
+          </button>
+          <button onClick={handleEmail} className="export-button email-button">
+            ✉️ Email Results
+          </button>
         </div>
 
         <div className="score-breakdown">

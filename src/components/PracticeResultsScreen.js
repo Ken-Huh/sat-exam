@@ -1,5 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ResultsScreen.css';
+import {
+  submitToGoogleSheets,
+  formatResultsForSheet,
+  downloadResultsAsText,
+  emailResults
+} from '../utils/resultsExport';
 
 // Domain categories
 const RW_DOMAINS = [
@@ -64,7 +70,9 @@ function getDifficultyLevel(score, total) {
   return 'Needs Practice';
 }
 
-export default function PracticeResultsScreen({ scores, answers, questions, practiceType, onRestart }) {
+export default function PracticeResultsScreen({ scores, answers, questions, practiceType, studentInfo, onRestart }) {
+  const [sheetSubmitted, setSheetSubmitted] = useState(false);
+
   const isRW = practiceType === 'readingWriting';
   const sectionName = isRW ? 'Reading & Writing' : 'Math';
   const domains = isRW ? RW_DOMAINS : MATH_DOMAINS;
@@ -81,11 +89,36 @@ export default function PracticeResultsScreen({ scores, answers, questions, prac
   // Calculate domain scores
   const domainData = calculateDomainScores(questions, answers);
 
+  // Submit to Google Sheets on mount
+  useEffect(() => {
+    if (!sheetSubmitted && questions) {
+      const data = formatResultsForSheet(studentInfo, scores, answers, questions, practiceType);
+      submitToGoogleSheets(data).then(result => {
+        if (result.success) {
+          console.log('Results submitted to Google Sheets');
+        }
+      });
+      setSheetSubmitted(true);
+    }
+  }, [sheetSubmitted, studentInfo, scores, answers, questions, practiceType]);
+
+  const handleDownload = () => {
+    downloadResultsAsText(studentInfo, scores, answers, questions, practiceType);
+  };
+
+  const handleEmail = () => {
+    emailResults(studentInfo, scores, answers, questions, practiceType);
+  };
+
   return (
     <div className="results-screen">
       <div className="results-container">
         <div className="practice-badge">Practice Session</div>
         <h1>{sectionName} Practice Complete!</h1>
+
+        {studentInfo?.name && (
+          <p className="student-greeting">Great work, {studentInfo.name}!</p>
+        )}
 
         <div className="overall-score">
           <div className="score-circle practice-score-circle">
@@ -93,6 +126,16 @@ export default function PracticeResultsScreen({ scores, answers, questions, prac
             <span className="score-label">of {totalQuestions}</span>
           </div>
           <p className="percentage">{percentage}% Correct</p>
+        </div>
+
+        {/* Export Actions */}
+        <div className="export-actions">
+          <button onClick={handleDownload} className="export-button download-button">
+            📥 Download Results
+          </button>
+          <button onClick={handleEmail} className="export-button email-button">
+            ✉️ Email Results
+          </button>
         </div>
 
         <div className="score-breakdown">

@@ -5,7 +5,7 @@
 // GOOGLE SHEETS INTEGRATION
 // ============================================
 
-// Replace this with your Google Apps Script Web App URL after setup
+// Your Google Apps Script Web App URL (already configured)
 const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzs8BhEiCmLFJj_YyVGbiCFX4n2nqzvfefyQRmQY-CIzCMdoODhbwRJxlj7-NNpXlDx/exec';
 
 /**
@@ -14,7 +14,7 @@ const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzs8BhEiCmLFJ
  */
 export async function submitToGoogleSheets(data) {
   // Don't submit if URL not configured
-  if (GOOGLE_SHEETS_URL === 'https://script.google.com/macros/s/AKfycbzs8BhEiCmLFJj_YyVGbiCFX4n2nqzvfefyQRmQY-CIzCMdoODhbwRJxlj7-NNpXlDx/exec') {
+  if (!GOOGLE_SHEETS_URL || GOOGLE_SHEETS_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
     console.log('Google Sheets URL not configured. Skipping submission.');
     console.log('Results data:', data);
     return { success: false, reason: 'not_configured' };

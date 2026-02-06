@@ -3,7 +3,9 @@ import Timer from './Timer';
 import QuestionNav from './QuestionNav';
 import ReviewPage from './ReviewPage';
 import PassageRenderer from './PassageRenderer';
+import DesmosCalculator from './DesmosCalculator';
 import './Module.css';
+import './DesmosCalculator.css';
 
 // Helper function to format text with underlines, bold, etc.
 function formatText(text) {
@@ -47,8 +49,17 @@ export default function MathModule({
   const [flaggedQuestions, setFlaggedQuestions] = useState(new Set());
   const [timeRemaining, setTimeRemaining] = useState(timeLimit * 60);
   const [showReview, setShowReview] = useState(false);
+  const [showCalculator, setShowCalculator] = useState(false);
 
   const currentQuestion = questions[currentQuestionIndex];
+
+  // Determine if current question needs split view (has visual content)
+  // Split view is shown when: hasVisual is true, or there's an image, or there's a passage
+  const needsSplitView = currentQuestion && (
+    currentQuestion.hasVisual === true ||
+    currentQuestion.image ||
+    currentQuestion.passage
+  );
 
   const calculateScore = useCallback(() => {
     let correct = 0;
@@ -152,93 +163,160 @@ export default function MathModule({
         </div>
       </div>
 
-      {/* Main Split Content */}
-      <div className="module-content">
-        {/* Left Panel - Figure/Graph if exists, or equation context */}
-        <div className="passage-panel">
-          {currentQuestion?.passage ? (
-            <PassageRenderer
-              passage={currentQuestion.passage}
-              image={currentQuestion.image}
-              imageDescription={currentQuestion.imageDescription}
-            />
-          ) : currentQuestion?.image ? (
-            <div className="question-figure">
-              <img
-                src={currentQuestion.image}
-                alt={currentQuestion.imageDescription || 'Question figure'}
-                className="question-image"
+      {/* Main Content - Split view for visual questions, single page otherwise */}
+      {needsSplitView ? (
+        // Split view layout (like R/W section)
+        <div className="module-content">
+          {/* Left Panel - Figure/Graph/Passage */}
+          <div className="passage-panel">
+            {currentQuestion?.passage ? (
+              <PassageRenderer
+                passage={currentQuestion.passage}
+                image={currentQuestion.image}
+                imageDescription={currentQuestion.imageDescription}
               />
-            </div>
-          ) : equations.length > 0 ? (
-            <div className="equation-display">
-              {equations.map((eq, idx) => (
-                <div key={idx} className="equation-line">
-                  <em>{eq}</em>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="no-passage">
-              <p>Calculator allowed for this section.</p>
-            </div>
-          )}
-        </div>
-
-        {/* Divider */}
-        <div className="panel-divider" />
-
-        {/* Right Panel - Question */}
-        <div className="question-panel">
-          {currentQuestion && (
-            <>
-              <div className="question-header-bar">
-                <span className="question-number-badge">{currentQuestionIndex + 1}</span>
-                <button
-                  className={`mark-review-button ${flaggedQuestions.has(currentQuestion.id) ? 'flagged' : ''}`}
-                  onClick={handleToggleFlag}
-                >
-                  <span className="flag-icon">▶</span>
-                  Mark for Review
-                </button>
+            ) : currentQuestion?.image ? (
+              <div className="question-figure">
+                <img
+                  src={currentQuestion.image}
+                  alt={currentQuestion.imageDescription || 'Question figure'}
+                  className="question-image"
+                />
               </div>
+            ) : equations.length > 0 ? (
+              <div className="equation-display">
+                {equations.map((eq, idx) => (
+                  <div key={idx} className="equation-line">
+                    <em>{eq}</em>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="no-passage">
+                <p>Reference material for this question.</p>
+              </div>
+            )}
+          </div>
 
-              <div
-                className="question-text"
-                dangerouslySetInnerHTML={{ __html: formatText(equations.length > 0 ? questionText : currentQuestion.text) }}
-              />
+          {/* Divider */}
+          <div className="panel-divider" />
 
-              {currentQuestion.type === 'multipleChoice' ? (
-                <div className="answer-choices">
-                  {currentQuestion.options.map(option => (
-                    <div
-                      key={option.letter}
-                      className={`choice-option ${moduleAnswers[currentQuestion.id] === option.letter ? 'selected' : ''}`}
-                      onClick={() => handleAnswer(currentQuestion.id, option.letter)}
-                    >
-                      <div className="choice-letter-circle">{option.letter}</div>
+          {/* Right Panel - Question */}
+          <div className="question-panel">
+            {currentQuestion && (
+              <>
+                <div className="question-header-bar">
+                  <span className="question-number-badge">{currentQuestionIndex + 1}</span>
+                  <button
+                    className={`mark-review-button ${flaggedQuestions.has(currentQuestion.id) ? 'flagged' : ''}`}
+                    onClick={handleToggleFlag}
+                  >
+                    <span className="flag-icon">▶</span>
+                    Mark for Review
+                  </button>
+                </div>
+
+                <div
+                  className="question-text"
+                  dangerouslySetInnerHTML={{ __html: formatText(equations.length > 0 ? questionText : currentQuestion.text) }}
+                />
+
+                {currentQuestion.type === 'multipleChoice' ? (
+                  <div className="answer-choices">
+                    {currentQuestion.options.map(option => (
                       <div
-                        className="choice-content"
-                        dangerouslySetInnerHTML={{ __html: formatText(option.text) }}
-                      />
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="fill-in-answer">
-                  <input
-                    type="text"
-                    className="fill-in-input"
-                    value={moduleAnswers[currentQuestion.id] || ''}
-                    onChange={(e) => handleAnswer(currentQuestion.id, e.target.value)}
-                    placeholder="Enter your answer"
-                  />
-                </div>
-              )}
-            </>
-          )}
+                        key={option.letter}
+                        className={`choice-option ${moduleAnswers[currentQuestion.id] === option.letter ? 'selected' : ''}`}
+                        onClick={() => handleAnswer(currentQuestion.id, option.letter)}
+                      >
+                        <div className="choice-letter-circle">{option.letter}</div>
+                        <div
+                          className="choice-content"
+                          dangerouslySetInnerHTML={{ __html: formatText(option.text) }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="fill-in-answer">
+                    <input
+                      type="text"
+                      className="fill-in-input"
+                      value={moduleAnswers[currentQuestion.id] || ''}
+                      onChange={(e) => handleAnswer(currentQuestion.id, e.target.value)}
+                      placeholder="Enter your answer"
+                    />
+                  </div>
+                )}
+              </>
+            )}
+          </div>
         </div>
-      </div>
+      ) : (
+        // Single page layout (no visual content)
+        <div className="module-content single-page">
+          <div className="question-panel full-width">
+            {currentQuestion && (
+              <>
+                <div className="question-header-bar">
+                  <span className="question-number-badge">{currentQuestionIndex + 1}</span>
+                  <button
+                    className={`mark-review-button ${flaggedQuestions.has(currentQuestion.id) ? 'flagged' : ''}`}
+                    onClick={handleToggleFlag}
+                  >
+                    <span className="flag-icon">▶</span>
+                    Mark for Review
+                  </button>
+                </div>
+
+                {/* Show equations if present */}
+                {equations.length > 0 && (
+                  <div className="inline-equation-display">
+                    {equations.map((eq, idx) => (
+                      <div key={idx} className="equation-line">
+                        <em>{eq}</em>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                <div
+                  className="question-text"
+                  dangerouslySetInnerHTML={{ __html: formatText(equations.length > 0 ? questionText : currentQuestion.text) }}
+                />
+
+                {currentQuestion.type === 'multipleChoice' ? (
+                  <div className="answer-choices">
+                    {currentQuestion.options.map(option => (
+                      <div
+                        key={option.letter}
+                        className={`choice-option ${moduleAnswers[currentQuestion.id] === option.letter ? 'selected' : ''}`}
+                        onClick={() => handleAnswer(currentQuestion.id, option.letter)}
+                      >
+                        <div className="choice-letter-circle">{option.letter}</div>
+                        <div
+                          className="choice-content"
+                          dangerouslySetInnerHTML={{ __html: formatText(option.text) }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="fill-in-answer">
+                    <input
+                      type="text"
+                      className="fill-in-input"
+                      value={moduleAnswers[currentQuestion.id] || ''}
+                      onChange={(e) => handleAnswer(currentQuestion.id, e.target.value)}
+                      placeholder="Enter your answer"
+                    />
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Bottom Footer */}
       <div className="module-footer">
@@ -270,6 +348,21 @@ export default function MathModule({
           </button>
         </div>
       </div>
+
+      {/* Calculator Button */}
+      <button
+        className="calculator-button"
+        onClick={() => setShowCalculator(true)}
+        title="Open Calculator"
+      >
+        🔢
+      </button>
+      <div className="calculator-tooltip">Calculator</div>
+
+      {/* Desmos Calculator Modal */}
+      {showCalculator && (
+        <DesmosCalculator onClose={() => setShowCalculator(false)} />
+      )}
     </div>
   );
 }

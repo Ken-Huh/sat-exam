@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './ResultsScreen.css';
-import {
-  submitToGoogleSheets,
-  formatResultsForSheet,
-  downloadResultsAsText,
-  emailResults
-} from '../utils/resultsExport';
+import { submitToGoogleSheets, formatResultsForSheet } from '../utils/resultsExport';
+import { downloadResultsPDF } from '../utils/pdfGenerator';
+import { sendResultsEmail, isEmailConfigured, openMailtoFallback } from '../utils/emailService';
 
 // Domain categories
 const RW_DOMAINS = [
@@ -50,7 +47,6 @@ function calculateDomainScores(questions, answers, section) {
 
 // Skill bar component
 function SkillBar({ score, total, maxBars = 7 }) {
-  // Scale score to 0-7 range
   const scaledScore = total > 0 ? Math.round((score / total) * maxBars) : 0;
 
   return (
@@ -77,10 +73,19 @@ function getDifficultyLevel(score, total) {
 
 export default function ResultsScreen({ scores, answers, questions, studentInfo, onRestart }) {
   const [sheetSubmitted, setSheetSubmitted] = useState(false);
+  const [emailSending, setEmailSending] = useState(false);
+  const [emailStatus, setEmailStatus] = useState(null);
 
   const totalCorrect = (scores.rw1 || 0) + (scores.rw2 || 0) + (scores.math1 || 0) + (scores.math2 || 0);
-  const totalQuestions = 54 + 44; // 27*2 RW + 22*2 Math
+  const totalQuestions = 54 + 44;
   const percentage = Math.round((totalCorrect / totalQuestions) * 100);
+
+  // Calculate estimated SAT scores
+  const rwTotal = (scores.rw1 || 0) + (scores.rw2 || 0);
+  const mathTotal = (scores.math1 || 0) + (scores.math2 || 0);
+  const estimatedRWScore = Math.round(200 + (rwTotal / 54) * 600);
+  const estimatedMathScore = Math.round(200 + (mathTotal / 44) * 600);
+  const estimatedTotalScore = estimatedRWScore + estimatedMathScore;
 
   // Calculate domain scores
   const rwDomainData = questions ? calculateDomainScores(questions, answers, 'rw') : { scores: {}, totals: {} };
@@ -100,11 +105,33 @@ export default function ResultsScreen({ scores, answers, questions, studentInfo,
   }, [sheetSubmitted, studentInfo, scores, answers, questions]);
 
   const handleDownload = () => {
-    downloadResultsAsText(studentInfo, scores, answers, questions, null);
+    downloadResultsPDF(studentInfo, scores, answers, questions, null);
   };
 
-  const handleEmail = () => {
-    emailResults(studentInfo, scores, answers, questions, null);
+  const handleEmail = async () => {
+    if (!studentInfo.email) {
+      alert('No email address provided. Please download the PDF instead.');
+      return;
+    }
+
+    if (isEmailConfigured()) {
+      setEmailSending(true);
+      setEmailStatus(null);
+
+      const result = await sendResultsEmail(studentInfo, scores, answers, questions, null);
+
+      setEmailSending(false);
+      if (result.success) {
+        setEmailStatus('success');
+        setTimeout(() => setEmailStatus(null), 3000);
+      } else {
+        // Fallback to mailto
+        openMailtoFallback(studentInfo, scores, answers, questions, null);
+      }
+    } else {
+      // Fallback to mailto
+      openMailtoFallback(studentInfo, scores, answers, questions, null);
+    }
   };
 
   return (
@@ -122,17 +149,26 @@ export default function ResultsScreen({ scores, answers, questions, studentInfo,
             <span className="score-label">of {totalQuestions}</span>
           </div>
           <p className="percentage">{percentage}% Correct</p>
+          <p className="estimated-sat">Estimated SAT Score: {estimatedTotalScore}</p>
         </div>
 
         {/* Export Actions */}
         <div className="export-actions">
           <button onClick={handleDownload} className="export-button download-button">
-            📥 Download Results
+            📥 Download PDF
           </button>
-          <button onClick={handleEmail} className="export-button email-button">
-            ✉️ Email Results
+          <button
+            onClick={handleEmail}
+            className="export-button email-button"
+            disabled={emailSending}
+          >
+            {emailSending ? '⏳ Sending...' : '✉️ Email Results'}
           </button>
         </div>
+
+        {emailStatus === 'success' && (
+          <p className="email-success">✓ Email sent successfully!</p>
+        )}
 
         <div className="score-breakdown">
           <h3>Section Scores</h3>
@@ -140,6 +176,7 @@ export default function ResultsScreen({ scores, answers, questions, studentInfo,
           <div className="section-scores">
             <div className="section-group">
               <h4>Reading & Writing</h4>
+              <div className="estimated-section-score">Est. Score: {estimatedRWScore}</div>
               <div className="module-scores">
                 <div className="score-box">
                   <span className="module-label">Module 1</span>
@@ -151,12 +188,13 @@ export default function ResultsScreen({ scores, answers, questions, studentInfo,
                 </div>
               </div>
               <div className="section-total">
-                Total: {(scores.rw1 || 0) + (scores.rw2 || 0)}/54
+                Total: {rwTotal}/54
               </div>
             </div>
 
             <div className="section-group">
               <h4>Math</h4>
+              <div className="estimated-section-score">Est. Score: {estimatedMathScore}</div>
               <div className="module-scores">
                 <div className="score-box">
                   <span className="module-label">Module 1</span>
@@ -168,7 +206,7 @@ export default function ResultsScreen({ scores, answers, questions, studentInfo,
                 </div>
               </div>
               <div className="section-total">
-                Total: {(scores.math1 || 0) + (scores.math2 || 0)}/44
+                Total: {mathTotal}/44
               </div>
             </div>
           </div>

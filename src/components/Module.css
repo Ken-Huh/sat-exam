@@ -336,6 +336,58 @@
   border-radius: 4px;
 }
 
+/* Single Page Layout (for math questions without visuals) */
+.module-content.single-page {
+  justify-content: center;
+}
+
+.module-content.single-page .question-panel.full-width {
+  flex: none;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 60px;
+}
+
+/* Inline equation display for single page layout */
+.inline-equation-display {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px 30px;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.inline-equation-display .equation-line {
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 8px 0;
+  color: #333;
+}
+
+.inline-equation-display .equation-line em {
+  font-style: italic;
+}
+
+/* Question figure styling */
+.question-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  min-height: 300px;
+}
+
+.question-figure .question-image {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .module-content {
@@ -351,5 +403,10 @@
 
   .panel-divider {
     display: none;
+  }
+
+  .module-content.single-page .question-panel.full-width {
+    padding: 30px 20px;
+    max-width: 100%;
   }
 }

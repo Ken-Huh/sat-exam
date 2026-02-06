@@ -4,6 +4,8 @@
   "private": true,
   "CI": false,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "jspdf": "^4.1.0",
     "katex": "^0.16.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

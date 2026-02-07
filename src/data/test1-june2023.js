@@ -30,8 +30,8 @@ export const test1Questions = {
       domain: 'craft_structure', // Words in context
       passage: `The following text is from Mark Twain's 1876 novel The Adventures of Tom Sawyer. Tom, a child, has been told by his aunt to paint their house's fence.
 
-Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush. He surveyed the fence, and all gladness left him and a deep melancholy settled down upon his spirit. Thirty yards of board fence nine feet high.`,
-      text: 'As used in the text, what does the word __"surveyed"__ most nearly mean?',
+Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush. He __surveyed__ the fence, and all gladness left him and a deep melancholy settled down upon his spirit. Thirty yards of board fence nine feet high.`,
+      text: 'As used in the text, what does the word "surveyed" most nearly mean?',
       type: 'multipleChoice',
       options: [
         { letter: 'A', text: 'Looked at' },
@@ -80,7 +80,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
     {
       id: 4,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Although our knowledge of the Pliocene epoch and the lives of the hominids during this time was once ______, recent analyses of fossils like that of the individual known as KNM-KP 271, discovered in Kenya in 1963, have sharpened our picture of what a day in the life of KNM-KP 271 may have looked like.`,
       text: 'Which choice completes the text with the most logical and precise word or phrase?',
       type: 'multipleChoice',
@@ -97,7 +97,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
     {
       id: 5,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In what is now Washington state, the Tulalip Cultural Center. Relying on traditional knowledge to guide the design of exhibits, this institution present Tulalip history and culture to the tribe's citizens. The Citizen Potawatomi Nation, a tribe in Oklahoma, employs a similar strategy in its own cultural center. Both centers contrast with museums that aren't Indigenous-led; when displaying Indigenous artifacts, such museums tend to anticipate mainly non-Indigenous audiences and rely on Euro-centric strategies for designing exhibits.`,
       text: 'Which best describes the overall structure of the text?',
       type: 'multipleChoice',
@@ -114,7 +114,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
     {
       id: 6,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Luang Prabang has high pedestrian traffic, but simply replicating a feature of Luang Prabang associated with walkability—e.g., its human-scaled architecture—may be insufficient to induce increased walking in other cities. As urbanist Mariela Alfonzo argues, our understanding of individuals' decision-making about whether to walk is insufficiently robust: some studies emphasize the role of local norms, others the role of demographic characteristics, and so on, but walking decisions are made in complex context in which multiple conditions and needs inform individuals' choices.`,
       text: 'Which choice best states the main purpose of the text?',
       type: 'multipleChoice',
@@ -131,7 +131,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
     {
       id: 7,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In Hoocąk, an Indigenous language from the Mid-Atlantic region of what is now the United States, okayeke means "bad," whereas ati okayeye'tesel means "bad houses." This phenomenon, in which an element of a root word is repeated, sometimes with modification, within another word that is related to the root word, is called reduplication. In this case, the element "ye" in okayake gets repeated in ati okayeye'tesel. There are many examples of this type of reduplication in Hoocąk.`,
       text: 'Which choice best describes the function of the underlined part?',
       type: 'multipleChoice',
@@ -148,7 +148,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
     {
       id: 8,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Researcher César A. Hidalgo, Elisa Castañer, and Andres Sevtsuk created a computer model to predict the mix of businesses and places of interest found in a given neighborhood. The team used data from the Google Places API service to help identify furniture stores, florists, and other businesses and map their locations. This approach has some limits—data from Places API tend to be restricted to places that the customer facing—but the data set nonetheless provides an extremely reliable source to study colocation patterns of neighborhood amenities.`,
       text: 'According to the text, what is one potential drawback of Hidalgo and colleagues\' method?',
       type: 'multipleChoice',
@@ -182,7 +182,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
     {
       id: 10,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Poems is an 1895 collection of poetry by Frances E.W. Harper. In one of Harper's poems, the speaker criticizes activists who champion humanitarian causes in other countries while overlooking local concerns, saying ______`,
       text: 'Which quotation from Poems most effectively illustrates the claim?',
       type: 'multipleChoice',
@@ -199,7 +199,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
     {
       id: 11,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Impact of Four Key Industries on Oklahoma Economy in 2017
 
 | Industry | Approximate total contribution by industry | Number of people employed by industry | Average contribution per employee by industry |
@@ -225,7 +225,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 12,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `To understand the extent of deforestation in the Chorotega Region of Costa Rica, Juan Pablo Arroyo-Mora and colleagues used aerial photography and remote sensing data to track changes in the forest cover area across different land use capability class (categories that indicate possible uses of forest land.) Due to the Chorotega region's accessibility, various types of forest areas were converted to cattle practices as rising international meat prices drove a cattle ranching boom in the 1960s and 1970s. By the mid 1980s, however, increased public awareness and environmental reforms, along with a decline in meat prices, engendered a natural forest regrowth, as evident by the ______`,
       text: 'Which choice most effectively uses data from the graph to complete the assertion?',
       image: '/images/questions/rw_m1_q12_forest.png',
@@ -244,7 +244,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 13,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Veronice L. Bura, Akito Y. Kawahara, and Jayne E. Yack investigated the evolution and function of sound production in silk moth and hawk moth caterpillars. They found that during harmless simulated attacks on isolated caterpillars, 33% of the tested species produced sound, which ranged from clicks in Manduca pellenia to whistles in Rhodinia fugax. Although some insects use sound to communicate with members of the same species, the researchers claim that the caterpillar sounds recorded in their study are directed primarily at predators.`,
       text: 'Which finding, if true, would most directly support Bura and colleagues\' claim?',
       type: 'multipleChoice',
@@ -261,7 +261,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 14,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `The British Bronze Age began when sophisticated techniques for making tools, weapons, and other objects from metal were introduced to the British Isles around 2500 BCE, and it lasted until around 700 BCE. In Britain during this time, collections of valuable metal objects (called hoards) were sometimes buried for safekeeping. Some stayed buried for many centuries, such as the Parc-y-Meirch hoard, which was unearthed around 1868, and the Fittleworth hoard, discovered in 1995. And although the period is known as the Bronze Age, some hoards, like the Fittleworth hoard, contained decorative objects made of gold; gold was much rarer than bronze, however, and thus it is not surprising that ______`,
       text: 'Which choice most logically completes the text?',
       type: 'multipleChoice',
@@ -278,7 +278,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 15,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `The state of North Dakota has designated the spiny water flea as an invasive species that could outcompete some of the state's native species. Many other states draw similar distinctions between invasive and native species. But researchers Alejandro Camacho and Jason McLachlan have pointed out that Earth's climate is changing in ways that challenge such designations. Climate changes may cause animals to leave their current ranges and establish new ones. Climate changes may also create good habitats in areas where a species couldn't live previously. These observations suggest that ______`,
       text: 'Which choice most logically completes the text?',
       type: 'multipleChoice',
@@ -295,7 +295,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 16,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Water boils at around 212°F at sea level, but in Highland, Utah (elevation: 4,977 feet above sea level), it boils at around 202°F. Food writer J. Kenji López-Alt, who explores the science behind cooking, ______ that lower boiling points at higher elevations "can wreak all sorts of havoc on recipes."`,
       text: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
       type: 'multipleChoice',
@@ -312,7 +312,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 17,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `It is widely known that New York City's Museum of Modern Art (MoMA) ______ a vast collection of oil paintings, including Franz Marc's The World Cow and Katherine S. Dreier's Abstract Portrait of Marcel Duchamp.`,
       text: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
       type: 'multipleChoice',
@@ -329,7 +329,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 18,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Lily Everett and Mary Foote were among the 300 artists who exhibited at the 1913 Armory Show, a groundbreaking New York City art exhibition that introduced modernism to American audience. Marcel Duchamp's abstract cubist aesthetic received the most skepticism form critics, as ______ represented a radical departure from the more realistic painting style that was popular at the time.`,
       text: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
       type: 'multipleChoice',
@@ -346,7 +346,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 19,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In Moscow, Russia, the average temperature is 62.6 degrees Fahrenheit in June, ______ to 66.6 degree in July, and then dips slightly to 62.6 degrees in August.`,
       text: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
       type: 'multipleChoice',
@@ -363,7 +363,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 20,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `After finding information about Major Robert Odell Owens, who represented New York in the United States House of Representatives, the student discovered biographical sketches of two other Black Americans who served in ______ Josiah Thomas Walls of Florida and Thomas Ezekiel Miller of South Carolina.`,
       text: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
       type: 'multipleChoice',
@@ -380,7 +380,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 21,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `The first documented use of the English word "depart" is attributed to poet Geoffrey Chaucer's 1386 work "The Parson's Tale." However, Chaucer didn't write in Modern English; ______ he wrote it what we now call Middle English, which was commonly used during the period.`,
       text: 'Which choice completes the text with the most logical transition?',
       type: 'multipleChoice',
@@ -397,7 +397,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 22,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In his essay "Of Coaches," French philosopher Michel de Montaigne explores a relatively light subject, but he expresses heavier fare in "Of the Inconvenience of Greatness." Regardless of subject matter, Montaigne works to question his own perceptive throughout his essay. ______ his personal motto was "What do I know?"`,
       text: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
       type: 'multipleChoice',
@@ -414,7 +414,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 23,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Blanche K. Bruce was an outspoken abolitionist whose Washington, DC, home was a stop on the underground railroad (the network of people and places that some enslaved people used to escape to freedom). It was relatively rare for supporters of the railroad to be secretive about their antislavery views. ______ they were vocal abolitionist like Bruce.`,
       text: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
       type: 'multipleChoice',
@@ -431,7 +431,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 24,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
 • The Archipelago-Madrean Mountains are located in northwestern Mexico.
 • They cover an area of 1,038 square miles (mi²)
@@ -454,7 +454,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 25,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
 • The Future of Nostalgia is a scholarly book by literary theorist Svetlana Boym.
 • The book provides a multifaced exploration of the concept of nostalgia.
@@ -476,7 +476,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 26,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
 • Hina Hanta is an online archive curated by the Choctaw Nation of Oklahoma.
 • Hina Hanta means "bright path" in Choctaw.
@@ -498,7 +498,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 27,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
 • A currency is a money system.
 • Sometimes, countries adopt a new currency to replace an older one.
@@ -524,7 +524,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
     {
       id: 28,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `The following text is adapted from John Matheus's 1926 short story, "Mr. Bradford Teaches Sunday School." Mr. Bradford is driving through the countryside in Florida.
 
 The moss in the towering water oaks had become enlivened with a verdant sheen of silver and hung like festoons of carnival or like funeral decorations for the mourning of the dead. The pine cones were pungent, the pine green was resplendent. The bald cypresses spread themselves along the water courses while the willows wept as they always did.
@@ -545,7 +545,7 @@ Mr. Bradford was conscious of this gorgeous display of nature.`,
     {
       id: 29,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Béláné Mocsáry, who traveled solo to four continents in the early 1900s, undoubtedly accomplished much, but her place in our historical memory is perhaps more ______ than that of a noteworthy "first" such as Adeline and Augusta Van Buren, who were the first women to ride solo motorcycles across the continental United States, a deed for which they will always be remembered.`,
       text: 'Which choice completes the text with most logical and precise word or phrase?',
       type: 'multipleChoice',
@@ -562,7 +562,7 @@ Mr. Bradford was conscious of this gorgeous display of nature.`,
     {
       id: 30,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `A number of recording artists ______ distinctions between Indigenous music and other musical style. For example, Inuit singer-songwriter Tanya Tagaq incorporated Inuit throat singing into electronic music on her album Tongue, and Swinomist/Iñupiaq musician Black Belt Eagle Scout combined powwow-style melodies with rock on her album At the Party with My Brown Friends.`,
       text: 'Which choice completes the text with the most logical and precise word or phrase?',
       type: 'multipleChoice',
@@ -579,7 +579,7 @@ Mr. Bradford was conscious of this gorgeous display of nature.`,
     {
       id: 31,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Text corpora such as the British National Corpus are enormous collections of electronically stored texts that can be used for empirical testing of hypotheses regarding how ______ a word is in spoken and written English. For instance, one might have a guess about the incidence of the word "world," but only an analysis of a corpus can prove that "world" is the eighth most commonly used noun.`,
       text: 'Which choice completes the text with the most logical and precise word or phrase?',
       type: 'multipleChoice',
@@ -596,7 +596,7 @@ Mr. Bradford was conscious of this gorgeous display of nature.`,
     {
       id: 32,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `______ though it seemed to many mathematicians, the honeycomb conjecture, posited in the first century BCE, eventually yielded to the efforts of Thomas C. Hales, who presented a proof of it in 1999.`,
       text: 'Which choice completes the text with the most logical and precise word or phrase?',
       type: 'multipleChoice',
@@ -613,7 +613,7 @@ Mr. Bradford was conscious of this gorgeous display of nature.`,
     {
       id: 33,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Mexican textile artist Victoria Villasana weave stories of triumph, using her unique method of applying colorful yarn to photographs of people. In some works, Villasana focuses on celebrating cultural icons who are people of color, as she does in her depiction of activist Ryu Gwansun. However, in other works, Villasana honors ordinary people, as she does in her captivating portrayal of young girl sitting on a sidewalk. Villasana sees both of these approaches as ways of depicting the power and interconnectedness of all people.`,
       text: 'Which choice best states the function of the underlined portion in the text as a whole?',
       type: 'multipleChoice',
@@ -630,7 +630,7 @@ Mr. Bradford was conscious of this gorgeous display of nature.`,
     {
       id: 34,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Text 1
 For decades, ornithologists assumed that if they saw a singing Bell's vireo—a bird species found in temperate North American—they must be observing a male. That's because birdsong has long been considered a male trait; researchers have argued that males to attract mates and claim territory.
 
@@ -651,7 +651,7 @@ Recent evidence shows that a female Bell's vireo is as capable of song as a male
     {
       id: 35,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Like all species of baleen whales, the Antarctic minke whale feeds on tiny creatures known as krill by filtering water through bristlelike keratin structures called baleen plates. In this way, baleen whales can eat up to 30 percent of their total mass per day. And while no one would call the Antarctic minke whale small—it can have a mass as high as 10,000 kg—it is one of the smaller whales and is much smaller than the bowhead whale, which can weight a whopping 66,000 kg and consume as much as 19,800 kg of krill per day.`,
       text: 'Based on the text, what can most reasonably be concluded about krill consumption among Antarctic minke and bowhead whale?',
       type: 'multipleChoice',
@@ -668,7 +668,7 @@ Recent evidence shows that a female Bell's vireo is as capable of song as a male
     {
       id: 36,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Meredith E. Protas and colleagues have explored how convergent evolution—a phenomenon that occurs when the same trait evolves independently in two reproductively separate lineages—can result from a genetic mechanism shared by both lineages. Meanwhile, Bas J. Zwaan and colleagues have investigated how convergence occurs through different genetic mechanisms, but the relative prevalence of convergence through shared and different genetic processes is still poorly understood. This motivated biologist Delbert A. Green II and Cassandra G. Extavour to evaluate both types of convergence in a single study for their 2012 paper.`,
       text: 'Which choice best states the main idea of the text?',
       type: 'multipleChoice',
@@ -685,7 +685,7 @@ Recent evidence shows that a female Bell's vireo is as capable of song as a male
     {
       id: 37,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `US Hydroelectric Power Plants, 2019
 
 | Plant | State | Mode | Generators in plant | Average power generation (MWh/yr) | Water source |
@@ -711,7 +711,7 @@ A run-of-river hydroelectric power plant, as the name suggests, uses the natural
     {
       id: 38,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Days per Winter That Lakes Have Surface Ice
 
 | Lake | Latitude (degrees) | 1980-81 | 1985-86 | 1990-91 | 1995-96 | 2000-01 | 2005-06 |
@@ -737,7 +737,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 39,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Some fuel additives contain cerium oxide nanoparticles (CeO₂-NPs), which can leach into waterways and soils via wastewater. In a 2015 study, Maël Garaud and colleagues found that CeO₂-NPs can accumulate in the bodies of zebra mussels (Dreissena polymorpha). While bioaccumulation of manufactured nanoparticles may be inherently worrisome, it has been hypothesized that CeO₂-NP bioaccumulation in invertebrate like D. polymorpha could serve a valuable proxy role, observing the need for manufacturers to conduct costly and intrusive sampling of vertebrate species—such as rainbow trout (Oncorhynchus mykiss), commonly used in regulatory compliance testing—for manipulative bioaccumulation, as environmental protection laws currently require.`,
       text: 'Which finding, if true, would most directly weaken the hypothesis presented in the text?',
       type: 'multipleChoice',
@@ -754,7 +754,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 40,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Callie W Babbitt, Hema Madaka, and colleagues assembled a database of materials used in consumer electronics by studying products in the lab and by gathering data from similar product studies. The team gave each of these studies a rating for level of traceability (with a higher rating for clearer description of procedures) and for category consistency (with a higher rating for using materials categories more closely aligned with the categories in the team's database). Based on these ratings, a second research team concluded that the methodology was better explained in a study by Jaco Huisman and colleagues than it was in a study by Oguchi Masahiro and colleagues.`,
       text: 'Which finding, if true, would most directly challenges the second research team\'s conclusion?',
       type: 'multipleChoice',
@@ -771,7 +771,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 41,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Arthurian legends (tales related to the character of King Arthur) derive from many sources, such as Preiddeu Annwfn, composed around 900, and Perceval, the Story of the Grail from around 1181. Sir Thomas Malory's 15th-centruy text Le Morte d'Arthur was an attempt to compile these stories into a coherent narrative. Many of Malory's sources derive from Geoffrey of Monmouth's History of the Kings of Britain, written in the 1130s. While neither History nor any works that predate it mention Arthur's famous Round Table at which his knights assembled, Le Morte d'Arthur does, suggesting that ______`,
       text: 'Which choice most logically completes the text?',
       type: 'multipleChoice',
@@ -788,7 +788,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 42,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In June of 1987, South Korean liberalized its stock market, meaning that it began allowing foreign individuals and businesses to invest money in South Korean companies. This was part of a wave of stock markets liberalization from the mid-1980s through the mid-1990s—Brazil in 1988, Venezuela in 1990, and so on. In an analysis of economic data from 1976 to 1993, Ross Levine and Sara Zervos found that liberalization did not lead to enduring increases in investment in companies based in countries that liberalized. Peter Blair Henry, however, found that, on average, investment in companies in liberalized countries increased significantly in the three years following liberation. Taken together, these results suggest that ______`,
       text: 'Which choice most logically completes the text?',
       type: 'multipleChoice',
@@ -805,7 +805,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 43,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Each year, the Nobel Prize in Literature is given to an author who has, in the words of its founder Alfre Nobel, "produced the most outstanding work in an idealistic ______ in 1952, for instance, judges recognized François Mauriac "for the deep spiritual insight and the artistic intensity with which he has in his novels penetrated the drama of human life."`,
       text: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
       type: 'multipleChoice',
@@ -822,7 +822,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 44,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In Los Angeles County, California, bicycle paths such as the San Gabriel River bicycle path—which is 28 miles long—have become an increasingly popular means of travel. Moreover, lawyer and cycling ______ has identified several features of the Los Angeles landscape, like its temperate climate and mostly flat roads, that make the city naturally bike-friendly.`,
       text: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
       type: 'multipleChoice',
@@ -839,7 +839,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 45,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Yerevan is the capital city of Armenia and, ______ roughly one million people, home to an impressive 36 percent of Armenia's total population.`,
       text: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
       type: 'multipleChoice',
@@ -856,7 +856,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 46,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `It was the kind of challenge that would set any art curator's mind into ______ that elusive thread that could link artists as disparate as American abstract painter Anne Ryan, Romanian impressionist painter Micaela Eleutheriade, and Flemish mannerist painter Anthony van Dyck.`,
       text: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
       type: 'multipleChoice',
@@ -873,7 +873,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 47,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In 2020, internationally renowned Slovak photographer Mária Švarbová exhibited her work at the Contessa Gallery and the Art Angle Gallery in the United States and ______ utilizing vivid pastel colors, overexposed tones, and mirrorlike symmetry, Švarbová's photographs evoke a Socialist-era aesthetic that she describes as "minimalistic but also futuristic."`,
       text: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
       type: 'multipleChoice',
@@ -890,7 +890,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 48,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Though he's performed on many respected albums, including Trypnotyx by Victor Wooten, drummer Dennis Chambers may be best known for his time as house drummer for the hip-hop label Sugar Hill Records. He did not play drums on the label's classic song "Rapper's ______ he joined the label after the song's release.`,
       text: 'Which choice completes the text with the most logical transition?',
       type: 'multipleChoice',
@@ -907,7 +907,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 49,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `With their distinctive cone shapes and steeply sloping sides, the volcanoes Maungarei (New Zealand) and Harunasan (Japan) may look similar from afar. Tehnuka Ilanko and other volcanologists, ______ can tell by how each was formed that Maungarei is a cinder cone volcano, while Harunasan is a composite volcano.`,
       text: 'Which choice completes the text with the most logical transition?',
       type: 'multipleChoice',
@@ -924,7 +924,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 50,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Space scientist Maggie Aderin-Pocock is excited about the potential of the new James Webb Space Telescope (JWST). Unlike its predecessor the Hubble Telescope, the JWST is optimized for infrared wavelength. When light from distant galaxies is infrared, ______ the JWST can provide sharp images that reveal much more information about those galaxies than the Hubble could.`,
       text: 'Which choice completes the text with the most logical transition?',
       type: 'multipleChoice',
@@ -941,7 +941,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 51,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
 • Antonio Stradivari (1644-1737) made about 1,000 violins in his lifetime.
 • Musicians prize his Stradivarius violins for their famed sound quality.
@@ -962,7 +962,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 52,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
 • Grimanesa Amoros is a Peruvian American artist.
 • She is well known for her large-scale LED light sculptures.
@@ -984,7 +984,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 53,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
 • Calida Garcia Rawles is an African American painter.
 • She is known for her large-scale, hyperrealistic paintings depicting African American figures in water.
@@ -1007,7 +1007,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 54,
       module: 2,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
 • Ynés Mexía was a Mexican American botanist.
 • Between 1917 and 1938, she collected over 150,000 botanical samples throughout the Americas.
@@ -1155,7 +1155,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
       domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
       text: 'Line n is shown in the xy-plane. Line k (not shown) is perpendicular to line n. What is the slope of line k?',
       image: '/images/questions/math_m1_q8_line.png',
-      imageDescription: 'A coordinate plane showing line n passing through approximately (-2, 2) and (0, 3), with a positive slope of about 1/5 or 0.2. The line continues in both directions.',
+      imageDescription: '',
       type: 'multipleChoice',
       options: [
         { letter: 'A', text: '-1/5' },
@@ -1204,8 +1204,8 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
       text: 'b² + 5c = 9d\n\nThe given equation relates the real numbers b, c, and d, where d > 5/9 c. Which equation correctly express b in terms of c and d?',
       type: 'multipleChoice',
       options: [
-        { letter: 'A', text: 'b = (9d + 5c)/2' },
-        { letter: 'B', text: 'b = (9d - 5c)/2' },
+        { letter: 'A', text: 'b = (9d + 5c) / 2' },
+        { letter: 'B', text: 'b = (9d - 5c) / 2' },
         { letter: 'C', text: 'b = ±√(9d + 5c)' },
         { letter: 'D', text: 'b = ±√(9d - 5c)' }
       ],
@@ -1333,7 +1333,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
       id: 21,
       module: 1,
       domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
-      text: 'The expression (x²⁰(x - 4))/(5x²) + (4x²⁰)/(5x²) is equivalent to (1/5)xᶜ, where c is a constant and x > 0. What is the value of c?',
+      text: 'The expression (x²⁰ (x - 4)) / (5x²) + (4x²⁰) / (5x²) is equivalent to (1/5)xᶜ, where c is a constant and x > 0. What is the value of c?',
       type: 'multipleChoice',
       options: [
         { letter: 'A', text: '4' },

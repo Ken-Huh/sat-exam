@@ -7,6 +7,7 @@ import { test3Questions } from './test3-dec2023-digital';
 
 // Import practice sets
 import { rwPracticeSet1 } from './rw-practice-set1';
+import { rwPracticeSet2 } from './rw-practice-set2';
 import { rwPracticeSet3 } from './rw-practice-set3';
 
 // ==============================================
@@ -72,6 +73,7 @@ export const sampleQuestions = test1Questions;
 // R/W Practice Sets
 export const rwPracticeSets = {
   'rw-set1': rwPracticeSet1,
+  'rw-set2': rwPracticeSet2,
   'rw-set3': rwPracticeSet3
 };
 

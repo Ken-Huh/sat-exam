@@ -149,22 +149,23 @@ export default function ReadingWritingModule({
     }
   }, [currentQuestion, setCurrentQuestion]);
 
-  // Re-apply highlights after passage renders
+  // Re-apply highlights after passage renders or highlight state changes.
+  // applyHighlightsToDOM now clears all existing marks first, so this is
+  // safe to call on every state change (no duplication).
   useEffect(() => {
     if (!passageRef.current || !currentQuestion) return;
 
     // Small delay to ensure DOM has rendered
     const timer = setTimeout(() => {
       const highlights = getHighlights(currentQuestion.id);
-      if (highlights.length > 0 && passageRef.current) {
-        applyHighlightsToDOM(
-          passageRef.current,
-          highlights,
-          (highlightId, x, y) => {
-            showAnnotation(highlightId, currentQuestion.id, x, y);
-          }
-        );
-      }
+      // Always call — even with 0 highlights — so stale marks get cleared
+      applyHighlightsToDOM(
+        passageRef.current,
+        highlights,
+        (highlightId, x, y) => {
+          showAnnotation(highlightId, currentQuestion.id, x, y);
+        }
+      );
     }, 50);
 
     return () => clearTimeout(timer);

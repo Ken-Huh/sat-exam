@@ -74,12 +74,26 @@ export function renderLatex(text) {
 export function renderMathText(text, autoConvert = false) {
   if (!text) return '';
 
-  // Only call renderLatex if there are explicit LaTeX delimiters
-  if (text.includes('\\(') || text.includes('\\[') || text.includes('$$')) {
-    return renderLatex(text);
+  let processed = text;
+
+  // Minimal safe auto-conversion: ONLY parenthesized numeric fractions.
+  // Converts (6/7) → rendered fraction, but leaves everything else alone.
+  // This is safe because:
+  //   - Both sides are digits (no variable interactions)
+  //   - Enclosed in parens (unambiguous boundaries)
+  //   - Result is self-contained (no interaction with surrounding text)
+  if (autoConvert) {
+    processed = processed.replace(/\((\d+)\/(\d+)\)/g, (match, num, den) => {
+      return renderKatex(`\\frac{${num}}{${den}}`, false);
+    });
   }
 
-  return text;
+  // Process any explicit LaTeX delimiters
+  if (processed.includes('\\(') || processed.includes('\\[') || processed.includes('$$')) {
+    processed = renderLatex(processed);
+  }
+
+  return processed;
 }
 
 /**

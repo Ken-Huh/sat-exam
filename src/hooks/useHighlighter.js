@@ -114,32 +114,17 @@ export default function useHighlighter() {
   }, [toolbarState]);
 
   /**
-   * Remove a highlight (from state AND from DOM)
+   * Remove a highlight.
+   * State update triggers the useEffect which calls applyHighlightsToDOM,
+   * which now clears ALL marks first then re-applies remaining highlights.
    */
   const removeHighlight = useCallback((questionId, highlightId) => {
-    // Remove the <mark> element from the DOM immediately
-    const container = passageRef.current;
-    if (container) {
-      const markEl = container.querySelector(`mark[data-highlight-id="${highlightId}"]`);
-      if (markEl) {
-        // Unwrap: replace the <mark> with its text content
-        const parent = markEl.parentNode;
-        while (markEl.firstChild) {
-          parent.insertBefore(markEl.firstChild, markEl);
-        }
-        parent.removeChild(markEl);
-        // Normalize to merge adjacent text nodes
-        parent.normalize();
-      }
-    }
-
-    // Remove from state
     setAllHighlights(prev => ({
       ...prev,
       [questionId]: (prev[questionId] || []).filter(h => h.id !== highlightId),
     }));
     setAnnotationPopup(null);
-  }, [passageRef]);
+  }, []);
 
   /**
    * Update a highlight's note
@@ -251,7 +236,22 @@ function getTextOffsets(container, range) {
  * @param {Function} onHighlightClick - Callback when a highlight is clicked
  */
 export function applyHighlightsToDOM(container, highlights, onHighlightClick) {
-  if (!container || !highlights || highlights.length === 0) return;
+  if (!container) return;
+
+  // FIRST: Remove all existing highlight marks to prevent duplicates.
+  // This is critical because this function may be called multiple times
+  // on the same DOM (e.g., when highlight state changes via useEffect).
+  const existingMarks = container.querySelectorAll('mark.passage-highlight');
+  existingMarks.forEach(mark => {
+    const parent = mark.parentNode;
+    while (mark.firstChild) {
+      parent.insertBefore(mark.firstChild, mark);
+    }
+    parent.removeChild(mark);
+    parent.normalize();
+  });
+
+  if (!highlights || highlights.length === 0) return;
 
   // Sort highlights by startOffset descending so we apply from end to start
   // This prevents offset shifts from affecting earlier highlights

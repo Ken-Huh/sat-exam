@@ -86,7 +86,7 @@ export const rwPracticeSet2 = {
       domain: 'information_ideas',
       passage: `The following text is adapted from Matthew Arnold's 1869 nonfiction book Culture and Anarchy.
 
-The Times [a British newspaper], replying to some foreign strictures on the dress, looks, and behavior of the English abroad, urges that the English ideal is that everyone should be free to do and to look just as he likes. But culture indefatigably tries, not to make what each raw person may like the rule by which he fashions himself; but to draw ever nearer to a sense of what is indeed beautiful, graceful, and becoming, and to get the raw person to like that.`,
+<u>The Times [a British newspaper], replying to some foreign strictures on the dress, looks, and behavior of the English abroad, urges that the English ideal is that everyone should be free to do and to look just as he likes.</u> But culture indefatigably tries, not to make what each raw person may like the rule by which he fashions himself; but to draw ever nearer to a sense of what is indeed beautiful, graceful, and becoming, and to get the raw person to like that.`,
       text: 'Which choice best describes the function of the underlined sentence in the text as a whole?',
       type: 'multipleChoice',
       options: [
@@ -120,7 +120,11 @@ The Times [a British newspaper], replying to some foreign strictures on the dres
       id: 7,
       module: 1,
       domain: 'information_ideas',
-      passage: `A report from an international organization that monitors the numbers of women serving as judges or magistrates on various nations' highest courts. From 2009 to 2013, the number of women serving as justices or magistrates on highest courts in most countries increased. However, there are also countries where the number decreased or remained unchanged; for example, ______`,
+      passage: `Women Judges and Magistrates on High Courts, 2009-2013
+
+[Graph: Y-axis: Number (0-10). Lines for three countries over 2009-2013. Slovenia (solid line): rises from ~3 in 2009 to ~8 in 2013. Finland (dashed line): stays approximately the same at ~5 throughout. Dominican Republic (dotted line): decreases from ~5 in 2009 to ~2 in 2013.]
+
+A report from an international organization that monitors the numbers of women serving as judges or magistrates on various nations' highest courts. From 2009 to 2013, the number of women serving as justices or magistrates on highest courts in most countries increased. However, there are also countries where the number decreased or remained unchanged; for example, ______`,
       text: 'Which choice most effectively uses data from the graph to complete the example?',
       type: 'multipleChoice',
       options: [
@@ -346,8 +350,8 @@ Population figures for a city can vary significantly depending on what areas are
       domain: 'information_ideas',
       passage: `The following text is Rainer Maria Rilke's 1897 poem "Evening" (translated by Jessie Lamont in 1918).
 
-The bleak fields are asleep,
-My heart alone wakes;
+<u>The bleak fields are asleep,
+My heart alone wakes;</u>
 The evening in the harbour
 Down his red sails takes.
 Night, guardian of dreams,
@@ -388,7 +392,7 @@ Blossoms within her hand.`,
       module: 1,
       domain: 'information_ideas',
       passage: `Text 1:
-In 2017, Buenaventura, Colombia, was named a City of Gastronomy by UNESCO in recognition of the city's unique food culture. The honor is well known among residents of the city as well as tourists who visit. It's obvious that the selection of Buenaventura by UNESCO has brought awareness to local recipes, cooking practices, and chefs and has provided a boost to the city's tourism industry.
+In 2017, Buenaventura, Colombia, was named a City of Gastronomy by UNESCO in recognition of the city's unique food culture. The honor is well known among residents of the city as well as tourists who visit. <u>It's obvious that the selection of Buenaventura by UNESCO has brought awareness to local recipes, cooking practices, and chefs and has provided a boost to the city's tourism industry.</u>
 
 Text 2:
 Many people in Buenaventura's restaurant industry hoped that food tourism would increase after the city was chosen as a City of Gastronomy in 2017. However, as researcher Eerang Park and colleagues argue, cities must still create effective marketing strategies to benefit fully from being named a City of Gastronomy. Without an intentional effort to promote the city's food scene, many current and potential visitors to Buenaventura may not even be aware that it's home to uniquely delicious food.`,

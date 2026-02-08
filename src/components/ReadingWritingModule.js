@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Timer from './Timer';
 import QuestionNav from './QuestionNav';
 import ReviewPage from './ReviewPage';
 import PassageRenderer from './PassageRenderer';
 import { renderMathText } from '../utils/latexRenderer';
+import useHighlighter, { applyHighlightsToDOM } from '../hooks/useHighlighter';
 import './Module.css';
 
 // Helper function to format text with underlines, bold, and LaTeX math
@@ -16,6 +17,100 @@ function formatText(text) {
   // Then render LaTeX math expressions
   processed = renderMathText(processed, true);
   return processed;
+}
+
+// Highlight Toolbar Component
+function HighlightToolbar({ state, onHighlight }) {
+  if (!state) return null;
+
+  return (
+    <div
+      className="highlight-toolbar"
+      style={{
+        left: `${state.x}px`,
+        top: `${state.y}px`,
+        transform: 'translate(-50%, -100%)',
+      }}
+    >
+      <button
+        className="highlight-btn-yellow"
+        onClick={() => onHighlight('yellow')}
+        title="Highlight yellow"
+      />
+      <button
+        className="highlight-btn-green"
+        onClick={() => onHighlight('green')}
+        title="Highlight green"
+      />
+      <button
+        className="highlight-btn-blue"
+        onClick={() => onHighlight('blue')}
+        title="Highlight blue"
+      />
+      <button
+        className="highlight-btn-pink"
+        onClick={() => onHighlight('pink')}
+        title="Highlight pink"
+      />
+    </div>
+  );
+}
+
+// Annotation Popup Component
+function AnnotationPopup({ popup, highlights, onSave, onDelete, onClose }) {
+  const [noteText, setNoteText] = useState('');
+  const textareaRef = useRef(null);
+
+  useEffect(() => {
+    if (popup && highlights) {
+      const hl = highlights.find(h => h.id === popup.highlightId);
+      setNoteText(hl?.note || '');
+      // Focus textarea after mount
+      setTimeout(() => textareaRef.current?.focus(), 50);
+    }
+  }, [popup, highlights]);
+
+  if (!popup) return null;
+
+  const highlight = highlights?.find(h => h.id === popup.highlightId);
+  if (!highlight) return null;
+
+  return (
+    <div
+      className="annotation-popup"
+      style={{
+        left: `${Math.min(popup.x, window.innerWidth - 280)}px`,
+        top: `${popup.y}px`,
+      }}
+    >
+      <textarea
+        ref={textareaRef}
+        value={noteText}
+        onChange={(e) => setNoteText(e.target.value)}
+        placeholder="Add a note..."
+      />
+      <div className="annotation-popup-actions">
+        <button
+          className="annotation-delete-btn"
+          onClick={() => onDelete(popup.questionId, popup.highlightId)}
+        >
+          Remove
+        </button>
+        <div style={{ display: 'flex', gap: '6px' }}>
+          <button className="annotation-cancel-btn" onClick={onClose}>Cancel</button>
+          <button
+            className="annotation-save-btn"
+            onClick={() => {
+              onSave(popup.questionId, popup.highlightId, noteText);
+              onClose();
+            }}
+          >
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function ReadingWritingModule({
@@ -31,6 +126,49 @@ export default function ReadingWritingModule({
   const [showReview, setShowReview] = useState(false);
 
   const currentQuestion = questions[currentQuestionIndex];
+
+  // Highlight feature
+  const {
+    passageRef,
+    toolbarState,
+    annotationPopup,
+    setCurrentQuestion,
+    getHighlights,
+    handleMouseUp,
+    applyHighlight,
+    removeHighlight,
+    updateNote,
+    showAnnotation,
+    closeAnnotation,
+  } = useHighlighter();
+
+  // Track current question for highlights
+  useEffect(() => {
+    if (currentQuestion) {
+      setCurrentQuestion(currentQuestion.id);
+    }
+  }, [currentQuestion, setCurrentQuestion]);
+
+  // Re-apply highlights after passage renders
+  useEffect(() => {
+    if (!passageRef.current || !currentQuestion) return;
+
+    // Small delay to ensure DOM has rendered
+    const timer = setTimeout(() => {
+      const highlights = getHighlights(currentQuestion.id);
+      if (highlights.length > 0 && passageRef.current) {
+        applyHighlightsToDOM(
+          passageRef.current,
+          highlights,
+          (highlightId, x, y) => {
+            showAnnotation(highlightId, currentQuestion.id, x, y);
+          }
+        );
+      }
+    }, 50);
+
+    return () => clearTimeout(timer);
+  }, [currentQuestionIndex, currentQuestion, getHighlights, showAnnotation, passageRef]);
 
   const calculateScore = useCallback(() => {
     let correct = 0;
@@ -117,6 +255,9 @@ export default function ReadingWritingModule({
     );
   }
 
+  // Get highlight count for current question
+  const currentHighlights = currentQuestion ? getHighlights(currentQuestion.id) : [];
+
   return (
     <div className="module-container">
       {/* Top Header */}
@@ -129,8 +270,12 @@ export default function ReadingWritingModule({
 
       {/* Main Split Content */}
       <div className="module-content">
-        {/* Left Panel - Passage */}
-        <div className="passage-panel">
+        {/* Left Panel - Passage (highlightable) */}
+        <div
+          className="passage-panel"
+          ref={passageRef}
+          onMouseUp={handleMouseUp}
+        >
           {currentQuestion?.passage ? (
             <PassageRenderer
               passage={currentQuestion.passage}
@@ -168,6 +313,11 @@ export default function ReadingWritingModule({
                   <span className="flag-icon">▶</span>
                   Mark for Review
                 </button>
+                {currentHighlights.length > 0 && (
+                  <span className="highlight-count">
+                    {currentHighlights.length} highlight{currentHighlights.length !== 1 ? 's' : ''}
+                  </span>
+                )}
               </div>
 
               <div
@@ -206,6 +356,21 @@ export default function ReadingWritingModule({
           )}
         </div>
       </div>
+
+      {/* Highlight Toolbar (appears on text selection) */}
+      <HighlightToolbar
+        state={toolbarState}
+        onHighlight={applyHighlight}
+      />
+
+      {/* Annotation Popup (appears when clicking a highlight) */}
+      <AnnotationPopup
+        popup={annotationPopup}
+        highlights={currentHighlights}
+        onSave={updateNote}
+        onDelete={removeHighlight}
+        onClose={closeAnnotation}
+      />
 
       {/* Bottom Footer */}
       <div className="module-footer">

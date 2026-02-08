@@ -1,19 +1,7 @@
 import React from 'react';
-import katex from 'katex';
 import 'katex/dist/katex.min.css';
+import { renderMathText } from '../utils/latexRenderer';
 import './QuestionDisplay.css';
-
-// Helper function to render LaTeX math expressions
-function renderMath(latex, displayMode = false) {
-  try {
-    return katex.renderToString(latex, {
-      throwOnError: false,
-      displayMode: displayMode
-    });
-  } catch (e) {
-    return latex;
-  }
-}
 
 // Parse and render text with special formatting
 function formatText(text) {
@@ -30,10 +18,8 @@ function formatText(text) {
   // Check for italic text (marked with *text*)
   processedText = processedText.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>');
 
-  // Render inline math expressions (marked with $...$)
-  processedText = processedText.replace(/\$([^$]+)\$/g, (match, latex) => {
-    return renderMath(latex, false);
-  });
+  // Render math expressions using the improved renderer
+  processedText = renderMathText(processedText, true);
 
   return processedText;
 }

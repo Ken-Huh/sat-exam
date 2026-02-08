@@ -212,9 +212,9 @@ export default function MathModule({
             ) : equations.length > 0 ? (
               <div className="equation-display">
                 {equations.map((eq, idx) => (
-                  <div key={idx} className="equation-line">
-                    <em>{eq}</em>
-                  </div>
+                  <div key={idx} className="equation-line"
+                    dangerouslySetInnerHTML={{ __html: formatText(eq) }}
+                  />
                 ))}
               </div>
             ) : (
@@ -299,9 +299,9 @@ export default function MathModule({
                 {equations.length > 0 && (
                   <div className="inline-equation-display">
                     {equations.map((eq, idx) => (
-                      <div key={idx} className="equation-line">
-                        <em>{eq}</em>
-                      </div>
+                      <div key={idx} className="equation-line"
+                        dangerouslySetInnerHTML={{ __html: formatText(eq) }}
+                      />
                     ))}
                   </div>
                 )}

@@ -14,7 +14,7 @@ const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxN8hD-DXbEET
  */
 export async function submitToGoogleSheets(data) {
   // Don't submit if URL not configured
-  if (!GOOGLE_SHEETS_URL || GOOGLE_SHEETS_URL === 'https://script.google.com/macros/s/AKfycbxN8hD-DXbEETjZxgeE5TTp_rdcs5CD7h6PO724XNXdPWUuysBQRuVt4jC922Sw1bK1/exec') {
+  if (!GOOGLE_SHEETS_URL) {
     console.log('Google Sheets URL not configured. Skipping submission.');
     console.log('Results data:', data);
     return { success: false, reason: 'not_configured' };

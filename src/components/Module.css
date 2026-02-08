@@ -421,6 +421,206 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* ========================================
+   MATH RENDERED - Visual distinction for equations
+   ======================================== */
+.math-rendered {
+  font-family: 'KaTeX_Main', 'Times New Roman', Times, serif;
+}
+
+.math-rendered.math-inline {
+  display: inline;
+  padding: 0 1px;
+}
+
+.math-rendered.math-display {
+  display: block;
+  text-align: center;
+  margin: 16px 0;
+  padding: 12px 0;
+}
+
+/* Make KaTeX math slightly larger for readability */
+.question-text .katex,
+.choice-content .katex,
+.equation-line .katex {
+  font-size: 1.15em;
+}
+
+/* Style equation blocks for better visual distinction */
+.equation-display .equation-line,
+.inline-equation-display .equation-line {
+  font-size: 20px;
+}
+
+.equation-display .equation-line .katex,
+.inline-equation-display .equation-line .katex {
+  font-size: 1.25em;
+}
+
+/* ========================================
+   HIGHLIGHT & ANNOTATE - R/W passage tools
+   ======================================== */
+.passage-panel {
+  position: relative;
+}
+
+/* Highlight toolbar that appears on text selection */
+.highlight-toolbar {
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  background: #1e3a5f;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  animation: toolbarFadeIn 0.15s ease;
+}
+
+@keyframes toolbarFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.highlight-toolbar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  padding: 0;
+}
+
+.highlight-toolbar button:hover {
+  transform: scale(1.15);
+}
+
+.highlight-btn-yellow { background-color: #fef08a; }
+.highlight-btn-green { background-color: #bbf7d0; }
+.highlight-btn-blue { background-color: #bfdbfe; }
+.highlight-btn-pink { background-color: #fbcfe8; }
+
+.highlight-btn-annotate {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 14px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.highlight-btn-annotate:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* The actual highlighted text in passages */
+.passage-highlight {
+  border-radius: 2px;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+  position: relative;
+}
+
+.passage-highlight:hover {
+  filter: brightness(0.92);
+}
+
+.passage-highlight[data-color="yellow"] { background-color: #fef08a; }
+.passage-highlight[data-color="green"] { background-color: #bbf7d0; }
+.passage-highlight[data-color="blue"] { background-color: #bfdbfe; }
+.passage-highlight[data-color="pink"] { background-color: #fbcfe8; }
+
+/* Annotation indicator on highlighted text */
+.passage-highlight.has-note::after {
+  content: '💬';
+  font-size: 10px;
+  position: relative;
+  top: -8px;
+  margin-left: 1px;
+}
+
+/* Annotation popup */
+.annotation-popup {
+  position: fixed;
+  z-index: 200;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+  width: 260px;
+  animation: toolbarFadeIn 0.15s ease;
+}
+
+.annotation-popup textarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+}
+
+.annotation-popup textarea:focus {
+  border-color: #1e3a5f;
+}
+
+.annotation-popup-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  gap: 8px;
+}
+
+.annotation-popup-actions button {
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.annotation-save-btn {
+  background: #1e3a5f;
+  color: white;
+}
+
+.annotation-save-btn:hover {
+  background: #2c4a73;
+}
+
+.annotation-delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.annotation-delete-btn:hover {
+  background: #fecaca;
+}
+
+.annotation-cancel-btn {
+  background: #f3f4f6;
+  color: #666;
+}
+
+/* Highlight count indicator in question header */
+.highlight-count {
+  font-size: 11px;
+  color: #666;
+  padding: 2px 8px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  margin-left: auto;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .module-content {

@@ -120,11 +120,11 @@ export const rwPracticeSet2 = {
       id: 7,
       module: 1,
       domain: 'information_ideas',
-      passage: `Women Judges and Magistrates on High Courts, 2009-2013
+      image: '/images/questions/rw2_m1_q7_judges.png',
+      imageDescription: 'Line graph titled "Women Judges and Magistrates on High Courts, 2009-2013." Y-axis shows Number from 0 to 10. Three lines: Slovenia (solid triangles) starts at ~4, stays ~4-5 through 2013. Finland (dashed squares) starts at ~7, fluctuates, returns to ~7 in 2013. Dominican Republic (dotted circles) starts at ~5, peaks ~8 in 2011, drops to ~4 in 2013.',
+      passage: `[Graph showing Women Judges and Magistrates on High Courts, 2009-2013, with data for Slovenia, Finland, and Dominican Republic]
 
-[Graph: Y-axis: Number (0-10). Lines for three countries over 2009-2013. Slovenia (solid line): rises from ~3 in 2009 to ~8 in 2013. Finland (dashed line): stays approximately the same at ~5 throughout. Dominican Republic (dotted line): decreases from ~5 in 2009 to ~2 in 2013.]
-
-A report from an international organization that monitors the numbers of women serving as judges or magistrates on various nations' highest courts. From 2009 to 2013, the number of women serving as justices or magistrates on highest courts in most countries increased. However, there are also countries where the number decreased or remained unchanged; for example, ______`,
+A report from an international organization that monitors the numbers of women serving as judges or magistrates on various nations' highest courts, such as the Supreme Court in Finland and the Supreme Court in the Dominican Republic. From 2009 to 2013, the number of women serving as justices or magistrates on highest courts in most countries increased. However, there are also countries where the number decreased or remained unchanged; for example, ______`,
       text: 'Which choice most effectively uses data from the graph to complete the example?',
       type: 'multipleChoice',
       options: [

@@ -186,15 +186,15 @@ export const rwPracticeSet4 = {
       id: 11,
       module: 1,
       domain: 'information_ideas',
-      passage: `The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes in Oklahoma operate numerous businesses and collectively generate billions of dollars in revenue. In fact, when the tribes' activity is regarded as a single industry, its contribution to the Oklahoma economy in 2017 _____.
-
-Contributions of Three Key Industries to Oklahoma Economy in 2017
+      passage: `Contributions of Three Key Industries to Oklahoma Economy in 2017
 
 | Industry | Approximate contribution |
-| --- | --- |
+|----------|-------------------------|
 | Real estate | $18,314,700,000 |
 | Tribal economic activity | $7,312,400,000 |
-| Administration / waste | $5,830,600,000 |`,
+| Administration / waste | $5,830,600,000 |
+
+The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes in Oklahoma operate numerous businesses and collectively generate billions of dollars in revenue. In fact, when the tribes' activity is regarded as a single industry, its contribution to the Oklahoma economy in 2017 ______`,
       text: 'Which choice uses data from the table to most effectively complete the comparison?',
       type: 'multipleChoice',
       options: [
@@ -228,15 +228,11 @@ Contributions of Three Key Industries to Oklahoma Economy in 2017
       id: 13,
       module: 1,
       domain: 'information_ideas',
-      passage: `In a college course on urban affairs, a student asserts that increased traffic congestion in the 1990s in the United States was present both in very large cities such as New York City, New York, and smaller areas such as Albuquerque, New Mexico, Jacksonville, Florida, and Boise, Idaho; though those smaller areas may have been less affected by traffic congestion than very large cities, this congestion also worsened in them over time.
+      image: '/images/questions/rw4_m1_q13_traffic.png',
+      imageDescription: 'Line graph titled "Annual Average Hours of Highway Traffic Delay per Auto Commuter." X-axis shows years from 1990 to 2000. Y-axis shows Hours of delay from 0 to 70. Four lines: Jacksonville, Florida (solid triangles) rises from ~22 to ~38. Albuquerque, New Mexico (dashed squares) rises from ~22 to ~38. Boise, Idaho (dotted circles) rises from ~15 to ~28. New York City, New York (stars) rises from ~42 to ~63.',
+      passage: `[Graph showing Annual Average Hours of Highway Traffic Delay per Auto Commuter from 1990 to 2000, with data for Jacksonville FL, Albuquerque NM, Boise ID, and New York City NY]
 
-Annual Average Hours of Highway Traffic Delay per Auto Commuter (1990-2000)
-
-[Graph: Annual Average Hours of Highway Traffic Delay per Auto Commuter, 1990-2000
-- Jacksonville, Florida (solid triangle line): ~22 (1990), ~25 (1992), ~28 (1994), ~32 (1996), ~35 (1998), ~38 (2000)
-- Albuquerque, New Mexico (dashed square line): ~22 (1990), ~25 (1992), ~28 (1994), ~33 (1996), ~35 (1998), ~38 (2000)
-- Boise, Idaho (dotted circle line): ~15 (1990), ~17 (1992), ~18 (1994), ~19 (1996), ~22 (1998), ~28 (2000)
-- New York City, New York (star line): ~48 (1990), ~45 (1992), ~48 (1994), ~55 (1996), ~58 (1998), ~63 (2000)]`,
+In a college course on urban affairs, a student asserts that increased traffic congestion in the 1990s in the United States was present both in very large cities such as New York City, New York, and smaller areas such as Albuquerque, New Mexico, Jacksonville, Florida, and Boise, Idaho; though those smaller areas may have been less affected by traffic congestion than very large cities, this congestion also worsened in them over time.`,
       text: 'Which choice best describes data from the graph that support the student\'s claim?',
       type: 'multipleChoice',
       options: [
@@ -253,17 +249,17 @@ Annual Average Hours of Highway Traffic Delay per Auto Commuter (1990-2000)
       id: 14,
       module: 1,
       domain: 'information_ideas',
-      passage: `Esther Sanye-Mengual, Kathrin Specht, and their team surveyed three groups of people in Bologna, Italy—leaders of urban agriculture projects, stakeholders in urban agriculture (e.g., food researchers and urban farming associations), and the general public—to compare their views about the extent to which urban agriculture contributes to 25 social or ecological services that the team identified. The researchers used these ratings to rank the services for each group, with a conclusion that both stakeholders and general public regard the improvement of attitudes and outlooks as important benefit of urban agriculture.
-
-Ranking of Environmental and Sociocultural Benefits of Urban Agriculture (scale of 1 to 25; 1=highest)
+      passage: `Ranking of Environmental and Sociocultural Benefits of Urban Agriculture (scale of 1 to 25; 1=highest)
 
 | Social or ecological service | Project leaders | Stakeholders | General public |
-| --- | --- | --- | --- |
+|------------------------------|-----------------|--------------|----------------|
 | Improvement of attitudes and outlooks | 8 | 1 | 4 |
 | Provision of food | 4 | 15 | 8 |
 | Provision of raw materials | 22 | 25 | 15 |
 | Improvement of physical health | 5 | 4 | 7 |
-| Enhancement of pollination | 1 | 7 | 12 |`,
+| Enhancement of pollination | 1 | 7 | 12 |
+
+Esther Sanye-Mengual, Kathrin Specht, and their team surveyed three groups of people in Bologna, Italy—leaders of urban agriculture projects, stakeholders in urban agriculture (e.g., food researchers and urban farming associations), and the general public—to compare their views about the extent to which urban agriculture contributes to 25 social or ecological services that the team identified. The researchers used these ratings to rank the services for each group, with a conclusion that both stakeholders and general public regard the improvement of attitudes and outlooks as important benefit of urban agriculture.`,
       text: 'Which choice best describes data in the table that support the city planner\'s conclusion?',
       type: 'multipleChoice',
       options: [
@@ -371,16 +367,16 @@ The untaught peasant beheld the elements around him and was acquainted with thei
       id: 20,
       module: 1,
       domain: 'information_ideas',
-      passage: `Some scientists have suggested that as ocean temperatures rise, many fish and corals found in the shallow zone (less than 30 meters below the surface) could take refuge in the cooler, darker mesophotic zone (30 to 150 meters below the surface). However, it isn't clear that all such species will be able to tolerate mesophotic conditions. In 2018, Luiz Rocha and colleagues studied stony corals in the two zones in Caribbean and Indo-Pacific waters. Based on the depths at which those corals are now found, the species that seems least suited to a full migration to the mesophotic zone is _____.
-
-Minimum and Maximum Depths of Stony Coral Species in Caribbean and Indo-Pacific Waters
+      passage: `Minimum and Maximum Depths of Stony Coral Species in Caribbean and Indo-Pacific Waters
 
 | Species | Minimum depth (meters) | Maximum depth (meters) |
-| --- | --- | --- |
+|---|---|---|
 | Plerogyra discus | 8 | 15 |
 | Acropora echinata | 8 | 25 |
 | Psammocora albopicta | 1 | 28 |
-| Agaricia undata | 20 | 80 |`,
+| Agaricia undata | 20 | 80 |
+
+Some scientists have suggested that as ocean temperatures rise, many fish and corals found in the shallow zone (less than 30 meters below the surface) could take refuge in the cooler, darker mesophotic zone (30 to 150 meters below the surface). However, it isn't clear that all such species will be able to tolerate mesophotic conditions. In 2018, Luiz Rocha and colleagues studied stony corals in the two zones in Caribbean and Indo-Pacific waters. Based on the depths at which those corals are now found, the species that seems least suited to a full migration to the mesophotic zone is _____.`,
       text: 'Which choice most effectively uses data from the table to complete the statement?',
       type: 'multipleChoice',
       options: [

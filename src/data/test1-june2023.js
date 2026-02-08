@@ -165,7 +165,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
     {
       id: 9,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'information_ideas',
       passage: `The groundbreaking Negro Ensemble Company (NEC), founded in 1967, produced Paul Carter Harrison's award-winning play The Great MacDaddy in 1974. The company was cofounded by Robert Hooks, an actor, producer, and activist, and actor and playwright Douglas Turner Ward, who had met while performing in a 1960 touring production of Lorraine Hansberry's play A Raisin in the Sun. They shared a vision of a theater company that would nurture and showcase the work of Black theater professionals. Since its beginning, NEC has provided a forum for the voices of Harrison and other Black playwrights through workshops and performances.`,
       text: 'According to the text, how did Hooks and Ward initially meet?',
       type: 'multipleChoice',
@@ -1036,7 +1036,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 1,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'problem_solving',
       passage: `The table summarizes the UV index value recorded by a research assistant at noon each day for 49 days.
 
 | UV index | Number of days |
@@ -1060,7 +1060,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 2,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: 'To make a bookcase, a woodworker charged a onetime fee plus $17 per hour worked. The equation 17h + 45 = 164 represents this situation, where h is the number of hours worked. Which of the following is the best interpretation of 164 in this context?',
       type: 'multipleChoice',
       options: [
@@ -1076,7 +1076,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 3,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: 'In December 2017, the lowest temperature recorded in a certain city was 40 degrees Fahrenheit (°F) and the highest temperature recorded was 90°F. Which inequality is true for all values of t, where t represents any temperature, in °F, recorded in the city in December 2017?',
       type: 'multipleChoice',
       options: [
@@ -1092,7 +1092,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 4,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: 'The function f is defined by f(x) = 6(2x + 4). For what value of x does f(x) = 48?',
       type: 'multipleChoice',
       options: [
@@ -1108,7 +1108,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 5,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'problem_solving',
       text: 'The ratio of green tiles to blue tiles in a piece of artwork is 5 to 2. If there are 16 blue tiles in the piece of artwork, how many green tiles are there?',
       type: 'fillIn',
       correctAnswer: '40'
@@ -1118,7 +1118,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 6,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'problem_solving',
       text: 'Which of the following equations is the most appropriate linear model for the data shown?',
       image: '/images/questions/math_m1_q6_scatter.png',
       imageDescription: 'A scatterplot showing the relationship between two variables, x and y. The y-axis ranges from 0 to 30, and the x-axis ranges from 0 to 4. Points show a negative correlation, starting around (0, 25) and decreasing to approximately (4, 8).',
@@ -1136,7 +1136,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 7,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'problem_solving',
       text: 'A scientist analyzed a soil sample with a mass of 900 grams and determined that it contained 189 grams of water. What is the percentage of water, by mass, in this soil sample?',
       type: 'multipleChoice',
       options: [
@@ -1152,7 +1152,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 8,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: 'Line n is shown in the xy-plane. Line k (not shown) is perpendicular to line n. What is the slope of line k?',
       image: '/images/questions/math_m1_q8_line.png',
       imageDescription: '',
@@ -1170,7 +1170,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 9,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: 'mx + ky = -83\n2x + ky = 22\n\nIn the given system of equation, m and k are constants. The graphs of these equations in the xy-plane intersect at the point (5, y). What is the value of m?',
       type: 'fillIn',
       correctAnswer: '-19'
@@ -1180,7 +1180,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 10,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: 'For the linear function f, the graph of y = f(x) in the xy-plane passes through the point (0, 2) and (3, 3). What is the slope of y = f(x)?',
       type: 'fillIn',
       correctAnswer: '1/3'
@@ -1190,7 +1190,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 11,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'problem_solving',
       text: 'A certain book has 250 pages, and 21 of these pages have an illustration. If one of the book\'s pages is selected at random, what is the probability of selecting a page with an illustration? (Express your answer as a decimal or fraction, not as a percent.)',
       type: 'fillIn',
       correctAnswer: '0.084'
@@ -1200,7 +1200,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 12,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'advanced_math',
       text: 'b² + 5c = 9d\n\nThe given equation relates the real numbers b, c, and d, where d > 5/9 c. Which equation correctly express b in terms of c and d?',
       type: 'multipleChoice',
       options: [
@@ -1216,7 +1216,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 13,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'geometry',
       text: 'A right circular cylinder has a height of 4 meters (m) and a base with a radius of 18 m. What is the volume, in m³, of the cylinder?',
       type: 'multipleChoice',
       options: [
@@ -1232,7 +1232,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 14,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: 'What is the y-intercept of the graph of 3x + 2y = 96 in the xy-plane?',
       type: 'multipleChoice',
       options: [
@@ -1248,7 +1248,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 15,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: 'If (6/7)p + 12 = 54, what is the value of 7p?',
       type: 'fillIn',
       correctAnswer: '343'
@@ -1258,7 +1258,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 16,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'advanced_math',
       text: 'A certain neighborhood had a population of 1,340 in 2009. Each year for the next 5 years, the population of the neighborhood increased by approximately 3% of the population the previous year. Which of the following equations represents the population, N, of the neighborhood t years after 2009, where t ≤ 5?',
       type: 'multipleChoice',
       options: [
@@ -1274,7 +1274,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 17,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: 'In the xy-plane, which of the following does NOT contain any points (x, y) that are solutions to 7x + 4y > 12?',
       type: 'multipleChoice',
       options: [
@@ -1290,7 +1290,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 18,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'geometry',
       text: 'In triangle RST, the measure of angle R is 10 degrees and the measure of angle T is 50 degrees. Point L lies on RS, point K lies on ST, and LK is parallel to RT. What is the measure, in degree, of angle SKL? (Disregard the degree symbol when entering your answer.)',
       type: 'fillIn',
       correctAnswer: '50'
@@ -1300,7 +1300,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 19,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'advanced_math',
       text: 'An auditorium has seats for 3,200 people. Tickets to attend a show at the auditorium currently cost $8.00. For each $1.00 increase to the ticket price, 100 fewer tickets will be sold. This situation can be modeled by the equation y = -100x² + 2,400x + 25,600, where x represents the increase in ticket price, in dollars, and y represents the revenue, in dollars, from ticket sales. If this equation is graphed in the xy-plane, at what value of x is the maximum of the graph?',
       type: 'multipleChoice',
       options: [
@@ -1316,7 +1316,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 20,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'geometry',
       text: '(x + 3)² + (y - 4)² = 25\n\nIn the xy-plane, the graph of the given equation is circle. Which point lies on this circle?',
       type: 'multipleChoice',
       options: [
@@ -1332,7 +1332,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 21,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'advanced_math',
       text: 'The expression (x²⁰ (x - 4)) / (5x²) + (4x²⁰) / (5x²) is equivalent to (1/5)xᶜ, where c is a constant and x > 0. What is the value of c?',
       type: 'multipleChoice',
       options: [
@@ -1348,7 +1348,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 22,
       module: 1,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'geometry',
       text: 'Triangle ABC is similar to triangle DEF, where angle A corresponds to angle D and angle C and F are right angles. The length of AB is 2.4 times the length of DE. If tan A = 21/20, what is the value of sin D?',
       type: 'fillIn',
       correctAnswer: '21/29'
@@ -1362,7 +1362,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 23,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'problem_solving',
       text: 'The speed of a white-throated needletail, a type of bird, in flight was measured to be 49 miles per hour. What was the white-throated needletail\'s measured speed, in __kilometers__ per hour? (Use 1 mile = 1.6 kilometers.)',
       type: 'multipleChoice',
       options: [
@@ -1378,7 +1378,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 24,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'advanced_math',
       text: 'Which expression is equivalent to (3x³ - x² + 4)(5x² + 8x)?',
       type: 'multipleChoice',
       options: [
@@ -1394,7 +1394,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 25,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: 'If 5(x + 1) = 25, what is the value of x + 1?',
       type: 'multipleChoice',
       options: [
@@ -1410,7 +1410,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 26,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'problem_solving',
       text: 'The graph shows the estimated concentration of a certain strain of bacteria, y, in millions of cells per mL of nutrient medium, over time x, in minutes since the initial measurement. According to the graph, which of the following is closest to the number of minutes it took for the estimated concentration of the bacteria to increase from 20 million cells per mL of nutrient medium to 30 million cells per mL of nutrient medium?',
       image: '/images/questions/math_m2_q4_bacteria.png',
       imageDescription: 'A graph showing exponential growth of bacteria concentration over time. The x-axis shows Time (minutes) from 0 to 80, and the y-axis shows Concentration of bacteria (millions of cells per mL) from 0 to 80. The curve starts near 10 at x=0 and increases exponentially, reaching about 80 at x=80.',
@@ -1428,7 +1428,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 27,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'advanced_math',
       text: 'If (x + 3)² = 30, what is the value of x² + 6x?',
       type: 'multipleChoice',
       options: [
@@ -1444,7 +1444,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 28,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: 'y = 5x\ny = 2x + 2\n\nHow many solutions does the given system of equations have?',
       type: 'multipleChoice',
       options: [
@@ -1460,7 +1460,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 29,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'advanced_math',
       text: 'f(x) = |71 - 2x|\n\nThe function f is defined by the given equation. For which of the following values of k does f(k) = 3k?',
       type: 'multipleChoice',
       options: [
@@ -1476,7 +1476,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 30,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: 'g(x) = 2(16x - 17)\n\nWhat is the y-coordinate of the y-intercept of the graph of y = g(x) - 3 in the xy-plane?',
       type: 'multipleChoice',
       options: [
@@ -1492,7 +1492,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 31,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       passage: `| x | y |
 |---|---|
 | 0 | n |
@@ -1507,7 +1507,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 32,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'advanced_math',
       text: '18x² + 24x + c = 0\n\nIn the given equation, c is a constant. The equation has exactly one solution. What is the value of c?',
       type: 'fillIn',
       correctAnswer: '8'
@@ -1517,7 +1517,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 33,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: '(x - 3) - 8(y + 9) = 129\n(x - 3) + 8(y + 9) = 432\n\nThe solution to the given system of equations is (x, y). What is the value of 8(x - 3)?',
       type: 'fillIn',
       correctAnswer: '2244'
@@ -1527,7 +1527,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 34,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'geometry',
       text: 'The volume of a right rectangular prism with a square base is 2,448 cubic centimeters. If the area of the square base is 144 square centimeters, what is the area, in square centimeters, of one of the four lateral faces of the prism?',
       type: 'multipleChoice',
       options: [
@@ -1543,7 +1543,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 35,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'advanced_math',
       text: 'y = 5(x - 2)²\ny = 10(x - 2)\n\nA solution to the given system of equations is (x, y). What is one possible value of x + y?',
       type: 'multipleChoice',
       options: [
@@ -1559,7 +1559,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 36,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'advanced_math',
       text: 'The graph of the quadratic function y = f(x) in the xy-plane intersects the x-axis when x = 39 and when x = p, where p is a constant. The maximum value of y = f(x) occurs at the point (14, m), where m is a constant. What is the value of p?',
       type: 'fillIn',
       correctAnswer: '-11'
@@ -1569,7 +1569,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 37,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'advanced_math',
       text: '(x + 1)/(5x²) = k/x\n\nIn the given equation, k is a constant. The solution to the given equation is 1/174. What is the value of k?',
       type: 'fillIn',
       correctAnswer: '35'
@@ -1579,7 +1579,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 38,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'geometry',
       text: 'The area of a triangle is equal to x² square centimeters. The length of the base of the triangle is 2x + 6 centimeters, and the height of the triangle is x - 2 centimeters. What is the value of x?',
       type: 'fillIn',
       correctAnswer: '6'
@@ -1589,7 +1589,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 39,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'advanced_math',
       text: 'The function g is a quadratic function. In the xy-plane, the graph of y = g(x) has a vertex at (-1, -4) and passes through the points (-2, -43) and (1, -160). What is the value of g(0) - g(2)?',
       type: 'multipleChoice',
       options: [
@@ -1605,7 +1605,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 40,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'geometry',
       text: 'Triangle ABC and DEF are congruent, where A corresponds to D, and B and E are right angles. The measure of angle A is 62°. What is the measure of angle F?',
       type: 'multipleChoice',
       options: [
@@ -1621,7 +1621,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 41,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: 'A business consultant charge $408 for the first hour and $204 for each additional hour of work. Which of the following functions gives the charge C(h), in dollars, for h hours of work, where h is a positive integer?',
       type: 'multipleChoice',
       options: [
@@ -1637,7 +1637,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 42,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'advanced_math',
       text: 'An acceptable noise criterion rating for the background noise in a laundry room is 50. For a noise criterion rating of 50, the equation y = 22(0.997)^(x-60) + 47 gives the estimated sound pressure level, y, in decibels, as a function of the octave band center frequency, x, in hertz, where x ≥ 60. Which of the following is the best interpretation of 47 in this context?',
       type: 'multipleChoice',
       options: [
@@ -1653,7 +1653,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 43,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'algebra',
       text: '3x + 5y = 8\n9x + 15y = 24\n\nFor each real number r, which of the following points lies on the graph of each equation in the xy-plane for the given system?',
       type: 'multipleChoice',
       options: [
@@ -1669,7 +1669,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     {
       id: 44,
       module: 2,
-      domain: '', // TODO: categorize as algebra, advanced_math, problem_solving, or geometry
+      domain: 'geometry',
       text: 'In the figure, parallel lines a and b are intersected by lines c, d, and e. If z = 49, y = 136, and v < z, which statement about x and w must be true?',
       image: '/images/questions/math_m2_q22_parallel.png',
       imageDescription: 'A figure showing two parallel horizontal lines a and b intersected by three lines c, d, and e. Various angles are marked: v° and x° at the intersection with line c on line b, y° where line d intersects, w° where line e intersects with line a, and z° where line e intersects with line b.',

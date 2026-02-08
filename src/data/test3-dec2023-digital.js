@@ -14,7 +14,7 @@ export const test3Questions = {
     {
       id: 1,
       module: 1,
-      domain: '', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
+      domain: 'craft_structure',
       passage: `The National Heritage Fellowship was created to honor exceptional folk and traditional artists in the United States for their ______. The Irish American accordionist Joe Derrane was chosen for the fellowship because he has contributed so much to the arts.`,
       text: 'Which choice completes the text with the most logical and precise word or phrase?',
       type: 'multipleChoice',
@@ -31,7 +31,7 @@ export const test3Questions = {
     {
       id: 2,
       module: 1,
-      domain: '', // TODO: categorize
+      domain: 'craft_structure',
       passage: `Some pieces of music might have many meanings—the compositions of Albertine Caron-Legris can ______ as many different interpretations as there are people to listen to them—and so as long as a listener's interpretation isn't willfully absurd or the result of inattention, it is difficult to justify the claim that the listener has misunderstood the piece.`,
       text: 'Which choice completes the text with the most logical and precise word or phrase?',
       type: 'multipleChoice',

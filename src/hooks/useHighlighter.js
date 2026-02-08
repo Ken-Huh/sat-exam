@@ -114,15 +114,32 @@ export default function useHighlighter() {
   }, [toolbarState]);
 
   /**
-   * Remove a highlight
+   * Remove a highlight (from state AND from DOM)
    */
   const removeHighlight = useCallback((questionId, highlightId) => {
+    // Remove the <mark> element from the DOM immediately
+    const container = passageRef.current;
+    if (container) {
+      const markEl = container.querySelector(`mark[data-highlight-id="${highlightId}"]`);
+      if (markEl) {
+        // Unwrap: replace the <mark> with its text content
+        const parent = markEl.parentNode;
+        while (markEl.firstChild) {
+          parent.insertBefore(markEl.firstChild, markEl);
+        }
+        parent.removeChild(markEl);
+        // Normalize to merge adjacent text nodes
+        parent.normalize();
+      }
+    }
+
+    // Remove from state
     setAllHighlights(prev => ({
       ...prev,
       [questionId]: (prev[questionId] || []).filter(h => h.id !== highlightId),
     }));
     setAnnotationPopup(null);
-  }, []);
+  }, [passageRef]);
 
   /**
    * Update a highlight's note

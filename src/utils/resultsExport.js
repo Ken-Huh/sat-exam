@@ -91,36 +91,58 @@ export function getAllQuestionDetails(answers, questions, practiceType = null) {
   const details = [];
 
   // Handle practice mode (flat array) vs full test (nested object)
-  let allQuestions = [];
   if (practiceType) {
-    allQuestions = questions;
-  } else {
-    allQuestions = [...(questions.readingWriting || []), ...(questions.math || [])];
-  }
-
-  allQuestions.forEach((q, index) => {
-    const userAnswer = answers[q.id] || '';
-    const isCorrect = userAnswer === q.correctAnswer;
-
-    // Determine section
-    let section = 'RW';
-    if (q.section) {
-      section = q.section;
-    } else if (practiceType === 'math' || q.type === 'fillIn') {
-      section = 'Math';
-    }
-
-    details.push({
-      questionNumber: index + 1,
-      questionId: q.id,
-      section: section,
-      module: q.module || 1,
-      domain: (q.domain || 'unknown').replace(/_/g, ' '),
-      userAnswer: userAnswer || '(blank)',
-      correctAnswer: q.correctAnswer,
-      isCorrect: isCorrect ? 'Correct' : 'Incorrect',
+    // Practice mode - all questions are the same section
+    const section = practiceType === 'math' ? 'Math' : 'RW';
+    questions.forEach((q, index) => {
+      const userAnswer = answers[q.id] || '';
+      const isCorrect = userAnswer === q.correctAnswer;
+      details.push({
+        questionNumber: index + 1,
+        questionId: q.id,
+        section,
+        module: q.module || 1,
+        domain: (q.domain || 'unknown').replace(/_/g, ' '),
+        userAnswer: userAnswer || '(blank)',
+        correctAnswer: q.correctAnswer,
+        isCorrect: isCorrect ? 'Correct' : 'Incorrect',
+      });
     });
-  });
+  } else {
+    // Full test - use the actual arrays to determine section
+    const rwQuestions = questions.readingWriting || [];
+    const mathQuestions = questions.math || [];
+
+    rwQuestions.forEach((q, index) => {
+      const userAnswer = answers[q.id] || '';
+      const isCorrect = userAnswer === q.correctAnswer;
+      details.push({
+        questionNumber: index + 1,
+        questionId: q.id,
+        section: 'RW',
+        module: q.module || 1,
+        domain: (q.domain || 'unknown').replace(/_/g, ' '),
+        userAnswer: userAnswer || '(blank)',
+        correctAnswer: q.correctAnswer,
+        isCorrect: isCorrect ? 'Correct' : 'Incorrect',
+      });
+    });
+
+    mathQuestions.forEach((q, index) => {
+      const userAnswer = answers[q.id] || '';
+      const isCorrect = userAnswer === q.correctAnswer;
+      details.push({
+        questionNumber: rwQuestions.length + index + 1,
+        questionId: q.id,
+        section: 'Math',
+        module: q.module || 1,
+        domain: (q.domain || 'unknown').replace(/_/g, ' '),
+        userAnswer: userAnswer || '(blank)',
+        correctAnswer: q.correctAnswer,
+        isCorrect: isCorrect ? 'Correct' : 'Incorrect',
+      });
+    });
+  }
 
   return details;
 }
@@ -130,40 +152,45 @@ export function getAllQuestionDetails(answers, questions, practiceType = null) {
  */
 export function getWrongAnswersDetails(answers, questions, practiceType = null) {
   const wrongAnswers = [];
-
-  // Handle practice mode (flat array) vs full test (nested object)
-  let allQuestions = [];
   if (practiceType) {
-    // Practice mode - questions is a flat array
-    allQuestions = questions;
+    const section = practiceType === 'math' ? 'Math' : 'RW';
+    questions.forEach(q => {
+      const userAnswer = answers[q.id];
+      if (userAnswer && userAnswer !== q.correctAnswer) {
+        wrongAnswers.push({
+          questionId: q.id, module: q.module, domain: q.domain || 'unknown',
+          section, userAnswer, correctAnswer: q.correctAnswer,
+        });
+      } else if (!userAnswer) {
+        wrongAnswers.push({
+          questionId: q.id, module: q.module, domain: q.domain || 'unknown',
+          section, userAnswer: '(unanswered)', correctAnswer: q.correctAnswer,
+        });
+      }
+    });
   } else {
-    // Full test - questions has readingWriting and math arrays
-    allQuestions = [...(questions.readingWriting || []), ...(questions.math || [])];
-  }
+    // Full test - iterate each array separately for correct labeling
+    const rwQuestions = questions.readingWriting || [];
+    const mathQuestions = questions.math || [];
 
-  allQuestions.forEach(q => {
-    const userAnswer = answers[q.id];
-    if (userAnswer && userAnswer !== q.correctAnswer) {
-      wrongAnswers.push({
-        questionId: q.id,
-        module: q.module,
-        domain: q.domain || 'unknown',
-        section: q.type === 'multipleChoice' && q.options?.[0]?.letter ? 'RW' : 'Math',
-        userAnswer: userAnswer,
-        correctAnswer: q.correctAnswer,
-      });
-    } else if (!userAnswer) {
-      // Unanswered questions
-      wrongAnswers.push({
-        questionId: q.id,
-        module: q.module,
-        domain: q.domain || 'unknown',
-        section: q.type === 'multipleChoice' ? 'RW' : 'Math',
-        userAnswer: '(unanswered)',
-        correctAnswer: q.correctAnswer,
-      });
-    }
-  });
+    const processQuestion = (q, section) => {
+      const userAnswer = answers[q.id];
+      if (userAnswer && userAnswer !== q.correctAnswer) {
+        wrongAnswers.push({
+          questionId: q.id, module: q.module, domain: q.domain || 'unknown',
+          section, userAnswer, correctAnswer: q.correctAnswer,
+        });
+      } else if (!userAnswer) {
+        wrongAnswers.push({
+          questionId: q.id, module: q.module, domain: q.domain || 'unknown',
+          section, userAnswer: '(unanswered)', correctAnswer: q.correctAnswer,
+        });
+      }
+    };
+
+    rwQuestions.forEach(q => processQuestion(q, 'RW'));
+    mathQuestions.forEach(q => processQuestion(q, 'Math'));
+  }
 
   return wrongAnswers;
 }

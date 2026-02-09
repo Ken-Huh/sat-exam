@@ -13,7 +13,7 @@ export const rwPracticeSet4 = {
 
     // Question 1 - Answer: D
     {
-      id: 1,
+      id: 'rw_1',
       module: 1,
       domain: 'craft_structure',
       passage: `The following text is from John Matheus's 1925 novel Fog. The story happens in a city where heavy fog has set in. The little conductor stood on tiptoe in an effort to keep one hand on the signal rope, craning his neck in a vain and dissatisfied endeavor to pierce the miasma of the fog. The motorman chafed in his box, thinking of the drudging lot of the laboring man. He registered discontent.`,
@@ -30,7 +30,7 @@ export const rwPracticeSet4 = {
 
     // Question 2 - Answer: C
     {
-      id: 2,
+      id: 'rw_2',
       module: 1,
       domain: 'craft_structure',
       passage: `The Istiqlal Mosque in Jakarta, Indonesia, is a massive mosque that can accommodate approximately 200,000 people at once, making it an _____ sight to behold.`,
@@ -47,7 +47,7 @@ export const rwPracticeSet4 = {
 
     // Question 3 - Answer: C
     {
-      id: 3,
+      id: 'rw_3',
       module: 1,
       domain: 'craft_structure',
       passage: `Although fewer companies trade their stocks on the Tehran Stock Exchange in Tehran, Iran, than on the stock exchanges in London, Mumbai, or Tokyo, the Tehran Stock Exchange has the advantage of focusing on local companies and thus reflecting economic circumstances that are _____ Iran. This sensitivity to unique, rapidly evolving local conditions benefits the companies and investors alike.`,
@@ -64,7 +64,7 @@ export const rwPracticeSet4 = {
 
     // Question 4 - Answer: D
     {
-      id: 4,
+      id: 'rw_4',
       module: 1,
       domain: 'craft_structure',
       passage: `In a study by Mika R. Moran, Daniel A. Rodriguez, and colleagues, residents of Caracas, Venezuela, and of Fortaleza, Brazil, were surveyed about parks in their cities. Of the 1,043 respondents from Caracas, 44.7% indicated that they use the city's parks, and of the 938 respondents from Fortaleza, 35.7% indicated using city parks. <u>It may be tempting to assume the difference is due to different levels of access to parks:</u> however, given that the percentage of Caracas respondents who reported living within a 10-minute walk of a park was much lower than that reported by Fortaleza respondents, greater proximity alone can't explain the difference in park use.`,
@@ -81,7 +81,7 @@ export const rwPracticeSet4 = {
 
     // Question 5 - Answer: C
     {
-      id: 5,
+      id: 'rw_5',
       module: 1,
       domain: 'information_ideas',
       passage: `The following text is adapted from Anton Chekhov's 1899 play Uncle Vanya. Professor Serebrakoff retires and moves to his country estate, which Vanya manages with the help of Sonia, the professor's daughter from a previous marriage. Chekhov portrays the professor as being someone adjusting to living at the country estate, as is evident when he expresses his displeasure with his new surroundings.`,
@@ -98,7 +98,7 @@ export const rwPracticeSet4 = {
 
     // Question 6 - Answer: C
     {
-      id: 6,
+      id: 'rw_6',
       module: 1,
       domain: 'craft_structure',
       passage: `The following text is from Jerome K. Jerome's 1889 novel Three Men in a Boat. We are creatures of the sun, we men and women. We love light and life. That is why we crowd into the towns and cities, and the country grows more and more deserted every year. In the sunlight—in the daytime, when Nature is alive and busy all around us, we like the open hillsides and the deep woods well enough: but in the night, when our Mother Earth has gone to sleep, and left us waking, oh! the world seems so lonesome, and we get frightened, like children in a silent house. Then we sit and sob, and long for the gas-lit streets, and the sound of human voices, and the answering throb of human life.`,
@@ -115,7 +115,7 @@ export const rwPracticeSet4 = {
 
     // Question 7 - Answer: D
     {
-      id: 7,
+      id: 'rw_7',
       module: 1,
       domain: 'information_ideas',
       passage: `Falcons and horses can see in three dimensions (3D), which helps them perceive distance and depth. Octopuses and squid are thought to lack 3D vision. Many researchers once thought the same about cuttlefish, but Trevor Wardill and his team wanted to test whether this assumption was true. The team studied how cuttlefish wearing 3D glasses reacted to 3D images of shrimp (a favorite prey) projected on a tank wall. Cuttlefish changed their striking position to match the 3D images, suggesting that their vision is more like that of falcons and horses than that of octopuses or squid.`,
@@ -132,7 +132,7 @@ export const rwPracticeSet4 = {
 
     // Question 8 - Answer: B
     {
-      id: 8,
+      id: 'rw_8',
       module: 1,
       domain: 'information_ideas',
       passage: `President Richard Nixon is most famous for his participation in the 1970s Watergate political scandal, a convoluted tale of criminality and eroded ethics involving a constellation of associates such as White House Counsel Chuck Colson and White House Counsel John Dean. But Nixon's legacy is complex: he has been praised for his role in creating the Environmental Protection Agency, and he once made an attempt at reforming United States health care policy that is arguably a precursor to the Affordable Care Act, which became law during the Barack Obama administration.`,
@@ -149,7 +149,7 @@ export const rwPracticeSet4 = {
 
     // Question 9 - Answer: B
     {
-      id: 9,
+      id: 'rw_9',
       module: 1,
       domain: 'information_ideas',
       passage: `Cane is a 1923 novel by Jean Toomer. In one portion of the novel, Toomer uses figurative language to connect the narrator's urban environment of Washington, DC, and the rural South of the narrator's past, writing _____.`,
@@ -166,7 +166,7 @@ export const rwPracticeSet4 = {
 
     // Question 10 - Answer: C
     {
-      id: 10,
+      id: 'rw_10',
       module: 1,
       domain: 'information_ideas',
       passage: `Many believe that lullabies, characterized by their steady beat, contain some acoustic features that are universally calming to infants. In a study, Constance M. Bainbridge and colleagues played both a lullaby sung in the Western Nahuatl language and a non-lullaby sung in the Serbian language to a group of infants. The researchers also measured the infants' heart rates, as a reduced heart rate is considered a measure of relaxation. They claim that the lullaby did indeed relax the infants.`,
@@ -183,7 +183,7 @@ export const rwPracticeSet4 = {
 
     // Question 11 - Answer: A
     {
-      id: 11,
+      id: 'rw_11',
       module: 1,
       domain: 'information_ideas',
       passage: `Contributions of Three Key Industries to Oklahoma Economy in 2017
@@ -208,7 +208,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 12 - Answer: A
     {
-      id: 12,
+      id: 'rw_12',
       module: 1,
       domain: 'information_ideas',
       passage: `Water flowing around an obstruction creates vortices (patterns of swirls) of varying size; by detecting the vortices, fish can determine the size and position of the obstruction. Testing by Yuzo R. Yanagisuru, Otar Akanyeti, and James C. Liao using models of three head shapes—narrow (low ratio of width to length), intermediate, and wide (high ratio of width to length)—showed that for large vortices, fish with intermediate heads would be better able than narrow-headed fish to distinguish between vortices and general turbulence in the water. A second research team has therefore hypothesized that in low-visibility conditions, intermediate-headed fish will be more likely than narrow-headed fish to detect obstructions that create large vortices.`,
@@ -225,7 +225,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 13 - Answer: B
     {
-      id: 13,
+      id: 'rw_13',
       module: 1,
       domain: 'information_ideas',
       image: '/images/questions/rw4_m1_q13_traffic.png',
@@ -246,7 +246,7 @@ In a college course on urban affairs, a student asserts that increased traffic c
 
     // Question 14 - Answer: D
     {
-      id: 14,
+      id: 'rw_14',
       module: 1,
       domain: 'information_ideas',
       passage: `Ranking of Environmental and Sociocultural Benefits of Urban Agriculture (scale of 1 to 25; 1=highest)
@@ -273,7 +273,7 @@ Esther Sanye-Mengual, Kathrin Specht, and their team surveyed three groups of pe
 
     // Question 15 - Answer: A
     {
-      id: 15,
+      id: 'rw_15',
       module: 1,
       domain: 'information_ideas',
       passage: `Like many other fruit-eating birds on the Hawaiian island of Oahu, the red-whiskered bulbul helps forest plants spread by dropping seeds from the plants' fruits in different spots (a process called seed dispersal). Ecologists have found that fruit-eating birds disperse some seeds from native plants at risk of extinction in the wild, such as the lapalapa tree. However, the birds disperse a higher number of seeds from night-blooming jessamine shrubs and other non-native plants with large populations, likely because there are so many more of those plants for them to choose from. Therefore, it isn't surprising that _____.`,
@@ -290,7 +290,7 @@ Esther Sanye-Mengual, Kathrin Specht, and their team surveyed three groups of pe
 
     // Question 16 - Answer: D
     {
-      id: 16,
+      id: 'rw_16',
       module: 1,
       domain: 'craft_structure',
       passage: `Sarah Marquis, who walked 16,000 kilometers across Asia, Siberia, and Australia, undoubtedly accomplished much, but to _____ a lasting historical legacy for oneself, almost nothing is more effective than being the first to do something. For example, people will always remember that Anesia Pinheiro Machado was the first female pilot in Brazil to carry passengers and the first to make stunt flights.`,
@@ -307,7 +307,7 @@ Esther Sanye-Mengual, Kathrin Specht, and their team surveyed three groups of pe
 
     // Question 17 - Answer: B
     {
-      id: 17,
+      id: 'rw_17',
       module: 1,
       domain: 'craft_structure',
       passage: `Text 1
@@ -328,7 +328,7 @@ Any assessment of the state of contemporary poetry must reckon with the professi
 
     // Question 18 - Answer: B
     {
-      id: 18,
+      id: 'rw_18',
       module: 1,
       domain: 'information_ideas',
       passage: `The Yellow Admiral, first published in 1996, is a novel in Patrick O'Brian's Aubrey/Maturin series, which includes twenty books plus an unfinished fragment of a twenty-first. Like the rest of the books in the series, The Yellow Admiral has a rather abrupt ending, but the following book, The Hundred Days, picks up neatly where The Yellow Admiral leaves off. Thus, the sudden ending is only an issue if one considers the books as independent texts—the Aubrey/Maturin series is best thought of as a single incredibly long work, similar to other multivolume stories, such as Marcel Proust's In Search of Lost Time.`,
@@ -345,7 +345,7 @@ Any assessment of the state of contemporary poetry must reckon with the professi
 
     // Question 19 - Answer: D
     {
-      id: 19,
+      id: 'rw_19',
       module: 1,
       domain: 'information_ideas',
       passage: `The following text is from Mary Shelley's 1818 novel Frankenstein. Victor Frankenstein, who narrates this portion of text, describes the state of scientific knowledge as he began his own study of the natural world.
@@ -364,7 +364,7 @@ The untaught peasant beheld the elements around him and was acquainted with thei
 
     // Question 20 - Answer: B
     {
-      id: 20,
+      id: 'rw_20',
       module: 1,
       domain: 'information_ideas',
       passage: `Minimum and Maximum Depths of Stony Coral Species in Caribbean and Indo-Pacific Waters
@@ -390,7 +390,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 21 - Answer: D
     {
-      id: 21,
+      id: 'rw_21',
       module: 1,
       domain: 'information_ideas',
       passage: `The Harlem Renaissance, which gave us great literary works like May Miller's play The Bog Guide and nonliterary works like James Van Der Zee's photograph Couple, Harlem, is often said to have ended in the 1930s shortly after the Great Depression began. But some scholars argue that the Harlem Renaissance never really ended because it continues to shape culture in the United States today. These scholars therefore suggest that _____.`,
@@ -407,7 +407,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 22 - Answer: B
     {
-      id: 22,
+      id: 'rw_22',
       module: 1,
       domain: 'information_ideas',
       passage: `Architects looking for inspiration may examine photographs of iconic buildings such as the Forbidden City in Beijing. A two-dimensional photograph, however, cannot capture how a building interacts with its surroundings, whether by complementing, blending in with, or perhaps even clashing with sights and activities nearby. An image of the Forbidden City thus _____.`,
@@ -424,7 +424,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 23 - Answer: C
     {
-      id: 23,
+      id: 'rw_23',
       module: 1,
       domain: 'information_ideas',
       passage: `Some studies can be done well with relatively little money. For example, a marketing study simply trying to identify the average amount customers spend per transaction at an online retailer has a straightforward central question that doesn't require many years of data collection. But it is much more expensive to conduct a longitudinal study like the Household, Income and Labour Dynamics in Australia Survey (HILDA), which looks at data for 25,000 people in Australia to find trends in economic well-being that can take a long time to develop. This requires lots of funding because _____.`,
@@ -443,7 +443,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 24 - Answer: A
     {
-      id: 24,
+      id: 'rw_24',
       module: 2,
       domain: 'standard_conventions',
       passage: `Cut, bent, and welded from discarded metal materials, the sculptures of London-based Nigerian artist Sokari Douglas Camp are meant to challenge viewers to consider their own relationships to material _____ her thought-provoking works in the 1993 exhibition Steel Clothes and Ornamentation at the Redfern Gallery in London were no different.`,
@@ -460,7 +460,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 25 - Answer: D
     {
-      id: 25,
+      id: 'rw_25',
       module: 2,
       domain: 'standard_conventions',
       passage: `A recipient of the Othmer Gold Medal and the Davy Medal from the Royal Society, _____ known as femtochemistry when he devised an optical spectroscopy technique that allowed researchers to study ultrafast chemical reactions occurring within molecules.`,
@@ -477,7 +477,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 26 - Answer: A
     {
-      id: 26,
+      id: 'rw_26',
       module: 2,
       domain: 'expression_ideas',
       passage: `While researching a topic, a student has taken the following notes:
@@ -499,7 +499,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 27 - Answer: D
     {
-      id: 27,
+      id: 'rw_27',
       module: 2,
       domain: 'expression_ideas',
       passage: `While researching a topic, a student has taken the following notes:
@@ -522,7 +522,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 28 - Answer: A
     {
-      id: 28,
+      id: 'rw_28',
       module: 2,
       domain: 'standard_conventions',
       passage: `What is the origin of the word "pessimism"? Interestingly, _____ It first appears in a letter by English author Samuel Taylor Coleridge.`,
@@ -539,7 +539,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 29 - Answer: D
     {
-      id: 29,
+      id: 'rw_29',
       module: 2,
       domain: 'standard_conventions',
       passage: `After much debate, _____ finally made a decision: the judges for the 1974 Nobel Prize in Literature would award Eyvind Johnson of Sweden with that year's prize "for a narrative art, far-seeing in lands and ages, in the service of freedom."`,
@@ -556,7 +556,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 30 - Answer: B
     {
-      id: 30,
+      id: 'rw_30',
       module: 2,
       domain: 'standard_conventions',
       passage: `Today, the Michelin Guide is widely known as the arbiter of fine dining, with its coveted 3-star rating being awarded to top restaurants like Xin Rong Ji in Beijing. However, few know the guide started as a marketing gimmick in 1900, when brothers Andre and Edouard Michelin sought to increase profits for their tire company by encouraging their customers to _____ their cars across France, visiting the guide's recommended hotels and restaurants along the way.`,
@@ -573,7 +573,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 31 - Answer: A
     {
-      id: 31,
+      id: 'rw_31',
       module: 2,
       domain: 'standard_conventions',
       passage: `Pinon Chapter is one of the 110 chapters of the Navajo Nation (Naabeeho Bincihdsdzo). The chapter, known as Be'ek'id Bas Ahoodzdni in the Navajo language (Dine Bizaad), was the subject of a profile _____ in the Navajo Times on December 12, 2013.`,
@@ -590,7 +590,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 32 - Answer: C
     {
-      id: 32,
+      id: 'rw_32',
       module: 2,
       domain: 'standard_conventions',
       passage: `Writer Silvia Moreno-Garcia's love of short fiction began when she read a collection of Edgar Allan Poe stories as a child, and she later would become a prolific short story writer herself, publishing pieces like "In the Details" (2015) and "To See Pedro Infante" (2014). Yet she's best _____ especially since her 2020 novel Mexican Gothic reached the New York Times Best Sellers list—as a novelist.`,
@@ -607,7 +607,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 33 - Answer: B
     {
-      id: 33,
+      id: 'rw_33',
       module: 2,
       domain: 'expression_ideas',
       passage: `In 1931, scientists first isolated a sample of the steroid hormone androsterone, which they knew existed in animals—and, they assumed, only in animals. _____ researchers would find androsterone in Swiss cheese plants (Monstera deliciosa), but this discovery wouldn't come until decades later.`,
@@ -624,7 +624,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 34 - Answer: C
     {
-      id: 34,
+      id: 'rw_34',
       module: 2,
       domain: 'expression_ideas',
       passage: `The first documented use of the English word "muzzle" is attributed to poet Geoffrey Chaucer's 1385 work "The Knight's Tale." However, Chaucer didn't write in Modern English; _____ he wrote in what we now call Middle English, which was commonly used during the period.`,
@@ -641,7 +641,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 35 - Answer: C
     {
-      id: 35,
+      id: 'rw_35',
       module: 2,
       domain: 'expression_ideas',
       passage: `The moon Leda orbits Jupiter in the same direction that the planet rotates. _____ Leda's orbit is described as prograde. Ananke, another of Jupiter's moons, orbits in the opposite direction, so its orbit is described with the opposite term: retrograde.`,
@@ -658,7 +658,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 36 - Answer: C
     {
-      id: 36,
+      id: 'rw_36',
       module: 2,
       domain: 'expression_ideas',
       passage: `As part of a study, participants were asked to list animals they thought of as "charismatic," which was defined as "attractive, fascinating, or appealing." Researchers compiled the responses into a single list and found that the cheetah and the blue whale both landed in the top twenty. _____ no animal outranked the tiger.`,
@@ -675,7 +675,7 @@ Some scientists have suggested that as ocean temperatures rise, many fish and co
 
     // Question 37 - Answer: B
     {
-      id: 37,
+      id: 'rw_37',
       module: 2,
       domain: 'expression_ideas',
       passage: `Shonte Tucker has worked at NASA's famed Jet Propulsion Laboratory (JPL), one of the world's leading facilities for robotic space exploration. _____ Tucker worked as a systems engineer on the JPL's Mars 2020 Perseverance rover team, which improved upon the 2011 Curiosity rover design by adding a coring drill to the robot that could collect rock samples for later analysis.`,

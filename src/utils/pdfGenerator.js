@@ -113,97 +113,106 @@ export function generateResultsPDF(studentInfo, scores, answers, questions, prac
 
   // ============ THREE COLUMN SCORE SECTION ============
   const colWidth = (pageWidth - 2 * margin - 20) / 3;
+  const boxHeight = 75; // Increased from 55 to provide more vertical space
 
   // Column 1: TOTAL SCORE
   doc.setFillColor(30, 58, 95);
-  doc.roundedRect(margin, yPos, colWidth, 55, 3, 3, 'F');
+  doc.roundedRect(margin, yPos, colWidth, boxHeight, 3, 3, 'F');
 
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(11);
   doc.setFont('helvetica', 'bold');
-  doc.text('TOTAL SCORE', margin + colWidth / 2, yPos + 10, { align: 'center' });
+  doc.text('TOTAL SCORE', margin + colWidth / 2, yPos + 12, { align: 'center' });
 
   doc.setFontSize(36);
-  doc.text(`${estimatedTotalScore}`, margin + colWidth / 2, yPos + 32, { align: 'center' });
+  doc.text(`${estimatedTotalScore}`, margin + colWidth / 2, yPos + 37, { align: 'center' });
 
   doc.setFontSize(8);
   doc.setFont('helvetica', 'normal');
-  doc.text('Score Range: 400-1600', margin + colWidth / 2, yPos + 42, { align: 'center' });
-  doc.text(`${totalCorrect}/${totalQuestions} correct`, margin + colWidth / 2, yPos + 50, { align: 'center' });
+  doc.text('Score Range: 400-1600', margin + colWidth / 2, yPos + 50, { align: 'center' });
+  doc.text(`${totalCorrect}/${totalQuestions} correct`, margin + colWidth / 2, yPos + 58, { align: 'center' });
 
   // Column 2: SECTION SCORES
   const col2X = margin + colWidth + 10;
   doc.setFillColor(250, 250, 250);
   doc.setDrawColor(220, 220, 220);
-  doc.roundedRect(col2X, yPos, colWidth, 55, 3, 3, 'FD');
+  doc.roundedRect(col2X, yPos, colWidth, boxHeight, 3, 3, 'FD');
 
   doc.setTextColor(0, 0, 0);
   doc.setFontSize(10);
   doc.setFont('helvetica', 'bold');
-  doc.text('SECTION SCORES', col2X + colWidth / 2, yPos + 10, { align: 'center' });
+  doc.text('SECTION SCORES', col2X + colWidth / 2, yPos + 12, { align: 'center' });
 
   // R/W Score
   doc.setFontSize(8);
-  doc.text('Reading and Writing', col2X + 8, yPos + 22);
+  doc.text('Reading and Writing', col2X + 8, yPos + 26);
   doc.setFontSize(20);
-  doc.text(`${estimatedRWScore}`, col2X + 8, yPos + 35);
+  doc.text(`${estimatedRWScore}`, col2X + 8, yPos + 40);
   doc.setFontSize(7);
   doc.setFont('helvetica', 'normal');
-  doc.text('Score Range: 200-800', col2X + 35, yPos + 35);
+  // TODO: Could add national average / 9th grade average score line here
+  doc.text('Score Range: 200-800', col2X + 35, yPos + 40);
 
   // Math Score
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(8);
-  doc.text('Math', col2X + 8, yPos + 45);
+  doc.text('Math', col2X + 8, yPos + 52);
   doc.setFontSize(20);
-  doc.text(`${estimatedMathScore}`, col2X + 8, yPos + 55);
+  doc.text(`${estimatedMathScore}`, col2X + 8, yPos + 65);
   doc.setFontSize(7);
   doc.setFont('helvetica', 'normal');
-  doc.text('Score Range: 200-800', col2X + 35, yPos + 55);
+  doc.text('Score Range: 200-800', col2X + 35, yPos + 65);
 
   // Column 3: SCORE DETAILS
   const col3X = margin + 2 * (colWidth + 10);
   doc.setFillColor(250, 250, 250);
   doc.setDrawColor(220, 220, 220);
-  doc.roundedRect(col3X, yPos, colWidth, 55, 3, 3, 'FD');
+  doc.roundedRect(col3X, yPos, colWidth, boxHeight, 3, 3, 'FD');
 
   doc.setTextColor(0, 0, 0);
   doc.setFontSize(10);
   doc.setFont('helvetica', 'bold');
-  doc.text('SCORE DETAILS', col3X + colWidth / 2, yPos + 10, { align: 'center' });
+  doc.text('SCORE DETAILS', col3X + colWidth / 2, yPos + 12, { align: 'center' });
 
   doc.setFontSize(8);
-  doc.text('Questions Overview', col3X + 8, yPos + 20);
+  doc.text('Questions Overview', col3X + 8, yPos + 25);
 
   doc.setFontSize(18);
-  doc.text(`${totalCorrect}`, col3X + 8, yPos + 32);
+  doc.text(`${totalCorrect}`, col3X + 8, yPos + 38);
   doc.setFontSize(7);
   doc.setFont('helvetica', 'normal');
-  doc.text('Correct', col3X + 22, yPos + 28);
-  doc.text('Answers', col3X + 22, yPos + 33);
-  doc.text(`Total Questions: ${totalQuestions}`, col3X + 45, yPos + 28);
-  doc.text(`Total Incorrect: ${totalQuestions - totalCorrect}`, col3X + 45, yPos + 33);
+  doc.text('Correct', col3X + 22, yPos + 34);
+  doc.text('Answers', col3X + 22, yPos + 39);
+  doc.text(`Total Questions: ${totalQuestions}`, col3X + 45, yPos + 34);
+  doc.text(`Total Incorrect: ${totalQuestions - totalCorrect}`, col3X + 45, yPos + 39);
 
   // R/W and Math breakdown
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(7);
-  doc.text('Reading and Writing', col3X + 8, yPos + 42);
-  doc.text('Math', col3X + colWidth / 2 + 5, yPos + 42);
+  doc.text('Reading and Writing', col3X + 8, yPos + 52);
+  doc.text('Math', col3X + colWidth / 2 + 5, yPos + 52);
 
   doc.setFontSize(14);
-  doc.text(`${rwTotal}`, col3X + 8, yPos + 52);
-  doc.text(`${mathTotal}`, col3X + colWidth / 2 + 5, yPos + 52);
+  doc.text(`${rwTotal}`, col3X + 8, yPos + 62);
+  doc.text(`${mathTotal}`, col3X + colWidth / 2 + 5, yPos + 62);
 
   doc.setFontSize(6);
   doc.setFont('helvetica', 'normal');
-  doc.text('Correct', col3X + 18, yPos + 49);
-  doc.text('Answers', col3X + 18, yPos + 53);
-  doc.text('Correct', col3X + colWidth / 2 + 15, yPos + 49);
-  doc.text('Answers', col3X + colWidth / 2 + 15, yPos + 53);
+  doc.text('Correct', col3X + 18, yPos + 59);
+  doc.text('Answers', col3X + 18, yPos + 63);
+  doc.text('Correct', col3X + colWidth / 2 + 15, yPos + 59);
+  doc.text('Answers', col3X + colWidth / 2 + 15, yPos + 63);
 
-  yPos += 65;
+  yPos += boxHeight + 10;
 
   // ============ KNOWLEDGE AND SKILLS ============
+  // Check if we need a page break to accommodate stacked domains
+  const contentHeight = (RW_DOMAINS.length + MATH_DOMAINS.length) * 18 + 30;
+  if (yPos + contentHeight > 250) {
+    doc.addPage();
+    yPos = 20;
+  }
+
   doc.setTextColor(0, 0, 0);
   doc.setFontSize(14);
   doc.setFont('helvetica', 'bold');
@@ -218,59 +227,66 @@ export function generateResultsPDF(studentInfo, scores, answers, questions, prac
   // Calculate domain scores
   const domainData = calculateDomainScores(questions, answers, practiceType);
 
-  // Two column layout
-  const leftCol = margin;
-  const rightCol = pageWidth / 2 + 5;
+  // Full-width stacked layout (no longer side-by-side)
+  const domainWidth = pageWidth - 2 * margin;
 
-  // Reading and Writing Column
+  // ===== READING AND WRITING DOMAINS =====
   doc.setFontSize(11);
   doc.setFont('helvetica', 'bold');
-  doc.text('Reading and Writing', leftCol, yPos);
-
-  // Math Column
-  doc.text('Math', rightCol, yPos);
+  doc.setTextColor(0, 0, 0);
+  doc.text('Reading and Writing', margin, yPos);
   yPos += 8;
 
-  // Draw domains
-  const domainStartY = yPos;
-
   RW_DOMAINS.forEach((domain, idx) => {
-    const y = domainStartY + idx * 22;
+    const y = yPos + idx * 18;
     const score = domainData.scores[domain.id] || 0;
     const total = domainData.totals[domain.id] || 0;
 
     doc.setFontSize(9);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 0, 0);
-    doc.text(domain.name, leftCol, y);
+    doc.text(domain.name, margin, y);
 
     doc.setFontSize(7);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(100, 100, 100);
-    doc.text(`(${domain.desc})`, leftCol, y + 5);
+    doc.text(`(${domain.desc})`, margin, y + 5);
 
-    drawSkillBar(doc, leftCol, y + 8, score, total);
+    drawSkillBar(doc, margin, y + 8, score, total);
   });
+
+  yPos += RW_DOMAINS.length * 18 + 6;
+
+  // ===== MATH DOMAINS =====
+  doc.setFontSize(11);
+  doc.setFont('helvetica', 'bold');
+  doc.setTextColor(0, 0, 0);
+  doc.text('Math', margin, yPos);
+  yPos += 8;
 
   MATH_DOMAINS.forEach((domain, idx) => {
-    const y = domainStartY + idx * 22;
+    const y = yPos + idx * 18;
     const score = domainData.scores[domain.id] || 0;
     const total = domainData.totals[domain.id] || 0;
 
     doc.setFontSize(9);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 0, 0);
-    doc.text(domain.name, rightCol, y);
+    doc.text(domain.name, margin, y);
 
     doc.setFontSize(7);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(100, 100, 100);
-    doc.text(`(${domain.desc})`, rightCol, y + 5);
+    doc.text(`(${domain.desc})`, margin, y + 5);
 
-    drawSkillBar(doc, rightCol, y + 8, score, total);
+    drawSkillBar(doc, margin, y + 8, score, total);
   });
 
-  // Footer
+  yPos += MATH_DOMAINS.length * 18;
+
+  // Footer - positioned at bottom of current page
+  const pageCount = doc.getNumberOfPages();
+  doc.setPage(pageCount);
   doc.setFontSize(7);
   doc.setTextColor(150, 150, 150);
   doc.text(`Generated by SAT Practice App | ${studentInfo.name || 'Anonymous'}`, pageWidth / 2, 285, { align: 'center' });

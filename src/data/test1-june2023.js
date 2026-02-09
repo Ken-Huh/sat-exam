@@ -25,7 +25,7 @@ export const test1Questions = {
 
     // Question 1
     {
-      id: 1,
+      id: 'rw_1',
       module: 1,
       domain: 'craft_structure', // Words in context
       passage: `The following text is from Mark Twain's 1876 novel The Adventures of Tom Sawyer. Tom, a child, has been told by his aunt to paint their house's fence.
@@ -44,7 +44,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
 
     // Question 2
     {
-      id: 2,
+      id: 'rw_2',
       module: 1,
       domain: 'craft_structure', // Words in context
       passage: `Though most studies of the effect of altitude on blood chemistry usually concentrated on people who live about sea level, researchers Suleiman A. Al-Sweedan and Moath Alhaj have instead chosen the ______ path in their recent work of studying the blood of people who live below sea level, in locations such as the California towns of Salton City and Imperial.`,
@@ -61,7 +61,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
 
     // Question 3
     {
-      id: 3,
+      id: 'rw_3',
       module: 1,
       domain: 'craft_structure', // Words in context
       passage: `The Gleaners, painted in the realist style by Jean-François Millet, depicts peasants picking stray wheat from a field after the harvest. The realists' emphasis on accurately portraying the experiences of average working people was largely a rejection of the romantic style evident in many paintings by Jérôme-Martin Langlois, which instead ______ their subjects' beauty or heroism while hiding all imperfection.`,
@@ -78,7 +78,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
 
     // Question 4
     {
-      id: 4,
+      id: 'rw_4',
       module: 1,
       domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Although our knowledge of the Pliocene epoch and the lives of the hominids during this time was once ______, recent analyses of fossils like that of the individual known as KNM-KP 271, discovered in Kenya in 1963, have sharpened our picture of what a day in the life of KNM-KP 271 may have looked like.`,
@@ -95,7 +95,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
 
     // Question 5
     {
-      id: 5,
+      id: 'rw_5',
       module: 1,
       domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In what is now Washington state, the Tulalip Cultural Center. Relying on traditional knowledge to guide the design of exhibits, this institution present Tulalip history and culture to the tribe's citizens. The Citizen Potawatomi Nation, a tribe in Oklahoma, employs a similar strategy in its own cultural center. Both centers contrast with museums that aren't Indigenous-led; when displaying Indigenous artifacts, such museums tend to anticipate mainly non-Indigenous audiences and rely on Euro-centric strategies for designing exhibits.`,
@@ -112,7 +112,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
 
     // Question 6
     {
-      id: 6,
+      id: 'rw_6',
       module: 1,
       domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Luang Prabang has high pedestrian traffic, but simply replicating a feature of Luang Prabang associated with walkability—e.g., its human-scaled architecture—may be insufficient to induce increased walking in other cities. As urbanist Mariela Alfonzo argues, our understanding of individuals' decision-making about whether to walk is insufficiently robust: some studies emphasize the role of local norms, others the role of demographic characteristics, and so on, but walking decisions are made in complex context in which multiple conditions and needs inform individuals' choices.`,
@@ -129,7 +129,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
 
     // Question 7
     {
-      id: 7,
+      id: 'rw_7',
       module: 1,
       domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In Hoocąk, an Indigenous language from the Mid-Atlantic region of what is now the United States, okayeke means "bad," whereas ati okayeye'tesel means "bad houses." This phenomenon, in which an element of a root word is repeated, sometimes with modification, within another word that is related to the root word, is called reduplication. In this case, the element "ye" in okayake gets repeated in ati okayeye'tesel. There are many examples of this type of reduplication in Hoocąk.`,
@@ -146,7 +146,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
 
     // Question 8
     {
-      id: 8,
+      id: 'rw_8',
       module: 1,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Researcher César A. Hidalgo, Elisa Castañer, and Andres Sevtsuk created a computer model to predict the mix of businesses and places of interest found in a given neighborhood. The team used data from the Google Places API service to help identify furniture stores, florists, and other businesses and map their locations. This approach has some limits—data from Places API tend to be restricted to places that the customer facing—but the data set nonetheless provides an extremely reliable source to study colocation patterns of neighborhood amenities.`,
@@ -163,7 +163,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
 
     // Question 9
     {
-      id: 9,
+      id: 'rw_9',
       module: 1,
       domain: 'information_ideas',
       passage: `The groundbreaking Negro Ensemble Company (NEC), founded in 1967, produced Paul Carter Harrison's award-winning play The Great MacDaddy in 1974. The company was cofounded by Robert Hooks, an actor, producer, and activist, and actor and playwright Douglas Turner Ward, who had met while performing in a 1960 touring production of Lorraine Hansberry's play A Raisin in the Sun. They shared a vision of a theater company that would nurture and showcase the work of Black theater professionals. Since its beginning, NEC has provided a forum for the voices of Harrison and other Black playwrights through workshops and performances.`,
@@ -180,7 +180,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
 
     // Question 10
     {
-      id: 10,
+      id: 'rw_10',
       module: 1,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Poems is an 1895 collection of poetry by Frances E.W. Harper. In one of Harper's poems, the speaker criticizes activists who champion humanitarian causes in other countries while overlooking local concerns, saying ______`,
@@ -197,7 +197,7 @@ Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush
 
     // Question 11
     {
-      id: 11,
+      id: 'rw_11',
       module: 1,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Impact of Four Key Industries on Oklahoma Economy in 2017
@@ -223,7 +223,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 12
     {
-      id: 12,
+      id: 'rw_12',
       module: 1,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `To understand the extent of deforestation in the Chorotega Region of Costa Rica, Juan Pablo Arroyo-Mora and colleagues used aerial photography and remote sensing data to track changes in the forest cover area across different land use capability class (categories that indicate possible uses of forest land.) Due to the Chorotega region's accessibility, various types of forest areas were converted to cattle practices as rising international meat prices drove a cattle ranching boom in the 1960s and 1970s. By the mid 1980s, however, increased public awareness and environmental reforms, along with a decline in meat prices, engendered a natural forest regrowth, as evident by the ______`,
@@ -242,7 +242,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 13
     {
-      id: 13,
+      id: 'rw_13',
       module: 1,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Veronice L. Bura, Akito Y. Kawahara, and Jayne E. Yack investigated the evolution and function of sound production in silk moth and hawk moth caterpillars. They found that during harmless simulated attacks on isolated caterpillars, 33% of the tested species produced sound, which ranged from clicks in Manduca pellenia to whistles in Rhodinia fugax. Although some insects use sound to communicate with members of the same species, the researchers claim that the caterpillar sounds recorded in their study are directed primarily at predators.`,
@@ -259,7 +259,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 14
     {
-      id: 14,
+      id: 'rw_14',
       module: 1,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `The British Bronze Age began when sophisticated techniques for making tools, weapons, and other objects from metal were introduced to the British Isles around 2500 BCE, and it lasted until around 700 BCE. In Britain during this time, collections of valuable metal objects (called hoards) were sometimes buried for safekeeping. Some stayed buried for many centuries, such as the Parc-y-Meirch hoard, which was unearthed around 1868, and the Fittleworth hoard, discovered in 1995. And although the period is known as the Bronze Age, some hoards, like the Fittleworth hoard, contained decorative objects made of gold; gold was much rarer than bronze, however, and thus it is not surprising that ______`,
@@ -276,7 +276,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 15
     {
-      id: 15,
+      id: 'rw_15',
       module: 1,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `The state of North Dakota has designated the spiny water flea as an invasive species that could outcompete some of the state's native species. Many other states draw similar distinctions between invasive and native species. But researchers Alejandro Camacho and Jason McLachlan have pointed out that Earth's climate is changing in ways that challenge such designations. Climate changes may cause animals to leave their current ranges and establish new ones. Climate changes may also create good habitats in areas where a species couldn't live previously. These observations suggest that ______`,
@@ -293,7 +293,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 16
     {
-      id: 16,
+      id: 'rw_16',
       module: 1,
       domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Water boils at around 212°F at sea level, but in Highland, Utah (elevation: 4,977 feet above sea level), it boils at around 202°F. Food writer J. Kenji López-Alt, who explores the science behind cooking, ______ that lower boiling points at higher elevations "can wreak all sorts of havoc on recipes."`,
@@ -310,7 +310,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 17
     {
-      id: 17,
+      id: 'rw_17',
       module: 1,
       domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `It is widely known that New York City's Museum of Modern Art (MoMA) ______ a vast collection of oil paintings, including Franz Marc's The World Cow and Katherine S. Dreier's Abstract Portrait of Marcel Duchamp.`,
@@ -327,7 +327,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 18
     {
-      id: 18,
+      id: 'rw_18',
       module: 1,
       domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Lily Everett and Mary Foote were among the 300 artists who exhibited at the 1913 Armory Show, a groundbreaking New York City art exhibition that introduced modernism to American audience. Marcel Duchamp's abstract cubist aesthetic received the most skepticism form critics, as ______ represented a radical departure from the more realistic painting style that was popular at the time.`,
@@ -344,7 +344,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 19
     {
-      id: 19,
+      id: 'rw_19',
       module: 1,
       domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In Moscow, Russia, the average temperature is 62.6 degrees Fahrenheit in June, ______ to 66.6 degree in July, and then dips slightly to 62.6 degrees in August.`,
@@ -361,7 +361,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 20
     {
-      id: 20,
+      id: 'rw_20',
       module: 1,
       domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `After finding information about Major Robert Odell Owens, who represented New York in the United States House of Representatives, the student discovered biographical sketches of two other Black Americans who served in ______ Josiah Thomas Walls of Florida and Thomas Ezekiel Miller of South Carolina.`,
@@ -378,7 +378,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 21
     {
-      id: 21,
+      id: 'rw_21',
       module: 1,
       domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `The first documented use of the English word "depart" is attributed to poet Geoffrey Chaucer's 1386 work "The Parson's Tale." However, Chaucer didn't write in Modern English; ______ he wrote it what we now call Middle English, which was commonly used during the period.`,
@@ -395,7 +395,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 22
     {
-      id: 22,
+      id: 'rw_22',
       module: 1,
       domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In his essay "Of Coaches," French philosopher Michel de Montaigne explores a relatively light subject, but he expresses heavier fare in "Of the Inconvenience of Greatness." Regardless of subject matter, Montaigne works to question his own perceptive throughout his essay. ______ his personal motto was "What do I know?"`,
@@ -412,7 +412,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 23
     {
-      id: 23,
+      id: 'rw_23',
       module: 1,
       domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Blanche K. Bruce was an outspoken abolitionist whose Washington, DC, home was a stop on the underground railroad (the network of people and places that some enslaved people used to escape to freedom). It was relatively rare for supporters of the railroad to be secretive about their antislavery views. ______ they were vocal abolitionist like Bruce.`,
@@ -429,7 +429,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 24
     {
-      id: 24,
+      id: 'rw_24',
       module: 1,
       domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
@@ -452,7 +452,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 25
     {
-      id: 25,
+      id: 'rw_25',
       module: 1,
       domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
@@ -474,7 +474,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 26
     {
-      id: 26,
+      id: 'rw_26',
       module: 1,
       domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
@@ -496,7 +496,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 27
     {
-      id: 27,
+      id: 'rw_27',
       module: 1,
       domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
@@ -522,7 +522,7 @@ The Cherokee Nation, the Seminole Nation, and the more than thirty other tribes 
 
     // Question 1 (Module 2)
     {
-      id: 28,
+      id: 'rw_28',
       module: 2,
       domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `The following text is adapted from John Matheus's 1926 short story, "Mr. Bradford Teaches Sunday School." Mr. Bradford is driving through the countryside in Florida.
@@ -543,7 +543,7 @@ Mr. Bradford was conscious of this gorgeous display of nature.`,
 
     // Question 2 (Module 2)
     {
-      id: 29,
+      id: 'rw_29',
       module: 2,
       domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Béláné Mocsáry, who traveled solo to four continents in the early 1900s, undoubtedly accomplished much, but her place in our historical memory is perhaps more ______ than that of a noteworthy "first" such as Adeline and Augusta Van Buren, who were the first women to ride solo motorcycles across the continental United States, a deed for which they will always be remembered.`,
@@ -560,7 +560,7 @@ Mr. Bradford was conscious of this gorgeous display of nature.`,
 
     // Question 3 (Module 2)
     {
-      id: 30,
+      id: 'rw_30',
       module: 2,
       domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `A number of recording artists ______ distinctions between Indigenous music and other musical style. For example, Inuit singer-songwriter Tanya Tagaq incorporated Inuit throat singing into electronic music on her album Tongue, and Swinomist/Iñupiaq musician Black Belt Eagle Scout combined powwow-style melodies with rock on her album At the Party with My Brown Friends.`,
@@ -577,7 +577,7 @@ Mr. Bradford was conscious of this gorgeous display of nature.`,
 
     // Question 4 (Module 2)
     {
-      id: 31,
+      id: 'rw_31',
       module: 2,
       domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Text corpora such as the British National Corpus are enormous collections of electronically stored texts that can be used for empirical testing of hypotheses regarding how ______ a word is in spoken and written English. For instance, one might have a guess about the incidence of the word "world," but only an analysis of a corpus can prove that "world" is the eighth most commonly used noun.`,
@@ -594,7 +594,7 @@ Mr. Bradford was conscious of this gorgeous display of nature.`,
 
     // Question 5 (Module 2)
     {
-      id: 32,
+      id: 'rw_32',
       module: 2,
       domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `______ though it seemed to many mathematicians, the honeycomb conjecture, posited in the first century BCE, eventually yielded to the efforts of Thomas C. Hales, who presented a proof of it in 1999.`,
@@ -611,7 +611,7 @@ Mr. Bradford was conscious of this gorgeous display of nature.`,
 
     // Question 6 (Module 2)
     {
-      id: 33,
+      id: 'rw_33',
       module: 2,
       domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Mexican textile artist Victoria Villasana weave stories of triumph, using her unique method of applying colorful yarn to photographs of people. In some works, Villasana focuses on celebrating cultural icons who are people of color, as she does in her depiction of activist Ryu Gwansun. However, in other works, Villasana honors ordinary people, as she does in her captivating portrayal of young girl sitting on a sidewalk. Villasana sees both of these approaches as ways of depicting the power and interconnectedness of all people.`,
@@ -628,7 +628,7 @@ Mr. Bradford was conscious of this gorgeous display of nature.`,
 
     // Question 7 (Module 2)
     {
-      id: 34,
+      id: 'rw_34',
       module: 2,
       domain: 'craft_structure', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Text 1
@@ -649,7 +649,7 @@ Recent evidence shows that a female Bell's vireo is as capable of song as a male
 
     // Question 8 (Module 2)
     {
-      id: 35,
+      id: 'rw_35',
       module: 2,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Like all species of baleen whales, the Antarctic minke whale feeds on tiny creatures known as krill by filtering water through bristlelike keratin structures called baleen plates. In this way, baleen whales can eat up to 30 percent of their total mass per day. And while no one would call the Antarctic minke whale small—it can have a mass as high as 10,000 kg—it is one of the smaller whales and is much smaller than the bowhead whale, which can weight a whopping 66,000 kg and consume as much as 19,800 kg of krill per day.`,
@@ -666,7 +666,7 @@ Recent evidence shows that a female Bell's vireo is as capable of song as a male
 
     // Question 9 (Module 2)
     {
-      id: 36,
+      id: 'rw_36',
       module: 2,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Meredith E. Protas and colleagues have explored how convergent evolution—a phenomenon that occurs when the same trait evolves independently in two reproductively separate lineages—can result from a genetic mechanism shared by both lineages. Meanwhile, Bas J. Zwaan and colleagues have investigated how convergence occurs through different genetic mechanisms, but the relative prevalence of convergence through shared and different genetic processes is still poorly understood. This motivated biologist Delbert A. Green II and Cassandra G. Extavour to evaluate both types of convergence in a single study for their 2012 paper.`,
@@ -683,7 +683,7 @@ Recent evidence shows that a female Bell's vireo is as capable of song as a male
 
     // Question 10 (Module 2)
     {
-      id: 37,
+      id: 'rw_37',
       module: 2,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `US Hydroelectric Power Plants, 2019
@@ -709,7 +709,7 @@ A run-of-river hydroelectric power plant, as the name suggests, uses the natural
 
     // Question 11 (Module 2)
     {
-      id: 38,
+      id: 'rw_38',
       module: 2,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Days per Winter That Lakes Have Surface Ice
@@ -735,7 +735,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
     // Continue with remaining Module 2 RW questions...
     // Question 12 (Module 2)
     {
-      id: 39,
+      id: 'rw_39',
       module: 2,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Some fuel additives contain cerium oxide nanoparticles (CeO₂-NPs), which can leach into waterways and soils via wastewater. In a 2015 study, Maël Garaud and colleagues found that CeO₂-NPs can accumulate in the bodies of zebra mussels (Dreissena polymorpha). While bioaccumulation of manufactured nanoparticles may be inherently worrisome, it has been hypothesized that CeO₂-NP bioaccumulation in invertebrate like D. polymorpha could serve a valuable proxy role, observing the need for manufacturers to conduct costly and intrusive sampling of vertebrate species—such as rainbow trout (Oncorhynchus mykiss), commonly used in regulatory compliance testing—for manipulative bioaccumulation, as environmental protection laws currently require.`,
@@ -752,7 +752,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 13 (Module 2)
     {
-      id: 40,
+      id: 'rw_40',
       module: 2,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Callie W Babbitt, Hema Madaka, and colleagues assembled a database of materials used in consumer electronics by studying products in the lab and by gathering data from similar product studies. The team gave each of these studies a rating for level of traceability (with a higher rating for clearer description of procedures) and for category consistency (with a higher rating for using materials categories more closely aligned with the categories in the team's database). Based on these ratings, a second research team concluded that the methodology was better explained in a study by Jaco Huisman and colleagues than it was in a study by Oguchi Masahiro and colleagues.`,
@@ -769,7 +769,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 14 (Module 2)
     {
-      id: 41,
+      id: 'rw_41',
       module: 2,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Arthurian legends (tales related to the character of King Arthur) derive from many sources, such as Preiddeu Annwfn, composed around 900, and Perceval, the Story of the Grail from around 1181. Sir Thomas Malory's 15th-centruy text Le Morte d'Arthur was an attempt to compile these stories into a coherent narrative. Many of Malory's sources derive from Geoffrey of Monmouth's History of the Kings of Britain, written in the 1130s. While neither History nor any works that predate it mention Arthur's famous Round Table at which his knights assembled, Le Morte d'Arthur does, suggesting that ______`,
@@ -786,7 +786,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 15 (Module 2)
     {
-      id: 42,
+      id: 'rw_42',
       module: 2,
       domain: 'information_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In June of 1987, South Korean liberalized its stock market, meaning that it began allowing foreign individuals and businesses to invest money in South Korean companies. This was part of a wave of stock markets liberalization from the mid-1980s through the mid-1990s—Brazil in 1988, Venezuela in 1990, and so on. In an analysis of economic data from 1976 to 1993, Ross Levine and Sara Zervos found that liberalization did not lead to enduring increases in investment in companies based in countries that liberalized. Peter Blair Henry, however, found that, on average, investment in companies in liberalized countries increased significantly in the three years following liberation. Taken together, these results suggest that ______`,
@@ -803,7 +803,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 16 (Module 2)
     {
-      id: 43,
+      id: 'rw_43',
       module: 2,
       domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Each year, the Nobel Prize in Literature is given to an author who has, in the words of its founder Alfre Nobel, "produced the most outstanding work in an idealistic ______ in 1952, for instance, judges recognized François Mauriac "for the deep spiritual insight and the artistic intensity with which he has in his novels penetrated the drama of human life."`,
@@ -820,7 +820,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 17 (Module 2)
     {
-      id: 44,
+      id: 'rw_44',
       module: 2,
       domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In Los Angeles County, California, bicycle paths such as the San Gabriel River bicycle path—which is 28 miles long—have become an increasingly popular means of travel. Moreover, lawyer and cycling ______ has identified several features of the Los Angeles landscape, like its temperate climate and mostly flat roads, that make the city naturally bike-friendly.`,
@@ -837,7 +837,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 18 (Module 2)
     {
-      id: 45,
+      id: 'rw_45',
       module: 2,
       domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Yerevan is the capital city of Armenia and, ______ roughly one million people, home to an impressive 36 percent of Armenia's total population.`,
@@ -854,7 +854,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 19 (Module 2)
     {
-      id: 46,
+      id: 'rw_46',
       module: 2,
       domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `It was the kind of challenge that would set any art curator's mind into ______ that elusive thread that could link artists as disparate as American abstract painter Anne Ryan, Romanian impressionist painter Micaela Eleutheriade, and Flemish mannerist painter Anthony van Dyck.`,
@@ -871,7 +871,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 20 (Module 2)
     {
-      id: 47,
+      id: 'rw_47',
       module: 2,
       domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `In 2020, internationally renowned Slovak photographer Mária Švarbová exhibited her work at the Contessa Gallery and the Art Angle Gallery in the United States and ______ utilizing vivid pastel colors, overexposed tones, and mirrorlike symmetry, Švarbová's photographs evoke a Socialist-era aesthetic that she describes as "minimalistic but also futuristic."`,
@@ -888,7 +888,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 21 (Module 2)
     {
-      id: 48,
+      id: 'rw_48',
       module: 2,
       domain: 'standard_conventions', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Though he's performed on many respected albums, including Trypnotyx by Victor Wooten, drummer Dennis Chambers may be best known for his time as house drummer for the hip-hop label Sugar Hill Records. He did not play drums on the label's classic song "Rapper's ______ he joined the label after the song's release.`,
@@ -905,7 +905,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 22 (Module 2)
     {
-      id: 49,
+      id: 'rw_49',
       module: 2,
       domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `With their distinctive cone shapes and steeply sloping sides, the volcanoes Maungarei (New Zealand) and Harunasan (Japan) may look similar from afar. Tehnuka Ilanko and other volcanologists, ______ can tell by how each was formed that Maungarei is a cinder cone volcano, while Harunasan is a composite volcano.`,
@@ -922,7 +922,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 23 (Module 2)
     {
-      id: 50,
+      id: 'rw_50',
       module: 2,
       domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `Space scientist Maggie Aderin-Pocock is excited about the potential of the new James Webb Space Telescope (JWST). Unlike its predecessor the Hubble Telescope, the JWST is optimized for infrared wavelength. When light from distant galaxies is infrared, ______ the JWST can provide sharp images that reveal much more information about those galaxies than the Hubble could.`,
@@ -939,7 +939,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 24 (Module 2)
     {
-      id: 51,
+      id: 'rw_51',
       module: 2,
       domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
@@ -960,7 +960,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 25 (Module 2)
     {
-      id: 52,
+      id: 'rw_52',
       module: 2,
       domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
@@ -982,7 +982,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 26 (Module 2)
     {
-      id: 53,
+      id: 'rw_53',
       module: 2,
       domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
@@ -1005,7 +1005,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 27 (Module 2)
     {
-      id: 54,
+      id: 'rw_54',
       module: 2,
       domain: 'expression_ideas', // TODO: categorize as information_ideas, craft_structure, expression_ideas, or standard_conventions
       passage: `While researching a topic, a student has taken the following notes:
@@ -1034,7 +1034,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 1
     {
-      id: 1,
+      id: 'math_1',
       module: 1,
       domain: 'problem_solving',
       passage: `The table summarizes the UV index value recorded by a research assistant at noon each day for 49 days.
@@ -1058,7 +1058,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 2
     {
-      id: 2,
+      id: 'math_2',
       module: 1,
       domain: 'algebra',
       text: 'To make a bookcase, a woodworker charged a onetime fee plus $17 per hour worked. The equation 17h + 45 = 164 represents this situation, where h is the number of hours worked. Which of the following is the best interpretation of 164 in this context?',
@@ -1074,7 +1074,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 3
     {
-      id: 3,
+      id: 'math_3',
       module: 1,
       domain: 'algebra',
       text: 'In December 2017, the lowest temperature recorded in a certain city was 40 degrees Fahrenheit (°F) and the highest temperature recorded was 90°F. Which inequality is true for all values of t, where t represents any temperature, in °F, recorded in the city in December 2017?',
@@ -1090,7 +1090,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 4
     {
-      id: 4,
+      id: 'math_4',
       module: 1,
       domain: 'algebra',
       text: 'The function f is defined by f(x) = 6(2x + 4). For what value of x does f(x) = 48?',
@@ -1106,7 +1106,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 5
     {
-      id: 5,
+      id: 'math_5',
       module: 1,
       domain: 'problem_solving',
       text: 'The ratio of green tiles to blue tiles in a piece of artwork is 5 to 2. If there are 16 blue tiles in the piece of artwork, how many green tiles are there?',
@@ -1116,7 +1116,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 6
     {
-      id: 6,
+      id: 'math_6',
       module: 1,
       domain: 'problem_solving',
       text: 'Which of the following equations is the most appropriate linear model for the data shown?',
@@ -1134,7 +1134,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 7
     {
-      id: 7,
+      id: 'math_7',
       module: 1,
       domain: 'problem_solving',
       text: 'A scientist analyzed a soil sample with a mass of 900 grams and determined that it contained 189 grams of water. What is the percentage of water, by mass, in this soil sample?',
@@ -1150,7 +1150,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 8
     {
-      id: 8,
+      id: 'math_8',
       module: 1,
       domain: 'algebra',
       text: 'Line n is shown in the xy-plane. Line k (not shown) is perpendicular to line n. What is the slope of line k?',
@@ -1168,7 +1168,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 9
     {
-      id: 9,
+      id: 'math_9',
       module: 1,
       domain: 'algebra',
       text: 'mx + ky = -83\n2x + ky = 22\n\nIn the given system of equation, m and k are constants. The graphs of these equations in the xy-plane intersect at the point (5, y). What is the value of m?',
@@ -1178,7 +1178,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 10
     {
-      id: 10,
+      id: 'math_10',
       module: 1,
       domain: 'algebra',
       text: 'For the linear function f, the graph of y = f(x) in the xy-plane passes through the point (0, 2) and (3, 3). What is the slope of y = f(x)?',
@@ -1188,7 +1188,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 11
     {
-      id: 11,
+      id: 'math_11',
       module: 1,
       domain: 'problem_solving',
       text: 'A certain book has 250 pages, and 21 of these pages have an illustration. If one of the book\'s pages is selected at random, what is the probability of selecting a page with an illustration? (Express your answer as a decimal or fraction, not as a percent.)',
@@ -1198,23 +1198,23 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 12
     {
-      id: 12,
+      id: 'math_12',
       module: 1,
       domain: 'advanced_math',
-      text: 'b² + 5c = 9d\n\nThe given equation relates the real numbers b, c, and d, where d > 5/9 c. Which equation correctly express b in terms of c and d?',
+      text: '\\(b^2 + 5c = 9d\\)\n\nThe given equation relates the real numbers b, c, and d, where \\(d > \\frac{5}{9}c\\). Which equation correctly expresses b in terms of c and d?',
       type: 'multipleChoice',
       options: [
-        { letter: 'A', text: 'b = (9d + 5c) / 2' },
-        { letter: 'B', text: 'b = (9d - 5c) / 2' },
-        { letter: 'C', text: 'b = ±√(9d + 5c)' },
-        { letter: 'D', text: 'b = ±√(9d - 5c)' }
+        { letter: 'A', text: '\\(b = \\frac{9d + 5c}{2}\\)' },
+        { letter: 'B', text: '\\(b = \\frac{9d - 5c}{2}\\)' },
+        { letter: 'C', text: '\\(b = \\pm\\sqrt{9d + 5c}\\)' },
+        { letter: 'D', text: '\\(b = \\pm\\sqrt{9d - 5c}\\)' }
       ],
       correctAnswer: 'D'
     },
 
     // Question 13
     {
-      id: 13,
+      id: 'math_13',
       module: 1,
       domain: 'geometry',
       text: 'A right circular cylinder has a height of 4 meters (m) and a base with a radius of 18 m. What is the volume, in m³, of the cylinder?',
@@ -1230,7 +1230,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 14
     {
-      id: 14,
+      id: 'math_14',
       module: 1,
       domain: 'algebra',
       text: 'What is the y-intercept of the graph of 3x + 2y = 96 in the xy-plane?',
@@ -1246,17 +1246,17 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 15
     {
-      id: 15,
+      id: 'math_15',
       module: 1,
       domain: 'algebra',
-      text: 'If (6/7)p + 12 = 54, what is the value of 7p?',
+      text: 'If \\(\\frac{6}{7}p + 12 = 54\\), what is the value of 7p?',
       type: 'fillIn',
       correctAnswer: '343'
     },
 
     // Question 16
     {
-      id: 16,
+      id: 'math_16',
       module: 1,
       domain: 'advanced_math',
       text: 'A certain neighborhood had a population of 1,340 in 2009. Each year for the next 5 years, the population of the neighborhood increased by approximately 3% of the population the previous year. Which of the following equations represents the population, N, of the neighborhood t years after 2009, where t ≤ 5?',
@@ -1272,7 +1272,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 17
     {
-      id: 17,
+      id: 'math_17',
       module: 1,
       domain: 'algebra',
       text: 'In the xy-plane, which of the following does NOT contain any points (x, y) that are solutions to 7x + 4y > 12?',
@@ -1288,7 +1288,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 18
     {
-      id: 18,
+      id: 'math_18',
       module: 1,
       domain: 'geometry',
       text: 'In triangle RST, the measure of angle R is 10 degrees and the measure of angle T is 50 degrees. Point L lies on RS, point K lies on ST, and LK is parallel to RT. What is the measure, in degree, of angle SKL? (Disregard the degree symbol when entering your answer.)',
@@ -1298,7 +1298,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 19
     {
-      id: 19,
+      id: 'math_19',
       module: 1,
       domain: 'advanced_math',
       text: 'An auditorium has seats for 3,200 people. Tickets to attend a show at the auditorium currently cost $8.00. For each $1.00 increase to the ticket price, 100 fewer tickets will be sold. This situation can be modeled by the equation y = -100x² + 2,400x + 25,600, where x represents the increase in ticket price, in dollars, and y represents the revenue, in dollars, from ticket sales. If this equation is graphed in the xy-plane, at what value of x is the maximum of the graph?',
@@ -1314,7 +1314,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 20
     {
-      id: 20,
+      id: 'math_20',
       module: 1,
       domain: 'geometry',
       text: '(x + 3)² + (y - 4)² = 25\n\nIn the xy-plane, the graph of the given equation is circle. Which point lies on this circle?',
@@ -1330,10 +1330,10 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 21
     {
-      id: 21,
+      id: 'math_21',
       module: 1,
       domain: 'advanced_math',
-      text: 'The expression (x²⁰ (x - 4)) / (5x²) + (4x²⁰) / (5x²) is equivalent to (1/5)xᶜ, where c is a constant and x > 0. What is the value of c?',
+      text: 'The expression \\(\\frac{x^{20}(x - 4)}{5x^2} + \\frac{4x^{20}}{5x^2}\\) is equivalent to \\(\\frac{1}{5}x^c\\), where c is a constant and x > 0. What is the value of c?',
       type: 'multipleChoice',
       options: [
         { letter: 'A', text: '4' },
@@ -1346,10 +1346,10 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 22
     {
-      id: 22,
+      id: 'math_22',
       module: 1,
       domain: 'geometry',
-      text: 'Triangle ABC is similar to triangle DEF, where angle A corresponds to angle D and angle C and F are right angles. The length of AB is 2.4 times the length of DE. If tan A = 21/20, what is the value of sin D?',
+      text: 'Triangle ABC is similar to triangle DEF, where angle A corresponds to angle D and angle C and F are right angles. The length of AB is 2.4 times the length of DE. If \\(\\tan A = \\frac{21}{20}\\), what is the value of sin D?',
       type: 'fillIn',
       correctAnswer: '21/29'
     },
@@ -1360,7 +1360,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 1 (Module 2)
     {
-      id: 23,
+      id: 'math_23',
       module: 2,
       domain: 'problem_solving',
       text: 'The speed of a white-throated needletail, a type of bird, in flight was measured to be 49 miles per hour. What was the white-throated needletail\'s measured speed, in __kilometers__ per hour? (Use 1 mile = 1.6 kilometers.)',
@@ -1376,7 +1376,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 2 (Module 2)
     {
-      id: 24,
+      id: 'math_24',
       module: 2,
       domain: 'advanced_math',
       text: 'Which expression is equivalent to (3x³ - x² + 4)(5x² + 8x)?',
@@ -1392,7 +1392,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 3 (Module 2)
     {
-      id: 25,
+      id: 'math_25',
       module: 2,
       domain: 'algebra',
       text: 'If 5(x + 1) = 25, what is the value of x + 1?',
@@ -1408,7 +1408,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 4 (Module 2)
     {
-      id: 26,
+      id: 'math_26',
       module: 2,
       domain: 'problem_solving',
       text: 'The graph shows the estimated concentration of a certain strain of bacteria, y, in millions of cells per mL of nutrient medium, over time x, in minutes since the initial measurement. According to the graph, which of the following is closest to the number of minutes it took for the estimated concentration of the bacteria to increase from 20 million cells per mL of nutrient medium to 30 million cells per mL of nutrient medium?',
@@ -1426,7 +1426,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 5 (Module 2)
     {
-      id: 27,
+      id: 'math_27',
       module: 2,
       domain: 'advanced_math',
       text: 'If (x + 3)² = 30, what is the value of x² + 6x?',
@@ -1442,7 +1442,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 6 (Module 2)
     {
-      id: 28,
+      id: 'math_28',
       module: 2,
       domain: 'algebra',
       text: 'y = 5x\ny = 2x + 2\n\nHow many solutions does the given system of equations have?',
@@ -1458,15 +1458,15 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 7 (Module 2)
     {
-      id: 29,
+      id: 'math_29',
       module: 2,
       domain: 'advanced_math',
       text: 'f(x) = |71 - 2x|\n\nThe function f is defined by the given equation. For which of the following values of k does f(k) = 3k?',
       type: 'multipleChoice',
       options: [
-        { letter: 'A', text: '71/5' },
-        { letter: 'B', text: '71/2' },
-        { letter: 'C', text: '213/5' },
+        { letter: 'A', text: '\\(\\frac{71}{5}\\)' },
+        { letter: 'B', text: '\\(\\frac{71}{2}\\)' },
+        { letter: 'C', text: '\\(\\frac{213}{5}\\)' },
         { letter: 'D', text: '71' }
       ],
       correctAnswer: 'A'
@@ -1474,7 +1474,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 8 (Module 2)
     {
-      id: 30,
+      id: 'math_30',
       module: 2,
       domain: 'algebra',
       text: 'g(x) = 2(16x - 17)\n\nWhat is the y-coordinate of the y-intercept of the graph of y = g(x) - 3 in the xy-plane?',
@@ -1490,7 +1490,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 9 (Module 2)
     {
-      id: 31,
+      id: 'math_31',
       module: 2,
       domain: 'algebra',
       passage: `| x | y |
@@ -1500,12 +1500,13 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 | 8 | n + 38 |`,
       text: 'There is a linear relationship between x and y. The table shows three values of x and their corresponding value of y in terms of a constant n. What is the slope of the line that represents this relationship in the xy-plane?',
       type: 'fillIn',
-      correctAnswer: '19/4'
+      correctAnswer: '19/4',
+      correctAnswerDisplay: '\\(\\frac{19}{4}\\)'
     },
 
     // Question 10 (Module 2)
     {
-      id: 32,
+      id: 'math_32',
       module: 2,
       domain: 'advanced_math',
       text: '18x² + 24x + c = 0\n\nIn the given equation, c is a constant. The equation has exactly one solution. What is the value of c?',
@@ -1515,7 +1516,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 11 (Module 2)
     {
-      id: 33,
+      id: 'math_33',
       module: 2,
       domain: 'algebra',
       text: '(x - 3) - 8(y + 9) = 129\n(x - 3) + 8(y + 9) = 432\n\nThe solution to the given system of equations is (x, y). What is the value of 8(x - 3)?',
@@ -1525,7 +1526,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 12 (Module 2)
     {
-      id: 34,
+      id: 'math_34',
       module: 2,
       domain: 'geometry',
       text: 'The volume of a right rectangular prism with a square base is 2,448 cubic centimeters. If the area of the square base is 144 square centimeters, what is the area, in square centimeters, of one of the four lateral faces of the prism?',
@@ -1541,7 +1542,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 13 (Module 2)
     {
-      id: 35,
+      id: 'math_35',
       module: 2,
       domain: 'advanced_math',
       text: 'y = 5(x - 2)²\ny = 10(x - 2)\n\nA solution to the given system of equations is (x, y). What is one possible value of x + y?',
@@ -1557,7 +1558,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 14 (Module 2)
     {
-      id: 36,
+      id: 'math_36',
       module: 2,
       domain: 'advanced_math',
       text: 'The graph of the quadratic function y = f(x) in the xy-plane intersects the x-axis when x = 39 and when x = p, where p is a constant. The maximum value of y = f(x) occurs at the point (14, m), where m is a constant. What is the value of p?',
@@ -1567,17 +1568,17 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 15 (Module 2)
     {
-      id: 37,
+      id: 'math_37',
       module: 2,
       domain: 'advanced_math',
-      text: '(x + 1)/(5x²) = k/x\n\nIn the given equation, k is a constant. The solution to the given equation is 1/174. What is the value of k?',
+      text: '\\(\\frac{x + 1}{5x^2} = \\frac{k}{x}\\)\n\nIn the given equation, k is a constant. The solution to the given equation is \\(\\frac{1}{174}\\). What is the value of k?',
       type: 'fillIn',
       correctAnswer: '35'
     },
 
     // Question 16 (Module 2)
     {
-      id: 38,
+      id: 'math_38',
       module: 2,
       domain: 'geometry',
       text: 'The area of a triangle is equal to x² square centimeters. The length of the base of the triangle is 2x + 6 centimeters, and the height of the triangle is x - 2 centimeters. What is the value of x?',
@@ -1587,7 +1588,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 17 (Module 2)
     {
-      id: 39,
+      id: 'math_39',
       module: 2,
       domain: 'advanced_math',
       text: 'The function g is a quadratic function. In the xy-plane, the graph of y = g(x) has a vertex at (-1, -4) and passes through the points (-2, -43) and (1, -160). What is the value of g(0) - g(2)?',
@@ -1603,7 +1604,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 18 (Module 2)
     {
-      id: 40,
+      id: 'math_40',
       module: 2,
       domain: 'geometry',
       text: 'Triangle ABC and DEF are congruent, where A corresponds to D, and B and E are right angles. The measure of angle A is 62°. What is the measure of angle F?',
@@ -1619,7 +1620,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 19 (Module 2)
     {
-      id: 41,
+      id: 'math_41',
       module: 2,
       domain: 'algebra',
       text: 'A business consultant charge $408 for the first hour and $204 for each additional hour of work. Which of the following functions gives the charge C(h), in dollars, for h hours of work, where h is a positive integer?',
@@ -1635,7 +1636,7 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 20 (Module 2)
     {
-      id: 42,
+      id: 'math_42',
       module: 2,
       domain: 'advanced_math',
       text: 'An acceptable noise criterion rating for the background noise in a laundry room is 50. For a noise criterion rating of 50, the equation y = 22(0.997)^(x-60) + 47 gives the estimated sound pressure level, y, in decibels, as a function of the octave band center frequency, x, in hertz, where x ≥ 60. Which of the following is the best interpretation of 47 in this context?',
@@ -1651,23 +1652,23 @@ It is common for freshwater lakes near or above a latitude of 45° north of the 
 
     // Question 21 (Module 2)
     {
-      id: 43,
+      id: 'math_43',
       module: 2,
       domain: 'algebra',
       text: '3x + 5y = 8\n9x + 15y = 24\n\nFor each real number r, which of the following points lies on the graph of each equation in the xy-plane for the given system?',
       type: 'multipleChoice',
       options: [
-        { letter: 'A', text: '(r, -5r/3 + 8/3)' },
-        { letter: 'B', text: '(r, 3r/5 + 8/5)' },
-        { letter: 'C', text: '(-5r/3 + 8/3, r)' },
-        { letter: 'D', text: '(r/3 + 8, -r/3 + 24)' }
+        { letter: 'A', text: '\\(\\left(r,\\; -\\frac{5r}{3} + \\frac{8}{3}\\right)\\)' },
+        { letter: 'B', text: '\\(\\left(r,\\; \\frac{3r}{5} + \\frac{8}{5}\\right)\\)' },
+        { letter: 'C', text: '\\(\\left(-\\frac{5r}{3} + \\frac{8}{3},\\; r\\right)\\)' },
+        { letter: 'D', text: '\\(\\left(\\frac{r}{3} + 8,\\; -\\frac{r}{3} + 24\\right)\\)' }
       ],
       correctAnswer: 'C'
     },
 
     // Question 22 (Module 2)
     {
-      id: 44,
+      id: 'math_44',
       module: 2,
       domain: 'geometry',
       text: 'In the figure, parallel lines a and b are intersected by lines c, d, and e. If z = 49, y = 136, and v < z, which statement about x and w must be true?',

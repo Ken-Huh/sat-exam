@@ -10,6 +10,7 @@ import { rwPracticeSet1 } from './rw-practice-set1';
 import { rwPracticeSet2 } from './rw-practice-set2';
 import { rwPracticeSet3 } from './rw-practice-set3';
 import { rwPracticeSet4 } from './rw-practice-set4';
+import { rwPracticeSet5 } from './rw-practice-set5';
 
 // ==============================================
 // DOMAIN CATEGORIES FOR SKILL TRACKING
@@ -76,7 +77,8 @@ export const rwPracticeSets = {
   'rw-set1': rwPracticeSet1,
   'rw-set2': rwPracticeSet2,
   'rw-set3': rwPracticeSet3,
-  'rw-set4': rwPracticeSet4
+  'rw-set4': rwPracticeSet4,
+  'rw-set5': rwPracticeSet5
 };
 
 // Math Practice Sets (placeholder for future sets)
